@@ -389,6 +389,43 @@
             "memberIdRef": "input1"
           }
         ]
+      },
+      {
+        "artifactId": "cubx-date-input",
+        "description": "Date input component",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "css/cubx-date-input.css"
+            ],
+            "dependencies": [
+              "this/cubx-input/main"
+            ]
+          }
+        ],
+        "slots": [],
+        "members": [
+          {
+            "memberId": "input1",
+            "componentId": "this/cubx-input"
+          }
+        ],
+        "connections": [],
+        "inits": [
+          {
+            "slot": "type",
+            "value": "date",
+            "memberIdRef": "input1"
+          }
+        ]
       }
     ],
     "utilities": []
