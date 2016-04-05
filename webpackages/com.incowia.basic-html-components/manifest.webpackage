@@ -93,6 +93,41 @@
             "direction": [
               "input"
             ]
+          },
+          {
+            "slotId": "accept",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "alt",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "height",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "width",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "src",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
           }
         ]
       }
@@ -423,6 +458,169 @@
           {
             "slot": "type",
             "value": "date",
+            "memberIdRef": "input1"
+          }
+        ]
+      },
+      {
+        "artifactId": "cubx-file-input",
+        "description": "File input component",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "css/cubx-file-input.css"
+            ],
+            "dependencies": [
+              "this/cubx-input/main"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "accept",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "input1",
+            "componentId": "this/cubx-input"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "con1",
+            "source": {
+              "slot": "accept"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "accept"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "slot": "type",
+            "value": "file",
+            "memberIdRef": "input1"
+          }
+        ]
+      },
+      {
+        "artifactId": "cubx-image-input",
+        "description": "Image input component",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "css/cubx-image-input.css"
+            ],
+            "dependencies": [
+              "this/cubx-input/main"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "alt",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "height",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "width",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "src",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "input1",
+            "componentId": "this/cubx-input"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "con1",
+            "source": {
+              "slot": "alt"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "alt"
+            }
+          },
+          {
+            "connectionId": "con2",
+            "source": {
+              "slot": "height"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "height"
+            }
+          },
+          {
+            "connectionId": "con3",
+            "source": {
+              "slot": "width"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "width"
+            }
+          },
+          {
+            "connectionId": "con4",
+            "source": {
+              "slot": "src"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "src"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "slot": "type",
+            "value": "image",
             "memberIdRef": "input1"
           }
         ]

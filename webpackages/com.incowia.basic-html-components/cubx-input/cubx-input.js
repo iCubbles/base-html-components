@@ -123,6 +123,46 @@
     modelNameChanged: function (name) {
       // update the view
       this.$.input.setAttribute('name', name);
+    },
+
+    /**
+     *  Called when slot 'accept' has changed
+     */
+    modelAcceptChanged: function (accept) {
+      // update the view
+      this.$.input.setAttribute('accept', accept);
+    },
+
+    /**
+     *  Called when slot 'src' has changed
+     */
+    modelSrcChanged: function (src) {
+      // update the view
+      this.$.input.setAttribute('src', src);
+    },
+
+    /**
+     *  Called when slot 'alt' has changed
+     */
+    modelAltChanged: function (alt) {
+      // update the view
+      this.$.input.setAttribute('alt', alt);
+    },
+
+    /**
+     *  Called when slot 'height' has changed
+     */
+    modelHeightChanged: function (height) {
+      // update the view
+      this.$.input.setAttribute('height', height);
+    },
+
+    /**
+     *  Called when slot 'height' has changed
+     */
+    modelWidthChanged: function (width) {
+      // update the view
+      this.$.input.setAttribute('width', width);
     }
 
 
