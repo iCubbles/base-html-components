@@ -23,9 +23,41 @@
     Place Cubbles-Component there as child element.
     Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
 -->
+<h1>&lt;cbx-number-input&gt; Demo</h1>
+<form>
+    <div style="width: 100%">
+        <label for="trueRadio">Checked?: </label>
+        <input type="radio" value="true" name="checked" id="trueRadio"> True
+        <input type="radio" value="false" name="checked" id="falseRadio" checked> False
+
+        <button id="btn_set" disabled="disabled" type="button">Set</button>
+    </div>
+
+</form>
+<h2>View</h2>
 <div cubx-core-crc>
-     <cubx-checkbox cubx-dependency="this/cubx-checkbox/main"></cubx-checkbox>
+    <cubx-checkbox cubx-dependency="this/cubx-checkbox/main"></cubx-checkbox>
 </div>
+
+<script>
+    (function(){
+        'use strict';
+
+        var btn_set = document.getElementById('btn_set');
+        var trueRadio = document.getElementById('trueRadio');
+
+        var cubxCheckbox = document.getElementsByTagName('cubx-checkbox')[0];
+
+        document.addEventListener('cifReady', function() {
+            btn_set.removeAttribute('disabled');
+        });
+
+        btn_set.addEventListener('click', function() {
+            var value = trueRadio.checked;
+            cubxCheckbox.setChecked(value);
+        });
+    })()
+</script>
 
 </body>
 </html>

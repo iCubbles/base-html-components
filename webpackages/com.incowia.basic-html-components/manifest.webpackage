@@ -79,6 +79,13 @@
             "direction": [
               "input"
             ]
+          },
+          {
+            "slotId": "checked",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
           }
         ]
       }
@@ -279,26 +286,27 @@
         ],
         "members": [
           {
-            "memberId": "member1",
-            "componentId": "webpackage@version/artifactId"
+            "memberId": "input1",
+            "componentId": "this/cubx-input"
           }
         ],
         "connections": [
           {
-            "connectionId": "temperature-transfer",
+            "connectionId": "con1",
             "source": {
-              "slot": "outdoor-temperature"
+              "slot": "checked"
             },
             "destination": {
-              "memberIdRef": "member1",
-              "slot": "temperatureIn"
+              "memberIdRef": "input1",
+              "slot": "checked"
             }
           }
         ],
         "inits": [
           {
-            "slot": "outdoor-temperature",
-            "value": 0
+            "slot": "type",
+            "value": "checkbox",
+            "memberIdRef": "input1"
           }
         ]
       }

@@ -93,7 +93,7 @@
       this.$.input.setAttribute('min', min);
     },
     /**
-     *  Called when slot 'min' has changed
+     *  Called when slot 'max' has changed
      */
 
     modelMaxChanged: function (max) {
@@ -102,11 +102,19 @@
     },
 
     /**
-     *  Called when slot 'min' has changed
+     *  Called when slot 'step' has changed
      */
     modelStepChanged: function (step) {
       // update the view
       this.$.input.setAttribute('step', step);
+    },
+
+    /**
+     *  Called when slot 'checked' has changed
+     */
+    modelCheckedChanged: function (checked) {
+      // update the view
+      this.$.input.checked = checked;
     }
 
 
