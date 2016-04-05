@@ -1,0 +1,308 @@
+{
+  "name": "basic-html-components",
+  "groupId": "com.incowia",
+  "version": "0.1.0-SNAPSHOT",
+  "modelVersion": "8.3.0",
+  "docType": "webpackage",
+  "author": {
+    "name": "Edwin Gamboa",
+    "email": "edwin.gamboa@incowia.com"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "man": [],
+  "artifacts": {
+    "apps": [],
+    "elementaryComponents": [
+      {
+        "artifactId": "cubx-input",
+        "description": "Customizable html input ",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "cubx-input demo"
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "description": "This is recommended for you use with webcomponents.",
+            "resources": [
+              "cubx-input.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.7.0/cubxpolymer/main"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "type",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "value",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "placeholder",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "min",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "max",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "step",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          }
+        ]
+      }
+    ],
+    "compoundComponents": [
+      {
+        "artifactId": "cubx-text-input",
+        "description": "Text input component",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "css/cubx-text-input.css"
+            ],
+            "dependencies": [
+              "this/cubx-input/main"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "placeholder",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "input1",
+            "componentId": "this/cubx-input"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "con1",
+            "source": {
+              "slot": "placeholder"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "placeholder"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "slot": "type",
+            "value": "text",
+            "memberIdRef": "input1"
+          }
+        ]
+      },
+      {
+        "artifactId": "cubx-number-input",
+        "description": "Number input component",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "css/cubx-number-input.css"
+            ],
+            "dependencies": [
+              "this/cubx-input/main"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "subtype",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "min",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "max",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "step",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "input1",
+            "componentId": "this/cubx-input"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "con1",
+            "source": {
+              "slot": "subtype"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "type"
+            }
+          },
+          {
+            "connectionId": "con2",
+            "source": {
+              "slot": "min"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "min"
+            }
+          },
+          {
+            "connectionId": "con3",
+            "source": {
+              "slot": "max"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "max"
+            }
+          },
+          {
+            "connectionId": "con4",
+            "source": {
+              "slot": "step"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "step"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "slot": "type",
+            "value": "number",
+            "memberIdRef": "input1"
+          }
+        ]
+      },
+      {
+        "artifactId": "cubx-checkbox",
+        "description": "Checkbox input component",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "css/cubx-checkbox.css"
+            ],
+            "dependencies": [
+              "this/cubx-input/main"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "checked",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "member1",
+            "componentId": "webpackage@version/artifactId"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "temperature-transfer",
+            "source": {
+              "slot": "outdoor-temperature"
+            },
+            "destination": {
+              "memberIdRef": "member1",
+              "slot": "temperatureIn"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "slot": "outdoor-temperature",
+            "value": 0
+          }
+        ]
+      }
+    ],
+    "utilities": []
+  }
+}

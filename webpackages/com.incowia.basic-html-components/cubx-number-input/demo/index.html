@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>&lt;cbx-number-input&gt;</title>
+
+    <script src="../../../cubx.core.rte@1.7.0/webcomponents/webcomponents-lite.js"></script>
+
+    <!--
+        Refer to the crc-loader artifact from a Cubbles-Base.
+        Take care: All other dependencies are expected to be available within the same Base!
+
+        Want to add a 'main' -script to be executed after the dependencies have been loaded?
+        If yes, add the following attribute: data-crc-main="js/my-script.js"
+    -->
+    <script src="../../../cubx.core.rte@1.7.0/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+
+</head>
+<body>
+<!--
+    The cubbles client-runtime-container is bound to the next element.
+    Place Cubbles-Component there as child element.
+    Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
+-->
+<h1>&lt;cbx-number-input&gt; Demo</h1>
+<form>
+    <div style="width: 100%">
+        <label for="typeValue">Type: </label>
+        <input type="text" id="typeValue" list="types">
+        <datalist id="types">
+            <option> number
+            <option> range
+        </datalist>
+        <button id="btn_setType" disabled="disabled" type="button">Set type</button>
+    </div>
+
+    <div style="width: 100%">
+        <label for="minValue">Min attribute: </label>
+        <input type="number" id="minValue">
+        <button id="btn_setMin" disabled="disabled" type="button">Set min</button>
+    </div>
+
+    <div style="width: 100%">
+        <label for="maxValue">Max attribute: </label>
+        <input type="number" id="maxValue">
+        <button id="btn_setMax" disabled="disabled" type="button">Set max</button>
+    </div>
+    <div style="width: 100%">
+        <label for="stepValue">Step attribute: </label>
+        <input type="number" id="stepValue">
+        <button id="btn_setStep" disabled="disabled" type="button">Set step</button>
+    </div>
+</form>
+<h2>View</h2>
+<div cubx-core-crc>
+    <cubx-number-input cubx-dependency="this/cubx-number-input/main"></cubx-number-input>
+</div>
+
+<script>
+    (function(){
+        'use strict';
+
+        var btn_setType = document.getElementById('btn_setType');
+        var btn_setMin = document.getElementById('btn_setMin');
+        var btn_setMax = document.getElementById('btn_setMax');
+        var btn_setStep = document.getElementById('btn_setStep');
+        var type = document.getElementById('typeValue');
+        var min = document.getElementById('minValue');
+        var max = document.getElementById('maxValue');
+        var step = document.getElementById('stepValue');
+
+        var cubxNumberInput = document.getElementsByTagName('cubx-number-input')[0];
+
+        document.addEventListener('cifReady', function() {
+            btn_setType.removeAttribute('disabled');
+            btn_setMin.removeAttribute('disabled');
+            btn_setMax.removeAttribute('disabled');
+            btn_setStep.removeAttribute('disabled');
+        });
+
+        btn_setType.addEventListener('click', function() {
+            var value = type.value;
+            cubxNumberInput.setSubtype(value);
+        });
+
+        btn_setMin.addEventListener('click', function() {
+            var value = min.value;
+            cubxNumberInput.setMin(value);
+        });
+
+        btn_setMax.addEventListener('click', function() {
+            var value = max.value;
+            cubxNumberInput.setMax(value);
+        });
+
+        btn_setStep.addEventListener('click', function() {
+            var value = step.value;
+            cubxNumberInput.setStep(value);
+        });
+    })()
+</script>
+
+</body>
+</html>
