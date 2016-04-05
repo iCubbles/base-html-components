@@ -115,6 +115,14 @@
     modelCheckedChanged: function (checked) {
       // update the view
       this.$.input.checked = checked;
+    },
+
+    /**
+     *  Called when slot 'step' has changed
+     */
+    modelNameChanged: function (name) {
+      // update the view
+      this.$.input.setAttribute('name', name);
     }
 
 

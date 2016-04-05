@@ -86,6 +86,13 @@
             "direction": [
               "input"
             ]
+          },
+          {
+            "slotId": "name",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
           }
         ]
       }
@@ -306,6 +313,79 @@
           {
             "slot": "type",
             "value": "checkbox",
+            "memberIdRef": "input1"
+          }
+        ]
+      },
+      {
+        "artifactId": "cubx-radio-button",
+        "description": "Radio button input component",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "css/cubx-radio-button.css"
+            ],
+            "dependencies": [
+              "this/cubx-input/main"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "checked",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "name",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "input1",
+            "componentId": "this/cubx-input"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "con1",
+            "source": {
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "checked"
+            }
+          },
+          {
+            "connectionId": "con2",
+            "source": {
+              "slot": "name"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "name"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "slot": "type",
+            "value": "radio",
             "memberIdRef": "input1"
           }
         ]
