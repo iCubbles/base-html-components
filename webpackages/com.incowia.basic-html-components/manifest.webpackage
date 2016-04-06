@@ -130,6 +130,53 @@
             ]
           }
         ]
+      },
+      {
+        "artifactId": "cubx-select",
+        "description": "Select html component",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "description": "This is recommended for you use with webcomponents.",
+            "resources": [
+              "cubx-select.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.7.0/cubxpolymer/main"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "value",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "size",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "options",
+            "type": "object",
+            "direction": [
+              "input"
+            ]
+          }
+        ]
       }
     ],
     "compoundComponents": [
