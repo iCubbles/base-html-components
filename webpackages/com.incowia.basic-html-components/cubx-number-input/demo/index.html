@@ -24,34 +24,35 @@
     Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
 -->
 <h1>&lt;cbx-number-input&gt; Demo</h1>
+<h2>Slots:</h2>
 <form>
     <div style="width: 100%">
-        <label for="typeValue">Type: </label>
-        <input type="text" id="typeValue" list="types">
-        <datalist id="types">
-            <option> number
-            <option> range
-        </datalist>
+        <label for="typeValue"><h3>subtype (string):</h3></label>
+        <select id="typeValue">
+            <option> number </option>
+            <option> range </option>
+        </select>
         <button id="btn_setType" disabled="disabled" type="button">Set type</button>
     </div>
 
     <div style="width: 100%">
-        <label for="minValue">Min attribute: </label>
-        <input type="number" id="minValue">
+        <label for="minValue"><h3>min (number):</h3></label>
+        <input type="number" id="minValue" value="0">
         <button id="btn_setMin" disabled="disabled" type="button">Set min</button>
     </div>
 
     <div style="width: 100%">
-        <label for="maxValue">Max attribute: </label>
-        <input type="number" id="maxValue">
+        <label for="maxValue"><h3>max (number):</h3></label>
+        <input type="number" id="maxValue" value="100">
         <button id="btn_setMax" disabled="disabled" type="button">Set max</button>
     </div>
     <div style="width: 100%">
-        <label for="stepValue">Step attribute: </label>
-        <input type="number" id="stepValue">
+        <label for="stepValue"><h3>step (number):</h3></label>
+        <input type="number" id="stepValue" value="2">
         <button id="btn_setStep" disabled="disabled" type="button">Set step</button>
     </div>
 </form>
+<div style="width:100%;height:1px;background-color:#0b0b0b;display:inline-block;"></div>
 <h2>View</h2>
 <div cubx-core-crc>
     <cubx-number-input cubx-dependency="this/cubx-number-input/main"></cubx-number-input>
