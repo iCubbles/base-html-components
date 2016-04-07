@@ -12,6 +12,14 @@
   CubxPolymer({
     is: 'cubx-ol',
 
+    _validTypes:[
+      '1',
+      'A',
+      'a',
+      'I',
+      'i',
+    ],
+
     /**
      * Manipulate an element’s local DOM when the element is created.
      */
@@ -22,8 +30,6 @@
      * Manipulate an element’s local DOM when the element is created and initialized.
      */
     ready: function () {
-      // set value-attribute of element with id='slota' to the initial value of slot 'a'
-      this.$.slota.setAttribute('value', this.getA());
     },
 
     /**
@@ -36,23 +42,66 @@
      * Manipulate an element’s local DOM when the cubbles framework is initialized and ready to work.
      */
     cubxReady: function () {
+      this._fillOlList();
     },
 
     /**
-     * A handler to be called by a dom-element
-     * @param {event} event
+     *  Observe the Cubbles-Component-Model: If value for slot 'list' has changed ...
      */
-    inputFieldSlotAChanged: function (event) {
-      // update the cubbles-model
-      this.setA(event.target.value);
+    modelListChanged: function (newValue) {
+      this._emptyOlList();
+      this._fillOlList();
     },
 
     /**
-     *  Observe the Cubbles-Component-Model: If value for slot 'a' has changed ...
+     *  Observe the Cubbles-Component-Model: If value for slot 'type' has changed ...
      */
-    modelAChanged: function (newValue) {
+    modelTypeChanged: function (newType) {
+      if (typeof newType === 'string' && this._validTypes.indexOf(newType) === -1) {
+        console.log('type : "' + newType + '" is not a valid input type. Using type "1" instead.');
+        newType = '1';
+      }
+      this.$.ol.setAttribute('type', newType);
+    },
+
+    /**
+     *  Observe the Cubbles-Component-Model: If value for slot 'start' has changed ...
+     */
+    modelStartChanged: function (newStart) {
       // update the view
-      this.$.slota.setAttribute('value', newValue);
+      this.$.ol.setAttribute('start', newStart);
+    },
+
+    /**
+     * Fill the options of the select component
+     * @private
+     */
+    _fillOlList: function () {
+      var list = this.getList() || [];
+      for (var i in list) {
+       this.$.ol.appendChild(this._createLiElement(list[i]));
+      }
+    },
+
+    /**
+     * Empty the select component's options list
+     * @private
+     */
+    _emptyOlList: function () {
+      this.$.ol.innerHTML = "";
+    },
+
+    /**
+     * Create a new <li> element with a text
+     * @param text - Text to be displayed within the <li>
+     * @returns {Element}
+     * @private
+     */
+    _createLiElement: function (text) {
+      var node = document.createElement("LI");
+      var textNode = document.createTextNode(text);
+      node.appendChild(textNode);
+      return node;
     }
   });
 }());

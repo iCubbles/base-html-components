@@ -287,7 +287,7 @@
       },
       {
         "artifactId": "cubx-p",
-        "description": "P component (<p> of HTML)",
+        "description": "P component (<p> from HTML)",
         "runnables": [
           {
             "name": "demo",
@@ -341,13 +341,25 @@
         ],
         "slots": [
           {
-            "slotId": "a",
+            "slotId": "list",
+            "type": "object",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "type",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "start",
             "type": "number",
             "direction": [
-              "input",
-              "output"
-            ],
-            "value": 10
+              "input"
+            ]
           }
         ]
       }

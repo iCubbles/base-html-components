@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>app</title>
+    <title>&lt;cubx-ol&gt;</title>
 
     <script src="../../../cubx.core.rte@1.7.0/webcomponents/webcomponents-lite.js"></script>
 
@@ -23,9 +23,79 @@
     Place Cubbles-Component there as child element.
     Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
 -->
-<div cubx-core-crc>
-     <cubx-ol cubx-dependency="this/cubx-ol/main"></cubx-ol>
+<h1>&lt;cubx-ol&gt; Demo</h1>
+<h2>Slots:</h2>
+<div>
+    <form style="width:100%;">
+        <div style="width: 100%">
+            <label for="list"><h3>list (Array):</h3></label>
+            <textarea id="list" style="height:100px;width:100%;">
+                ["First element",
+                "Second element",
+                "Third element",
+                "Fourth element"]</textarea>
+            <button id="btn_setList" disabled="disabled" style="float:right;" type="button">Set</button>
+        </div>
+        <div style="width: 100%">
+            <label for="type"><h3>type (string):</h3></label>
+            <select id="type">
+                <option>1</option>
+                <option>A</option>
+                <option>a</option>
+                <option>I</option>
+                <option>i</option>
+            </select>
+            <button id="btn_setType" disabled="disabled" type="button">Set</button>
+        </div>
+        <div style="width: 100%">
+            <label for="start"><h3>start (number):</h3></label>
+            <input type="number" id="start" value="2">
+            <button id="btn_setStart" disabled="disabled" type="button">Set</button>
+        </div>
+    </form>
 </div>
+<div style="width:100%;height:1px;background-color:#0b0b0b;display:inline-block;"></div>
+<h2>View:</h2>
+
+<div cubx-core-crc>
+    <cubx-ol cubx-dependency="this/cubx-ol/main"></cubx-ol>
+</div>
+
+<script>
+    (function(){
+        'use strict';
+
+        var list = document.getElementById('list');
+        var type = document.getElementById('type');
+        var start = document.getElementById('start');
+        var btn_setList = document.getElementById('btn_setList');
+        var btn_setType = document.getElementById('btn_setType');
+        var btn_setStart = document.getElementById('btn_setStart');
+        var cubxOl = document.getElementsByTagName('cubx-ol')[0];
+
+
+        document.addEventListener('cifReady', function() {
+            btn_setList.removeAttribute('disabled');
+            btn_setType.removeAttribute('disabled');
+            btn_setStart.removeAttribute('disabled');
+        });
+
+        btn_setList.addEventListener('click', function() {
+            var value = list.value === '' ? null : JSON.parse(list.value);
+            cubxOl.setList(value);
+        });
+
+        btn_setType.addEventListener('click', function() {
+            var value = type.value;
+            cubxOl.setType(value);
+        });
+
+        btn_setStart.addEventListener('click', function() {
+            var value = start.value;
+            cubxOl.setStart(value);
+        });
+    })()
+</script>
 
 </body>
 </html>
