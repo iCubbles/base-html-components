@@ -284,6 +284,72 @@
             ]
           }
         ]
+      },
+      {
+        "artifactId": "cubx-p",
+        "description": "P component (<p> of HTML)",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "description": "This is recommended for you use with webcomponents.",
+            "resources": [
+              "cubx-p.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.7.0/cubxpolymer/main"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "text",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          }
+        ]
+      },
+      {
+        "artifactId": "cubx-ol",
+        "description": "ol component (<ol> from HTML)",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "description": "This is recommended for you use with webcomponents.",
+            "resources": [
+              "cubx-ol.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.7.0/cubxpolymer/main"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "a",
+            "type": "number",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": 10
+          }
+        ]
       }
     ],
     "compoundComponents": [
