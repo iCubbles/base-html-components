@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>&lt;cbx-button&gt;</title>
+
+    <script src="../../../cubx.core.rte@1.7.0/webcomponents/webcomponents-lite.js"></script>
+
+    <!--
+        Refer to the crc-loader artifact from a Cubbles-Base.
+        Take care: All other dependencies are expected to be available within the same Base!
+
+        Want to add a 'main' -script to be executed after the dependencies have been loaded?
+        If yes, add the following attribute: data-crc-main="js/my-script.js"
+    -->
+    <script src="../../../cubx.core.rte@1.7.0/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+
+</head>
+<body>
+<!--
+    The cubbles client-runtime-container is bound to the next element.
+    Place Cubbles-Component there as child element.
+    Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
+-->
+<h1>&lt;cbx-button&gt; Demo</h1>
+<h2>Slots:</h2>
+<form>
+    <div style="width: 100%">
+        <label for="type"><h3>type (string):</h3></label>
+        <select id="type">
+            <option>submit</option>
+            <option>reset</option>
+            <option>button</option>
+        </select>
+        <button id="btn_setType" disabled="disabled" type="button">Set</button>
+    </div>
+    <div style="width: 100%">
+        <label for="value"><h3>value (string):</h3></label>
+        <input type="text" id="value" value="button_value">
+        <button id="btn_setValue" disabled="disabled" type="button">Set</button>
+    </div>
+
+    <div style="width: 100%">
+        <label for="text"><h3>text (string):</h3></label>
+        <input type="text" id="text" value="Button Text">
+        <button id="btn_setText" disabled="disabled" type="button">Set</button>
+    </div>
+</form>
+<div style="width:100%;height:1px;background-color:#0b0b0b;display:inline-block;"></div>
+<h2>View</h2>
+<div cubx-core-crc>
+    <cubx-button cubx-dependency="this/cubx-button/main"></cubx-button>
+</div>
+
+<script>
+    (function(){
+        'use strict';
+
+        var btn_setType = document.getElementById('btn_setType');
+        var btn_setValue = document.getElementById('btn_setValue');
+        var btn_setText = document.getElementById('btn_setText');
+        var value = document.getElementById('value');
+        var type = document.getElementById('type');
+        var text = document.getElementById('text');
+
+        var cubxButton = document.getElementsByTagName('cubx-button')[0];
+
+        document.addEventListener('cifReady', function() {
+            btn_setValue.removeAttribute('disabled');
+            btn_setType.removeAttribute('disabled');
+            btn_setText.removeAttribute('disabled');
+        });
+
+        btn_setValue.addEventListener('click', function() {
+            var text = value.value;
+            cubxButton.setValue(text);
+        });
+
+        btn_setType.addEventListener('click', function() {
+            var value = type.value;
+            cubxButton.setType(value);
+        });
+
+        btn_setText.addEventListener('click', function() {
+            var value = text.value;
+            cubxButton.setText(value);
+        });
+    })()
+</script>
+
+</body>
+</html>

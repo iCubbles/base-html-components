@@ -238,6 +238,52 @@
             ]
           }
         ]
+      },
+      {
+        "artifactId": "cubx-button",
+        "description": "Button component",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "description": "This is recommended for you use with webcomponents.",
+            "resources": [
+              "cubx-button.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.7.0/cubxpolymer/main"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "type",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "value",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "text",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          }
+        ]
       }
     ],
     "compoundComponents": [
