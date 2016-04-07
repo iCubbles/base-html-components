@@ -170,8 +170,7 @@
      *  Called when slot 'height' has changed
      */
     modelRightTextChanged: function (rightText) {
-      // update the view
-      this.$.rightText.innerHTML = rightText;
+      
     }
 
 
