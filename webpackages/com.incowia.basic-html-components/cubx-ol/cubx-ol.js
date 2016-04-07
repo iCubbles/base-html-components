@@ -17,7 +17,7 @@
       'A',
       'a',
       'I',
-      'i',
+      'i'
     ],
 
     /**
@@ -58,8 +58,9 @@
      */
     modelTypeChanged: function (newType) {
       if (typeof newType === 'string' && this._validTypes.indexOf(newType) === -1) {
-        console.log('type : "' + newType + '" is not a valid input type. Using type "1" instead.');
-        newType = '1';
+        console.log('type : "' + newType + '" is not a valid input type. Using type '
+          + this._validTypes[0] + ' instead.');
+        newType = this._validTypes[0];
       }
       this.$.ol.setAttribute('type', newType);
     },

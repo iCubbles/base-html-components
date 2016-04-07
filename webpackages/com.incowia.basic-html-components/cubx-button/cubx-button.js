@@ -12,6 +12,12 @@
   CubxPolymer({
     is: 'cubx-button',
 
+    _validTypes:[
+      'submit',
+      'reset',
+      'button',
+    ],
+
     /**
      * Manipulate an element’s local DOM when the element is created.
      */
@@ -40,6 +46,11 @@
      *  Observe the Cubbles-Component-Model: If value for slot 'type' has changed
      */
     modelTypeChanged: function (newType) {
+      if (typeof newType === 'string' && this._validTypes.indexOf(newType) === -1) {
+        console.log('type : "' + newType + '" is not a valid input type. Using type '
+          + this._validTypes[0] + ' instead.');
+        newType = this._validTypes[0];
+      }
       // update the view
       this.$.button.setAttribute('type', newType);
     },

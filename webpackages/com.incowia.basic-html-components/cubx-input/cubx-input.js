@@ -70,8 +70,9 @@
      */
     modelTypeChanged: function (type) {
       if (typeof type === 'string' && this._validTypes.indexOf(type) === -1) {
-        console.log('type : "' + type + '" is not a valid input type. Using type "text" instead.');
-        type = 'text';
+        console.log('type : "' + type + '" is not a valid input type. Using type '
+          + this._validTypes[0] + ' instead.');
+        type = this._validTypes[0];
       }
       // update the view
       this.$.input.setAttribute('type', type);
