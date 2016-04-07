@@ -34,6 +34,12 @@
         <button id="btn_set" disabled="disabled" type="button">Set</button>
     </div>
 
+    <div style="width: 100%">
+        <label for="rightText"><h3>alt (sting):</h3></label>
+        <input type="text" id="rightText" value="Right text">
+        <button id="btn_setRightText" disabled="disabled" type="button">Set</button>
+    </div>
+
 </form>
 <div style="width:100%;height:1px;background-color:#0b0b0b;display:inline-block;"></div>
 <h2>View</h2>
@@ -46,17 +52,25 @@
         'use strict';
 
         var btn_set = document.getElementById('btn_set');
+        var btn_setRightText = document.getElementById('btn_setRightText');
         var trueRadio = document.getElementById('trueRadio');
+        var rightText = document.getElementById('rightText');
 
         var cubxCheckbox = document.getElementsByTagName('cubx-checkbox')[0];
 
         document.addEventListener('cifReady', function() {
             btn_set.removeAttribute('disabled');
+            btn_setRightText.removeAttribute('disabled');
         });
 
         btn_set.addEventListener('click', function() {
             var checked = trueRadio.checked;
             cubxCheckbox.setChecked(checked);
+        });
+
+        btn_setRightText.addEventListener('click', function() {
+            var value = rightText.value;
+            cubxCheckbox.setRightText(value);
         });
     })()
 </script>

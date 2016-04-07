@@ -163,6 +163,14 @@
     modelWidthChanged: function (width) {
       // update the view
       this.$.input.setAttribute('width', width);
+    },
+
+    /**
+     *  Called when slot 'height' has changed
+     */
+    modelRightTextChanged: function (rightText) {
+      // update the view
+      this.$.rightText.innerHTML = rightText;
     }
 
 

@@ -39,6 +39,12 @@
         <button id="btn_setName" disabled="disabled" type="button">Set name</button>
     </div>
 
+    <div style="width: 100%">
+        <label for="rightText"><h3>alt (sting):</h3></label>
+        <input type="text" id="rightText" value="Right text">
+        <button id="btn_setRightText" disabled="disabled" type="button">Set</button>
+    </div>
+
 </form>
 <div style="width:100%;height:1px;background-color:#0b0b0b;display:inline-block;"></div>
 <h2>View</h2>
@@ -52,14 +58,17 @@
 
         var btn_set = document.getElementById('btn_set');
         var btn_setName = document.getElementById('btn_setName');
+        var btn_setRightText = document.getElementById('btn_setRightText');
         var trueRadio = document.getElementById('trueRadio');
         var nameAttribute = document.getElementById('nameAttribute');
+        var rightText = document.getElementById('rightText');
 
         var cubxRadioButton = document.getElementsByTagName('cubx-radio-button')[0];
 
         document.addEventListener('cifReady', function() {
             btn_set.removeAttribute('disabled');
             btn_setName.removeAttribute('disabled');
+            btn_setRightText.removeAttribute('disabled');
         });
 
         btn_set.addEventListener('click', function() {
@@ -70,6 +79,11 @@
         btn_setName.addEventListener('click', function() {
             var name = nameAttribute.value;
             cubxRadioButton.setName(name);
+        });
+
+        btn_setRightText.addEventListener('click', function() {
+            var value = rightText.value;
+            cubxRadioButton.setRightText(value);
         });
 
     })()
