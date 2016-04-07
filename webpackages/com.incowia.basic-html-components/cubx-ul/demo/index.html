@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>&lt;cubx-ul&gt;</title>
+
+    <script src="../../../cubx.core.rte@1.7.0/webcomponents/webcomponents-lite.js"></script>
+
+    <!--
+        Refer to the crc-loader artifact from a Cubbles-Base.
+        Take care: All other dependencies are expected to be available within the same Base!
+
+        Want to add a 'main' -script to be executed after the dependencies have been loaded?
+        If yes, add the following attribute: data-crc-main="js/my-script.js"
+    -->
+    <script src="../../../cubx.core.rte@1.7.0/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+
+</head>
+<body>
+<!--
+    The cubbles client-runtime-container is bound to the next element.
+    Place Cubbles-Component there as child element.
+    Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
+-->
+<h1>&lt;cubx-ul&gt; Demo</h1>
+<h2>Slots:</h2>
+<div>
+    <form style="width:100%;">
+        <div style="width: 100%">
+            <label for="list"><h3>list (Array):</h3></label>
+            <textarea id="list" style="height:100px;width:100%;">
+                ["First element",
+                "Second element",
+                "Third element",
+                "Fourth element"]</textarea>
+            <button id="btn_setList" disabled="disabled" style="float:right;" type="button">Set</button>
+        </div>
+    </form>
+</div>
+<div style="width:100%;height:1px;background-color:#0b0b0b;display:inline-block;"></div>
+<h2>View:</h2>
+
+<div cubx-core-crc>
+    <cubx-ul cubx-dependency="this/cubx-ul/main"></cubx-ul>
+</div>
+
+<script>
+    (function(){
+        'use strict';
+
+        var list = document.getElementById('list');
+        var btn_setList = document.getElementById('btn_setList');
+        var cubxUl = document.getElementsByTagName('cubx-ul')[0];
+
+
+        document.addEventListener('cifReady', function() {
+            btn_setList.removeAttribute('disabled');
+        });
+
+        btn_setList.addEventListener('click', function() {
+            var value = list.value === '' ? null : JSON.parse(list.value);
+            cubxUl.setList(value);
+        });
+    })()
+</script>
+
+</body>
+</html>

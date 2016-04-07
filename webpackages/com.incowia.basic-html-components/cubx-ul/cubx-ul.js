@@ -10,15 +10,7 @@
    * slot 'a': this.getA(); | this.setA(value)
    */
   CubxPolymer({
-    is: 'cubx-ol',
-
-    _validTypes:[
-      '1',
-      'A',
-      'a',
-      'I',
-      'i',
-    ],
+    is: 'cubx-ul',
 
     /**
      * Manipulate an element’s local DOM when the element is created.
@@ -54,41 +46,22 @@
     },
 
     /**
-     *  Observe the Cubbles-Component-Model: If value for slot 'type' has changed ...
-     */
-    modelTypeChanged: function (newType) {
-      if (typeof newType === 'string' && this._validTypes.indexOf(newType) === -1) {
-        console.log('type : "' + newType + '" is not a valid input type. Using type "1" instead.');
-        newType = '1';
-      }
-      this.$.ol.setAttribute('type', newType);
-    },
-
-    /**
-     *  Observe the Cubbles-Component-Model: If value for slot 'start' has changed ...
-     */
-    modelStartChanged: function (newStart) {
-      // update the view
-      this.$.ol.setAttribute('start', newStart);
-    },
-
-    /**
-     * Fill the list of the ol component
+     * Fill the ol list
      * @private
      */
     _fillOlList: function () {
       var list = this.getList() || [];
       for (var i in list) {
-       this.$.ol.appendChild(this._createLiElement(list[i]));
+        this.$.ul.appendChild(this._createLiElement(list[i]));
       }
     },
 
     /**
-     * Empty the ol list
+     * Clear the ul list
      * @private
      */
     _emptyOlList: function () {
-      this.$.ol.innerHTML = "";
+      this.$.ul.innerHTML = "";
     },
 
     /**
