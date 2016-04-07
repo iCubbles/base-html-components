@@ -394,6 +394,59 @@
             ]
           }
         ]
+      },
+      {
+        "artifactId": "cubx-img",
+        "description": "img component (<img> from HTML)",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "description": "This is recommended for you use with webcomponents.",
+            "resources": [
+              "cubx-img.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.7.0/cubxpolymer/main"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "alt",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "height",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "width",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "src",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          }
+        ]
       }
     ],
     "compoundComponents": [
