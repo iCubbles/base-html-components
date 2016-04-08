@@ -73,6 +73,13 @@
     },
 
     /**
+     *  Called when slot 'label' has changed
+     */
+    modelLabelChanged: function (label) {
+
+    },
+
+    /**
      * Fill the options of the select component
      * @private
      */

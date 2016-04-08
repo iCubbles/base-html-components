@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>&lt;cbx-image-input&gt;</title>
+    <title>&lt;cubx-image-input&gt;</title>
 
     <script src="../../../cubx.core.rte@1.7.0/webcomponents/webcomponents-lite.js"></script>
 
@@ -22,13 +22,18 @@
     Place Cubbles-Component there as child element.
     Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
 -->
-<h1>&lt;cbx-image-input&gt; Demo</h1>
+<h1>&lt;cubx-image-input&gt; Demo</h1>
 <h2>Slots:</h2>
 <form>
     <div style="width: 100%">
         <label for="srcValue"><h3>src (string):</h3></label>
         <input type="text" id="srcValue" disabled value="img/img.png">
         <button id="btn_setSrc" disabled="disabled" type="button">Set src</button>
+    </div>
+    <div style="width: 100%">
+        <label for="label"><h3>label (sting):</h3></label>
+        <input type="text" id="label" value="Label text">
+        <button id="btn_setLabel" disabled="disabled" type="button">Set</button>
     </div>
     <div style="width: 100%">
         <label for="widthValue"><h3>width (number):</h3></label>
@@ -60,6 +65,8 @@
         var btn_setWidth = document.getElementById('btn_setWidth');
         var btn_setHeight = document.getElementById('btn_setHeight');
         var btn_setAlt = document.getElementById('btn_setAlt');
+        var btn_setLabel = document.getElementById('btn_setLabel');
+        var label = document.getElementById('label');
         var src = document.getElementById('srcValue');
         var width = document.getElementById('widthValue');
         var height = document.getElementById('heightValue');
@@ -72,6 +79,7 @@
             btn_setWidth.removeAttribute('disabled');
             btn_setHeight.removeAttribute('disabled');
             btn_setAlt.removeAttribute('disabled');
+            btn_setLabel.removeAttribute('disabled');
         });
 
         btn_setSrc.addEventListener('click', function() {
@@ -92,6 +100,11 @@
         btn_setAlt.addEventListener('click', function() {
             var value = alt.value;
             cubxImageInput.setAlt(value);
+        });
+
+        btn_setLabel.addEventListener('click', function() {
+            var value = label.value;
+            cubxImageInput.setLabel(value);
         });
     })()
 </script>

@@ -167,10 +167,17 @@
     },
 
     /**
-     *  Called when slot 'height' has changed
+     *  Called when slot 'rightText' has changed
      */
     modelRightTextChanged: function (rightText) {
       
+    },
+
+    /**
+     *  Called when slot 'label' has changed
+     */
+    modelLabelChanged: function (label) {
+
     }
 
 

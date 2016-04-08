@@ -84,6 +84,13 @@
     modelColsChanged: function (newColumns) {
       // update the view
       this.$.textarea.setAttribute('cols', newColumns);
+    },
+    
+    /**
+     *  Called when slot 'label' has changed
+     */
+    modelLabelChanged: function (label) {
+
     }
   });
 }());

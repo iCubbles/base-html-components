@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>&lt;cbx-file-input&gt;</title>
+    <title>&lt;cubx-file-input&gt;</title>
 
     <script src="../../../cubx.core.rte@1.7.0/webcomponents/webcomponents-lite.js"></script>
 
@@ -23,9 +23,15 @@
     Place Cubbles-Component there as child element.
     Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
 -->
-<h1>&lt;cbx-file-input&gt; Demo</h1>
+<h1>&lt;cubx-file-input&gt; Demo</h1>
 <h2>Slots:</h2>
 <form>
+    <div style="width: 100%">
+        <label for="label"><h3>label (sting):</h3></label>
+        <input type="text" id="label" value="Label text">
+        <button id="btn_setLabel" disabled="disabled" type="button">Set</button>
+    </div>
+
     <div style="width: 100%">
         <label for="acceptOption"><h3>accept (string):</h3></label>
         <select id="acceptOption">
@@ -47,17 +53,25 @@
         'use strict';
 
         var btn_set = document.getElementById('btn_set');
+        var btn_setLabel = document.getElementById('btn_setLabel');
+        var label = document.getElementById('label');
         var acceptOption = document.getElementById('acceptOption');
 
-        var cubxDateInput = document.getElementsByTagName('cubx-file-input')[0];
+        var cubxfileInput = document.getElementsByTagName('cubx-file-input')[0];
 
         document.addEventListener('cifReady', function() {
             btn_set.removeAttribute('disabled');
+            btn_setLabel.removeAttribute('disabled');
         });
 
         btn_set.addEventListener('click', function() {
             var accept = acceptOption.value;
-            cubxDateInput.setAccept(accept);
+            cubxfileInput.setAccept(accept);
+        });
+
+        btn_setLabel.addEventListener('click', function() {
+            var value = label.value;
+            cubxfileInput.setLabel(value);
         });
     })()
 </script>

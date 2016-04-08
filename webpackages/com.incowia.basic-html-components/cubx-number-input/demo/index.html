@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>&lt;cbx-number-input&gt;</title>
+    <title>&lt;cubx-number-input&gt;</title>
 
     <script src="../../../cubx.core.rte@1.7.0/webcomponents/webcomponents-lite.js"></script>
 
@@ -23,9 +23,15 @@
     Place Cubbles-Component there as child element.
     Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
 -->
-<h1>&lt;cbx-number-input&gt; Demo</h1>
+<h1>&lt;cubx-number-input&gt; Demo</h1>
 <h2>Slots:</h2>
 <form>
+    <div style="width: 100%">
+        <label for="label"><h3>label (sting):</h3></label>
+        <input type="text" id="label" value="Label text">
+        <button id="btn_setLabel" disabled="disabled" type="button">Set</button>
+    </div>
+
     <div style="width: 100%">
         <label for="typeValue"><h3>subtype (string):</h3></label>
         <select id="typeValue">
@@ -66,6 +72,8 @@
         var btn_setMin = document.getElementById('btn_setMin');
         var btn_setMax = document.getElementById('btn_setMax');
         var btn_setStep = document.getElementById('btn_setStep');
+        var btn_setLabel = document.getElementById('btn_setLabel');
+        var label = document.getElementById('label');
         var type = document.getElementById('typeValue');
         var min = document.getElementById('minValue');
         var max = document.getElementById('maxValue');
@@ -78,6 +86,7 @@
             btn_setMin.removeAttribute('disabled');
             btn_setMax.removeAttribute('disabled');
             btn_setStep.removeAttribute('disabled');
+            btn_setLabel.removeAttribute('disabled');
         });
 
         btn_setType.addEventListener('click', function() {
@@ -98,6 +107,11 @@
         btn_setStep.addEventListener('click', function() {
             var value = step.value;
             cubxNumberInput.setStep(value);
+        });
+
+        btn_setLabel.addEventListener('click', function() {
+            var value = label.value;
+            cubxNumberInput.setLabel(value);
         });
     })()
 </script>

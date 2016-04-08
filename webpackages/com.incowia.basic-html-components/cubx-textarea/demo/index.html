@@ -27,6 +27,12 @@
 <h2>Slots:</h2>
 <form>
     <div style="width: 100%">
+        <label for="label"><h3>label (sting):</h3></label>
+        <input type="text" id="label" value="Label text">
+        <button id="btn_setLabel" disabled="disabled" type="button">Set</button>
+    </div>
+
+    <div style="width: 100%">
         <label for="value"><h3>value (string):</h3></label>
         <textarea id="value">Text for the text area</textarea>
         <button id="btn_setValue" disabled="disabled" type="button">Set</button>
@@ -71,6 +77,8 @@
         var btn_setRows = document.getElementById('btn_setRows');
         var btn_setMinLength = document.getElementById('btn_setMinLength');
         var btn_setMaxLength = document.getElementById('btn_setMaxLength');
+        var btn_setLabel = document.getElementById('btn_setLabel');
+        var label = document.getElementById('label');
         var value = document.getElementById('value');
         var columns = document.getElementById('columns');
         var rows = document.getElementById('rows');
@@ -85,6 +93,7 @@
             btn_setRows.removeAttribute('disabled');
             btn_setMinLength.removeAttribute('disabled');
             btn_setMaxLength.removeAttribute('disabled');
+            btn_setLabel.removeAttribute('disabled');
         });
 
         btn_setValue.addEventListener('click', function() {
@@ -110,6 +119,11 @@
         btn_setMaxLength.addEventListener('click', function() {
             var value = maxLength.value;
             cubxTextarea.setMaxLength(value);
+        });
+
+        btn_setLabel.addEventListener('click', function() {
+            var value = label.value;
+            cubxTextarea.setLabel(value);
         });
     })()
 </script>

@@ -27,11 +27,18 @@
 <h2>Slots:</h2>
 <div>
     <form style="width:100%;">
-        <label for="options"><h3>options (Array):</h3></label>
-            <textarea id="options" style="height:100px;width:100%;">[["option1Value", "Option 1 text"],
-                ["option2Value", "Option 2 text"],
-                ["option3Value", "Option 3 text"]]</textarea>
-        <button id="btn_set" disabled="disabled" style="float:right;" type="button">Set</button>
+        <div style="width: 100%">
+            <label for="label"><h3>label (sting):</h3></label>
+            <input type="text" id="label" value="Label text">
+            <button id="btn_setLabel" disabled="disabled" type="button">Set</button>
+        </div>
+        <div style="width: 100%">
+            <label for="options"><h3>options (Array):</h3></label>
+                <textarea id="options" style="height:100px;width:100%;">[["option1Value", "Option 1 text"],
+                    ["option2Value", "Option 2 text"],
+                    ["option3Value", "Option 3 text"]]</textarea>
+            <button id="btn_set" disabled="disabled" style="float:right;" type="button">Set</button>
+        </div>
     </form>
 </div>
 <div style="width:100%;height:1px;background-color:#0b0b0b;display:inline-block;"></div>
@@ -47,16 +54,24 @@
 
         var options = document.getElementById('options');
         var btn_set = document.getElementById('btn_set');
+        var btn_setLabel = document.getElementById('btn_setLabel');
+        var label = document.getElementById('label');
         var cubxSelect = document.getElementsByTagName('cubx-select')[0];
 
 
         document.addEventListener('cifReady', function() {
             btn_set.removeAttribute('disabled');
+            btn_setLabel.removeAttribute('disabled');
         });
 
         btn_set.addEventListener('click', function() {
             var value = options.value === '' ? null : JSON.parse(options.value);
             cubxSelect.setOptions(value);
+        });
+
+        btn_setLabel.addEventListener('click', function() {
+            var value = label.value;
+            cubxSelect.setLabel(value);
         });
     })()
 </script>
