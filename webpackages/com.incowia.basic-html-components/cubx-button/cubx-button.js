@@ -77,6 +77,21 @@
     modelOnclickChanged: function (newValue) {
       // update the view
       document.getElementById(this.getId()).setAttribute('onclick', newValue);
-    }
+    },
+
+    /**
+     *  Called when slot 'name' has changed
+     */
+    modelNameChanged: function (name) {
+      // update the view
+      document.getElementById(this.getId()).setAttribute('name', name);
+    },
+
+    /**
+     *  Called when slot 'disabled' has changed
+     */
+    modelDisabledChanged: function (disabled) {
+      document.getElementById(this.getId()).disabled = disabled;
+    },
   });
 }());

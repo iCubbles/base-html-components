@@ -119,14 +119,6 @@
     },
 
     /**
-     *  Called when slot 'step' has changed
-     */
-    modelNameChanged: function (name) {
-      // update the view
-      document.getElementById(this.getId()).setAttribute('name', name);
-    },
-
-    /**
      *  Called when slot 'accept' has changed
      */
     modelAcceptChanged: function (accept) {
@@ -167,17 +159,32 @@
     },
 
     /**
-     *  Called when slot 'rightText' has changed
+     *  Called when slot 'name' has changed
      */
-    modelRightTextChanged: function (rightText) {
-      
+    modelNameChanged: function (name) {
+      // update the view
+      document.getElementById(this.getId()).setAttribute('name', name);
     },
 
     /**
-     *  Called when slot 'label' has changed
+     *  Called when slot 'disabled' has changed
      */
-    modelLabelChanged: function (label) {
+    modelDisabledChanged: function (disabled) {
+      document.getElementById(this.getId()).disabled = disabled;
+    },
 
+    /**
+     *  Called when slot 'readonly' has changed
+     */
+    modelReadonlyChanged: function (readonly) {
+      document.getElementById(this.getId()).readOnly = readonly;
+    },
+
+    /**
+     *  Called when slot 'required' has changed
+     */
+    modelRequiredChanged: function (required) {
+      document.getElementById(this.getId()).required = required;
     }
 
 

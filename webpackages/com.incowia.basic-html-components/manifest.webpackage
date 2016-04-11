@@ -53,6 +53,34 @@
             ]
           },
           {
+            "slotId": "name",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "required",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "readonly",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "disabled",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
             "slotId": "label",
             "type": "string",
             "direction": [
@@ -98,13 +126,6 @@
           {
             "slotId": "checked",
             "type": "boolean",
-            "direction": [
-              "input"
-            ]
-          },
-          {
-            "slotId": "name",
-            "type": "string",
             "direction": [
               "input"
             ]
@@ -193,6 +214,27 @@
             ]
           },
           {
+            "slotId": "name",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "required",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "disabled",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
             "slotId": "label",
             "type": "string",
             "direction": [
@@ -252,6 +294,34 @@
             "direction": [
               "input",
               "output"
+            ]
+          },
+          {
+            "slotId": "required",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "readonly",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "disabled",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "name",
+            "type": "string",
+            "direction": [
+              "input"
             ]
           },
           {
@@ -321,6 +391,20 @@
               "input"
             ],
             "value": "buttonId"
+          },
+          {
+            "slotId": "name",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "disabled",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
           },
           {
             "slotId": "onclick",
@@ -548,6 +632,34 @@
             "value": "inputId"
           },
           {
+            "slotId": "name",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "required",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "readonly",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "disabled",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
             "slotId": "placeholder",
             "type": "string",
             "direction": [
@@ -616,6 +728,46 @@
               "memberIdRef": "input1",
               "slot": "value"
             }
+          },
+          {
+            "connectionId": "con8",
+            "source": {
+              "slot": "name"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "name"
+            }
+          },
+          {
+            "connectionId": "con9",
+            "source": {
+              "slot": "required"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "required"
+            }
+          },
+          {
+            "connectionId": "con10",
+            "source": {
+              "slot": "readonly"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "readonly"
+            }
+          },
+          {
+            "connectionId": "con11",
+            "source": {
+              "slot": "disabled"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "disabled"
+            }
           }
         ],
         "inits": [
@@ -651,6 +803,34 @@
           {
             "slotId": "id",
             "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "required",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "name",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "readonly",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "disabled",
+            "type": "boolean",
             "direction": [
               "input"
             ]
@@ -775,6 +955,46 @@
               "memberIdRef": "input1",
               "slot": "value"
             }
+          },
+          {
+            "connectionId": "con8",
+            "source": {
+              "slot": "name"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "name"
+            }
+          },
+          {
+            "connectionId": "con9",
+            "source": {
+              "slot": "required"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "required"
+            }
+          },
+          {
+            "connectionId": "con10",
+            "source": {
+              "slot": "readonly"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "readonly"
+            }
+          },
+          {
+            "connectionId": "con11",
+            "source": {
+              "slot": "disabled"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "disabled"
+            }
           }
         ],
         "inits": [
@@ -809,6 +1029,34 @@
         "slots": [
           {
             "slotId": "id",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "required",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "readonly",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "disabled",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "name",
             "type": "string",
             "direction": [
               "input"
@@ -899,6 +1147,46 @@
             "destination": {
               "memberIdRef": "input1",
               "slot": "value"
+            }
+          },
+          {
+            "connectionId": "con7",
+            "source": {
+              "slot": "name"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "name"
+            }
+          },
+          {
+            "connectionId": "con8",
+            "source": {
+              "slot": "required"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "required"
+            }
+          },
+          {
+            "connectionId": "con9",
+            "source": {
+              "slot": "readonly"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "readonly"
+            }
+          },
+          {
+            "connectionId": "con10",
+            "source": {
+              "slot": "disabled"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "disabled"
             }
           }
         ],
@@ -940,7 +1228,21 @@
             ]
           },
           {
-            "slotId": "checked",
+            "slotId": "required",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "readonly",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "disabled",
             "type": "boolean",
             "direction": [
               "input"
@@ -949,6 +1251,13 @@
           {
             "slotId": "name",
             "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "checked",
+            "type": "boolean",
             "direction": [
               "input"
             ]
@@ -1042,6 +1351,36 @@
               "memberIdRef": "input1",
               "slot": "value"
             }
+          },
+          {
+            "connectionId": "con8",
+            "source": {
+              "slot": "required"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "required"
+            }
+          },
+          {
+            "connectionId": "con9",
+            "source": {
+              "slot": "readonly"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "readonly"
+            }
+          },
+          {
+            "connectionId": "con10",
+            "source": {
+              "slot": "disabled"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "disabled"
+            }
           }
         ],
         "inits": [
@@ -1077,6 +1416,34 @@
           {
             "slotId": "id",
             "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "name",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "required",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "readonly",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "disabled",
+            "type": "boolean",
             "direction": [
               "input"
             ]
@@ -1133,6 +1500,46 @@
               "memberIdRef": "input1",
               "slot": "value"
             }
+          },
+          {
+            "connectionId": "con4",
+            "source": {
+              "slot": "name"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "name"
+            }
+          },
+          {
+            "connectionId": "con5",
+            "source": {
+              "slot": "required"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "required"
+            }
+          },
+          {
+            "connectionId": "con6",
+            "source": {
+              "slot": "readonly"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "readonly"
+            }
+          },
+          {
+            "connectionId": "con7",
+            "source": {
+              "slot": "disabled"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "disabled"
+            }
           }
         ],
         "inits": [
@@ -1168,6 +1575,34 @@
           {
             "slotId": "id",
             "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "name",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "required",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "readonly",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "disabled",
+            "type": "boolean",
             "direction": [
               "input"
             ]
@@ -1241,6 +1676,46 @@
               "memberIdRef": "input1",
               "slot": "value"
             }
+          },
+          {
+            "connectionId": "con5",
+            "source": {
+              "slot": "name"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "name"
+            }
+          },
+          {
+            "connectionId": "con6",
+            "source": {
+              "slot": "required"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "required"
+            }
+          },
+          {
+            "connectionId": "con7",
+            "source": {
+              "slot": "readonly"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "readonly"
+            }
+          },
+          {
+            "connectionId": "con8",
+            "source": {
+              "slot": "disabled"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "disabled"
+            }
           }
         ],
         "inits": [
@@ -1276,6 +1751,34 @@
           {
             "slotId": "id",
             "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "name",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "required",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "readonly",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "disabled",
+            "type": "boolean",
             "direction": [
               "input"
             ]
@@ -1399,6 +1902,46 @@
             "destination": {
               "memberIdRef": "input1",
               "slot": "value"
+            }
+          },
+          {
+            "connectionId": "con8",
+            "source": {
+              "slot": "name"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "name"
+            }
+          },
+          {
+            "connectionId": "con9",
+            "source": {
+              "slot": "required"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "required"
+            }
+          },
+          {
+            "connectionId": "con10",
+            "source": {
+              "slot": "readonly"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "readonly"
+            }
+          },
+          {
+            "connectionId": "con11",
+            "source": {
+              "slot": "disabled"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "disabled"
             }
           }
         ],

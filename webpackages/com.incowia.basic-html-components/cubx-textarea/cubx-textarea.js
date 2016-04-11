@@ -51,7 +51,7 @@
     modelValueChanged: function (newValue) {
       // update the view
       //this.$.textarea.setAttribute('value', newValue);
-      this.$.textarea.value = newValue;
+     document.getElementById(this.getId()).value = newValue;
     },
 
     /**
@@ -59,7 +59,7 @@
      */
     modelMinLengthChanged: function (newMinLength) {
       // update the view
-      this.$.textarea.setAttribute('minLength', newMinLength);
+     document.getElementById(this.getId()).setAttribute('minLength', newMinLength);
     },
 
     /**
@@ -67,7 +67,7 @@
      */
     modelMaxLengthChanged: function (newMaxLength) {
       // update the view
-      this.$.textarea.setAttribute('maxLength', newMaxLength);
+     document.getElementById(this.getId()).setAttribute('maxLength', newMaxLength);
     },
 
     /**
@@ -75,7 +75,7 @@
      */
     modelRowsChanged: function (newRows) {
       // update the view
-      this.$.textarea.setAttribute('rows', newRows);
+     document.getElementById(this.getId()).setAttribute('rows', newRows);
     },
 
     /**
@@ -83,14 +83,37 @@
      */
     modelColsChanged: function (newColumns) {
       // update the view
-      this.$.textarea.setAttribute('cols', newColumns);
+     document.getElementById(this.getId()).setAttribute('cols', newColumns);
     },
-    
-    /**
-     *  Called when slot 'label' has changed
-     */
-    modelLabelChanged: function (label) {
 
+    /**
+     *  Called when slot 'name' has changed
+     */
+    modelNameChanged: function (name) {
+      // update the view
+      document.getElementById(this.getId()).setAttribute('name', name);
+    },
+
+    /**
+     *  Called when slot 'disabled' has changed
+     */
+    modelDisabledChanged: function (disabled) {
+      document.getElementById(this.getId()).disabled = disabled;
+    },
+
+    /**
+     *  Called when slot 'readonly' has changed
+     */
+    modelReadonlyChanged: function (readonly) {
+      document.getElementById(this.getId()).readOnly = readonly;
+    },
+
+    /**
+     *  Called when slot 'required' has changed
+     */
+    modelRequiredChanged: function (required) {
+      document.getElementById(this.getId()).required = required;
     }
+
   });
 }());
