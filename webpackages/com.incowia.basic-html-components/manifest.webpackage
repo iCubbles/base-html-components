@@ -32,7 +32,7 @@
               "cubx-input.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0/cubxpolymer/main"
+              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main"
             ]
           }
         ],
@@ -171,7 +171,7 @@
               "cubx-select.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0/cubxpolymer/main"
+              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main"
             ]
           }
         ],
@@ -233,7 +233,7 @@
               "cubx-textarea.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0/cubxpolymer/main"
+              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main"
             ]
           }
         ],
@@ -291,6 +291,7 @@
           }
         ]
       },
+
       {
         "artifactId": "cubx-button",
         "description": "Button component",
@@ -309,7 +310,7 @@
               "cubx-button.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0/cubxpolymer/main"
+              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main"
             ]
           }
         ],
@@ -321,6 +322,13 @@
               "input"
             ],
             "value": "buttonId"
+          },
+          {
+            "slotId": "onclick",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
           },
           {
             "slotId": "type",
@@ -370,7 +378,7 @@
               "cubx-p.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0/cubxpolymer/main"
+              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main"
             ]
           }
         ],
@@ -402,7 +410,7 @@
               "cubx-ol.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0/cubxpolymer/main"
+              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main"
             ]
           }
         ],
@@ -448,7 +456,7 @@
               "cubx-ul.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0/cubxpolymer/main"
+              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main"
             ]
           }
         ],
@@ -480,7 +488,7 @@
               "cubx-img.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0/cubxpolymer/main"
+              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main"
             ]
           }
         ],

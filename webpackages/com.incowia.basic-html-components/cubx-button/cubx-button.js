@@ -69,6 +69,14 @@
     modelTextChanged: function (newText) {
       // update the view
       document.getElementById(this.getId()).innerHTML = newText;
+    },
+
+    /**
+     *  Observe the Cubbles-Component-Model: If value for slot 'onclick' has changed
+     */
+    modelOnclickChanged: function (newValue) {
+      // update the view
+      document.getElementById(this.getId()).setAttribute('onclick', newValue);
     }
   });
 }());
