@@ -337,13 +337,6 @@
             ]
           },
           {
-            "slotId": "label",
-            "type": "string",
-            "direction": [
-              "input"
-            ]
-          },
-          {
             "slotId": "value",
             "type": "string",
             "direction": [
