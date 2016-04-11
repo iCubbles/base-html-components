@@ -26,6 +26,11 @@
 <h2>Slots:</h2>
 <form>
     <div style="width: 100%">
+        <label for="id"><h3>id (string):</h3></label>
+        <input type="text" id="id" value="component_id">
+        <button id="btn_setId" disabled="disabled" type="button">Set</button>
+    </div>
+    <div style="width: 100%">
         <label for="srcValue"><h3>src (string):</h3></label>
         <input type="text" id="srcValue" disabled value="img/img.png">
         <button id="btn_setSrc" disabled="disabled" type="button">Set src</button>
@@ -66,13 +71,15 @@
         var btn_setHeight = document.getElementById('btn_setHeight');
         var btn_setAlt = document.getElementById('btn_setAlt');
         var btn_setLabel = document.getElementById('btn_setLabel');
+        var btn_setId = document.getElementById('btn_setId');
+        var id = document.getElementById('id');
         var label = document.getElementById('label');
         var src = document.getElementById('srcValue');
         var width = document.getElementById('widthValue');
         var height = document.getElementById('heightValue');
         var alt = document.getElementById('altValue');
 
-        var cubxImageInput = document.getElementsByTagName('cubx-image-input')[0];
+        var cubxHtmlComponent = document.getElementsByTagName('cubx-image-input')[0];
 
         document.addEventListener('cifReady', function() {
             btn_setSrc.removeAttribute('disabled');
@@ -80,31 +87,37 @@
             btn_setHeight.removeAttribute('disabled');
             btn_setAlt.removeAttribute('disabled');
             btn_setLabel.removeAttribute('disabled');
+            btn_setId.removeAttribute('disabled');
+        });
+
+        btn_setId.addEventListener('click', function() {
+            var value = id.value;
+            cubxHtmlComponent.setId(value);
         });
 
         btn_setSrc.addEventListener('click', function() {
             var value = src.value;
-            cubxImageInput.setSrc(value);
+            cubxHtmlComponent.setSrc(value);
         });
 
         btn_setWidth.addEventListener('click', function() {
             var value = width.value;
-            cubxImageInput.setWidth(value);
+            cubxHtmlComponent.setWidth(value);
         });
 
         btn_setHeight.addEventListener('click', function() {
             var value = height.value;
-            cubxImageInput.setHeight(value);
+            cubxHtmlComponent.setHeight(value);
         });
 
         btn_setAlt.addEventListener('click', function() {
             var value = alt.value;
-            cubxImageInput.setAlt(value);
+            cubxHtmlComponent.setAlt(value);
         });
 
         btn_setLabel.addEventListener('click', function() {
             var value = label.value;
-            cubxImageInput.setLabel(value);
+            cubxHtmlComponent.setLabel(value);
         });
     })()
 </script>

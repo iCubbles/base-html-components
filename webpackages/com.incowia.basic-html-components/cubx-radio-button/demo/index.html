@@ -27,6 +27,11 @@
 <h2>Slots:</h2>
 <form>
     <div style="width: 100%">
+        <label for="id"><h3>id (string):</h3></label>
+        <input type="text" id="id" value="component_id">
+        <button id="btn_setId" disabled="disabled" type="button">Set</button>
+    </div>
+    <div style="width: 100%">
         <label for="label"><h3>label (sting):</h3></label>
         <input type="text" id="label" value="Label text">
         <button id="btn_setLabel" disabled="disabled" type="button">Set</button>
@@ -65,38 +70,46 @@
         var btn_setName = document.getElementById('btn_setName');
         var btn_setRightText = document.getElementById('btn_setRightText');
         var btn_setLabel = document.getElementById('btn_setLabel');
+        var btn_setId = document.getElementById('btn_setId');
+        var id = document.getElementById('id');
         var label = document.getElementById('label');
         var trueRadio = document.getElementById('trueRadio');
         var nameAttribute = document.getElementById('nameAttribute');
         var rightText = document.getElementById('rightText');
 
-        var cubxRadioButton = document.getElementsByTagName('cubx-radio-button')[0];
+        var cubxHtmlComponent = document.getElementsByTagName('cubx-radio-button')[0];
 
         document.addEventListener('cifReady', function() {
             btn_set.removeAttribute('disabled');
             btn_setName.removeAttribute('disabled');
             btn_setRightText.removeAttribute('disabled');
             btn_setLabel.removeAttribute('disabled');
+            btn_setId.removeAttribute('disabled');
+        });
+
+        btn_setId.addEventListener('click', function() {
+            var value = id.value;
+            cubxHtmlComponent.setId(value);
         });
 
         btn_set.addEventListener('click', function() {
             var value = trueRadio.checked;
-            cubxRadioButton.setChecked(value);
+            cubxHtmlComponent.setChecked(value);
         });
 
         btn_setName.addEventListener('click', function() {
             var name = nameAttribute.value;
-            cubxRadioButton.setName(name);
+            cubxHtmlComponent.setName(name);
         });
 
         btn_setRightText.addEventListener('click', function() {
             var value = rightText.value;
-            cubxRadioButton.setRightText(value);
+            cubxHtmlComponent.setRightText(value);
         });
 
         btn_setLabel.addEventListener('click', function() {
             var value = label.value;
-            cubxRadioButton.setLabel(value);
+            cubxHtmlComponent.setLabel(value);
         });
     })()
 </script>

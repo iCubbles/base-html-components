@@ -62,7 +62,7 @@
      */
     modelValueChanged: function (value) {
       // update the view
-      this.$.input.setAttribute('value', value);
+      document.getElementById(this.getId()).setAttribute('value', value);
     },
 
     /**
@@ -75,7 +75,7 @@
         type = this._validTypes[0];
       }
       // update the view
-      this.$.input.setAttribute('type', type);
+      document.getElementById(this.getId()).setAttribute('type', type);
     },
 
     /**
@@ -83,7 +83,7 @@
      */
     modelPlaceholderChanged: function (placeholder) {
       // update the view
-      this.$.input.setAttribute('placeholder', placeholder);
+      document.getElementById(this.getId()).setAttribute('placeholder', placeholder);
     },
 
     /**
@@ -91,7 +91,7 @@
      */
     modelMinChanged: function (min) {
       // update the view
-      this.$.input.setAttribute('min', min);
+      document.getElementById(this.getId()).setAttribute('min', min);
     },
     /**
      *  Called when slot 'max' has changed
@@ -99,7 +99,7 @@
 
     modelMaxChanged: function (max) {
       // update the view
-      this.$.input.setAttribute('max', max);
+      document.getElementById(this.getId()).setAttribute('max', max);
     },
 
     /**
@@ -107,7 +107,7 @@
      */
     modelStepChanged: function (step) {
       // update the view
-      this.$.input.setAttribute('step', step);
+      document.getElementById(this.getId()).setAttribute('step', step);
     },
 
     /**
@@ -115,7 +115,7 @@
      */
     modelCheckedChanged: function (checked) {
       // update the view
-      this.$.input.checked = checked;
+      document.getElementById(this.getId()).checked = checked;
     },
 
     /**
@@ -123,7 +123,7 @@
      */
     modelNameChanged: function (name) {
       // update the view
-      this.$.input.setAttribute('name', name);
+      document.getElementById(this.getId()).setAttribute('name', name);
     },
 
     /**
@@ -131,7 +131,7 @@
      */
     modelAcceptChanged: function (accept) {
       // update the view
-      this.$.input.setAttribute('accept', accept);
+      document.getElementById(this.getId()).setAttribute('accept', accept);
     },
 
     /**
@@ -139,7 +139,7 @@
      */
     modelSrcChanged: function (src) {
       // update the view
-      this.$.input.setAttribute('src', src);
+      document.getElementById(this.getId()).setAttribute('src', src);
     },
 
     /**
@@ -147,7 +147,7 @@
      */
     modelAltChanged: function (alt) {
       // update the view
-      this.$.input.setAttribute('alt', alt);
+      document.getElementById(this.getId()).setAttribute('alt', alt);
     },
 
     /**
@@ -155,7 +155,7 @@
      */
     modelHeightChanged: function (height) {
       // update the view
-      this.$.input.setAttribute('height', height);
+      document.getElementById(this.getId()).setAttribute('height', height);
     },
 
     /**
@@ -163,7 +163,7 @@
      */
     modelWidthChanged: function (width) {
       // update the view
-      this.$.input.setAttribute('width', width);
+      document.getElementById(this.getId()).setAttribute('width', width);
     },
 
     /**

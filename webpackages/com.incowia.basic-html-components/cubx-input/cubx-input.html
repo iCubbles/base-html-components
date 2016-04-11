@@ -3,8 +3,8 @@
 
     <template>
         <style include="cubx-input-style"></style>
-        <label for="input">{{model.label}}</label>
-        <input id="input" on-change="inputFieldSlotValueChanged">{{model.rightText}}
+        <label for$="{{model.id}}">{{model.label}}</label>
+        <input id$="{{model.id}}" on-change="inputFieldSlotValueChanged">{{model.rightText}}
     </template>
 
     <script src="cubx-input.js"></script>

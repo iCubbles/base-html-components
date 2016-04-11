@@ -52,7 +52,7 @@
      */
     modelValueChanged: function (newValue) {
       // update the view
-      this.$.select.setAttribute('value', newValue);
+      document.getElementById(this.getId()).setAttribute('value', newValue);
     },
 
     /**
@@ -60,7 +60,7 @@
      */
     modelSizeChanged: function (newSize) {
       // update the view
-      this.$.select.setAttribute('size', newSize);
+      document.getElementById(this.getId()).setAttribute('size', newSize);
     },
 
     /**
@@ -80,6 +80,13 @@
     },
 
     /**
+     *  Called when slot 'label' has changed
+     */
+    modelIdChanged: function (id) {
+      
+    },
+
+    /**
      * Fill the options of the select component
      * @private
      */
@@ -92,9 +99,9 @@
         value = options[i][0];
         text = options[i][1];
         if (value === this.getValue()) {
-          this.$.select.options[i] = new Option(text, value, false, true);
+          document.getElementById(this.getId()).options[i] = new Option(text, value, false, true);
         } else {
-          this.$.select.options[i] = new Option(text, value, false, false);
+          document.getElementById(this.getId()).options[i] = new Option(text, value, false, false);
         }
       }
     },
@@ -104,7 +111,7 @@
      * @private
      */
     _emptySelect: function () {
-      this.$.select.options.length = 0;
+      document.getElementById(this.getId()).options.length = 0;
     }
   });
 }());

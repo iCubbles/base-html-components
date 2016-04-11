@@ -27,6 +27,11 @@
 <h2>Slots:</h2>
 <form>
     <div style="width: 100%">
+        <label for="id"><h3>id (string):</h3></label>
+        <input type="text" id="id" value="component_id">
+        <button id="btn_setId" disabled="disabled" type="button">Set</button>
+    </div>
+    <div style="width: 100%">
         <label for="label"><h3>label (sting):</h3></label>
         <input type="text" id="label" value="Label text">
         <button id="btn_setLabel" disabled="disabled" type="button">Set</button>
@@ -78,6 +83,8 @@
         var btn_setMinLength = document.getElementById('btn_setMinLength');
         var btn_setMaxLength = document.getElementById('btn_setMaxLength');
         var btn_setLabel = document.getElementById('btn_setLabel');
+        var btn_setId = document.getElementById('btn_setId');
+        var id = document.getElementById('id');
         var label = document.getElementById('label');
         var value = document.getElementById('value');
         var columns = document.getElementById('columns');
@@ -85,7 +92,7 @@
         var minLength = document.getElementById('minLength');
         var maxLength = document.getElementById('maxLength');
 
-        var cubxTextarea = document.getElementsByTagName('cubx-textarea')[0];
+        var cubxHtmlComponent = document.getElementsByTagName('cubx-textarea')[0];
 
         document.addEventListener('cifReady', function() {
             btn_setValue.removeAttribute('disabled');
@@ -94,36 +101,42 @@
             btn_setMinLength.removeAttribute('disabled');
             btn_setMaxLength.removeAttribute('disabled');
             btn_setLabel.removeAttribute('disabled');
+            btn_setId.removeAttribute('disabled');
+        });
+
+        btn_setId.addEventListener('click', function() {
+            var value = id.value;
+            cubxHtmlComponent.setId(value);
         });
 
         btn_setValue.addEventListener('click', function() {
             var text = value.value;
-            cubxTextarea.setValue(text);
+            cubxHtmlComponent.setValue(text);
         });
 
         btn_setColumns.addEventListener('click', function() {
             var value = columns.value;
-            cubxTextarea.setCols(value);
+            cubxHtmlComponent.setCols(value);
         });
 
         btn_setRows.addEventListener('click', function() {
             var value = rows.value;
-            cubxTextarea.setRows(value);
+            cubxHtmlComponent.setRows(value);
         });
 
         btn_setMinLength.addEventListener('click', function() {
             var value = minLength.value;
-            cubxTextarea.setMinLength(value);
+            cubxHtmlComponent.setMinLength(value);
         });
 
         btn_setMaxLength.addEventListener('click', function() {
             var value = maxLength.value;
-            cubxTextarea.setMaxLength(value);
+            cubxHtmlComponent.setMaxLength(value);
         });
 
         btn_setLabel.addEventListener('click', function() {
             var value = label.value;
-            cubxTextarea.setLabel(value);
+            cubxHtmlComponent.setLabel(value);
         });
     })()
 </script>

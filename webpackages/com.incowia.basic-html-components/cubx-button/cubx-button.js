@@ -52,7 +52,7 @@
         newType = this._validTypes[0];
       }
       // update the view
-      this.$.button.setAttribute('type', newType);
+      document.getElementById(this.getId()).setAttribute('type', newType);
     },
 
     /**
@@ -60,7 +60,7 @@
      */
     modelValueChanged: function (newValue) {
       // update the view
-      this.$.button.setAttribute('value', newValue);
+      document.getElementById(this.getId()).setAttribute('value', newValue);
     },
 
     /**
@@ -68,7 +68,7 @@
      */
     modelTextChanged: function (newText) {
       // update the view
-      this.$.button.innerHTML = newText;
+      document.getElementById(this.getId()).innerHTML = newText;
     }
   });
 }());

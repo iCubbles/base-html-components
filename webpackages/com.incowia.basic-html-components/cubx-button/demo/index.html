@@ -27,6 +27,11 @@
 <h2>Slots:</h2>
 <form>
     <div style="width: 100%">
+        <div style="width: 100%">
+            <label for="id"><h3>id (string):</h3></label>
+            <input type="text" id="id" value="component_id">
+            <button id="btn_setId" disabled="disabled" type="button">Set</button>
+        </div>
         <label for="type"><h3>type (string):</h3></label>
         <select id="type">
             <option>submit</option>
@@ -60,31 +65,39 @@
         var btn_setType = document.getElementById('btn_setType');
         var btn_setValue = document.getElementById('btn_setValue');
         var btn_setText = document.getElementById('btn_setText');
+        var btn_setId = document.getElementById('btn_setId');
+        var id = document.getElementById('id');
         var value = document.getElementById('value');
         var type = document.getElementById('type');
         var text = document.getElementById('text');
 
-        var cubxButton = document.getElementsByTagName('cubx-button')[0];
+        var cubxHtmlComponent = document.getElementsByTagName('cubx-button')[0];
 
         document.addEventListener('cifReady', function() {
             btn_setValue.removeAttribute('disabled');
             btn_setType.removeAttribute('disabled');
             btn_setText.removeAttribute('disabled');
+            btn_setId.removeAttribute('disabled');
         });
 
         btn_setValue.addEventListener('click', function() {
             var text = value.value;
-            cubxButton.setValue(text);
+            cubxHtmlComponent.setValue(text);
         });
 
         btn_setType.addEventListener('click', function() {
             var value = type.value;
-            cubxButton.setType(value);
+            cubxHtmlComponent.setType(value);
         });
 
         btn_setText.addEventListener('click', function() {
             var value = text.value;
-            cubxButton.setText(value);
+            cubxHtmlComponent.setText(value);
+        });
+
+        btn_setId.addEventListener('click', function() {
+            var value = id.value;
+            cubxHtmlComponent.setId(value);
         });
     })()
 </script>

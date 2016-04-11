@@ -28,6 +28,11 @@
 <div>
     <form style="width:100%;">
         <div style="width: 100%">
+            <label for="id"><h3>id (sting):</h3></label>
+            <input type="text" id="id" value="component_id">
+            <button id="btn_setID" disabled="disabled" type="button">Set</button>
+        </div>
+        <div style="width: 100%">
             <label for="label"><h3>label (sting):</h3></label>
             <input type="text" id="label" value="Label text">
             <button id="btn_setLabel" disabled="disabled" type="button">Set</button>
@@ -53,25 +58,33 @@
         'use strict';
 
         var options = document.getElementById('options');
+        var label = document.getElementById('label');
+        var id = document.getElementById('id');
         var btn_set = document.getElementById('btn_set');
         var btn_setLabel = document.getElementById('btn_setLabel');
-        var label = document.getElementById('label');
-        var cubxSelect = document.getElementsByTagName('cubx-select')[0];
+        var btn_setID = document.getElementById('btn_setID');
+        var cubxHtmlComponent = document.getElementsByTagName('cubx-select')[0];
 
 
         document.addEventListener('cifReady', function() {
             btn_set.removeAttribute('disabled');
             btn_setLabel.removeAttribute('disabled');
+            btn_setID.removeAttribute('disabled');
         });
 
         btn_set.addEventListener('click', function() {
             var value = options.value === '' ? null : JSON.parse(options.value);
-            cubxSelect.setOptions(value);
+            cubxHtmlComponent.setOptions(value);
         });
 
         btn_setLabel.addEventListener('click', function() {
             var value = label.value;
-            cubxSelect.setLabel(value);
+            cubxHtmlComponent.setLabel(value);
+        });
+
+        btn_setID.addEventListener('click', function() {
+            var value = id.value;
+            cubxHtmlComponent.setId(value);
         });
     })()
 </script>
