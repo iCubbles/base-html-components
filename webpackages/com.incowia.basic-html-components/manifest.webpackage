@@ -730,6 +730,16 @@
             }
           },
           {
+            "connectionId": "con4-1",
+            "source": {
+              "memberIdRef": "input1",
+              "slot": "value"
+            },
+            "destination": {
+              "slot": "value"
+            }
+          },
+          {
             "connectionId": "con8",
             "source": {
               "slot": "name"
@@ -957,6 +967,16 @@
             }
           },
           {
+            "connectionId": "con7-1",
+            "source": {
+              "memberIdRef": "input1",
+              "slot": "value"
+            },
+            "destination": {
+              "slot": "value"
+            }
+          },
+          {
             "connectionId": "con8",
             "source": {
               "slot": "name"
@@ -1146,6 +1166,16 @@
             },
             "destination": {
               "memberIdRef": "input1",
+              "slot": "value"
+            }
+          },
+          {
+            "connectionId": "con6-1",
+            "source": {
+              "memberIdRef": "input1",
+              "slot": "value"
+            },
+            "destination": {
               "slot": "value"
             }
           },
@@ -1353,6 +1383,16 @@
             }
           },
           {
+            "connectionId": "con6-1",
+            "source": {
+              "memberIdRef": "input1",
+              "slot": "value"
+            },
+            "destination": {
+              "slot": "value"
+            }
+          },
+          {
             "connectionId": "con8",
             "source": {
               "slot": "required"
@@ -1498,6 +1538,16 @@
             },
             "destination": {
               "memberIdRef": "input1",
+              "slot": "value"
+            }
+          },
+          {
+            "connectionId": "con3-1",
+            "source": {
+              "memberIdRef": "input1",
+              "slot": "value"
+            },
+            "destination": {
               "slot": "value"
             }
           },
@@ -1674,6 +1724,16 @@
             },
             "destination": {
               "memberIdRef": "input1",
+              "slot": "value"
+            }
+          },
+          {
+            "connectionId": "con4-1",
+            "source": {
+              "memberIdRef": "input1",
+              "slot": "value"
+            },
+            "destination": {
               "slot": "value"
             }
           },
@@ -1901,6 +1961,16 @@
             },
             "destination": {
               "memberIdRef": "input1",
+              "slot": "value"
+            }
+          },
+          {
+            "connectionId": "con7-1",
+            "source": {
+              "memberIdRef": "input1",
+              "slot": "value"
+            },
+            "destination": {
               "slot": "value"
             }
           },
