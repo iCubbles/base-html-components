@@ -727,7 +727,8 @@
             "destination": {
               "memberIdRef": "input1",
               "slot": "value"
-            }
+            },
+            "repeatedValues" : true
           },
           {
             "connectionId": "con4-1",

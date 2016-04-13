@@ -62,7 +62,7 @@
      */
     modelValueChanged: function (value) {
       // update the view
-      document.getElementById(this.getId()).setAttribute('value', value);
+      document.getElementById(this.getId()).value = value;
     },
 
     /**
