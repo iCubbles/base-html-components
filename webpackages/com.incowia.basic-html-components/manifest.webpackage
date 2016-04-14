@@ -171,6 +171,13 @@
             "direction": [
               "input"
             ]
+          },
+          {
+            "slotId": "tabindex",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
           }
         ]
       },
@@ -251,6 +258,13 @@
           {
             "slotId": "options",
             "type": "object",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "tabindex",
+            "type": "number",
             "direction": [
               "input"
             ]
@@ -358,6 +372,13 @@
             "direction": [
               "input"
             ]
+          },
+          {
+            "slotId": "tabindex",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
           }
         ]
       },
@@ -430,6 +451,13 @@
           {
             "slotId": "text",
             "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "tabindex",
+            "type": "number",
             "direction": [
               "input"
             ]
@@ -680,6 +708,13 @@
               "input",
               "output"
             ]
+          },
+          {
+            "slotId": "tabindex",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
           }
         ],
         "members": [
@@ -778,6 +813,16 @@
             "destination": {
               "memberIdRef": "input1",
               "slot": "disabled"
+            }
+          },
+          {
+            "connectionId": "con12",
+            "source": {
+              "slot": "tabindex"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "tabindex"
             }
           }
         ],
@@ -887,6 +932,13 @@
             "direction": [
               "input",
               "output"
+            ]
+          },
+          {
+            "slotId": "tabindex",
+            "type": "number",
+            "direction": [
+              "input"
             ]
           }
         ],
@@ -1016,6 +1068,16 @@
               "memberIdRef": "input1",
               "slot": "disabled"
             }
+          },
+          {
+            "connectionId": "con12",
+            "source": {
+              "slot": "tabindex"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "tabindex"
+            }
           }
         ],
         "inits": [
@@ -1110,6 +1172,13 @@
             "direction": [
               "input",
               "output"
+            ]
+          },
+          {
+            "slotId": "tabindex",
+            "type": "number",
+            "direction": [
+              "input"
             ]
           }
         ],
@@ -1218,6 +1287,16 @@
             "destination": {
               "memberIdRef": "input1",
               "slot": "disabled"
+            }
+          },
+          {
+            "connectionId": "con11",
+            "source": {
+              "slot": "tabindex"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "tabindex"
             }
           }
         ],
@@ -1314,6 +1393,13 @@
               "input",
               "output"
             ]
+          },
+          {
+            "slotId": "tabindex",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
           }
         ],
         "members": [
@@ -1386,8 +1472,8 @@
           {
             "connectionId": "con6-1",
             "source": {
-              "memberIdRef": "input1",
-              "slot": "value"
+              "slot": "value",
+              "memberIdRef": "input1"
             },
             "destination": {
               "slot": "value"
@@ -1421,6 +1507,16 @@
             "destination": {
               "memberIdRef": "input1",
               "slot": "disabled"
+            }
+          },
+          {
+            "connectionId": "con11",
+            "source": {
+              "slot": "tabindex"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "tabindex"
             }
           }
         ],
@@ -1502,6 +1598,13 @@
             "direction": [
               "input",
               "output"
+            ]
+          },
+          {
+            "slotId": "tabindex",
+            "type": "number",
+            "direction": [
+              "input"
             ]
           }
         ],
@@ -1591,6 +1694,16 @@
               "memberIdRef": "input1",
               "slot": "disabled"
             }
+          },
+          {
+            "connectionId": "con8",
+            "source": {
+              "slot": "tabindex"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "tabindex"
+            }
           }
         ],
         "inits": [
@@ -1678,6 +1791,13 @@
             "direction": [
               "input",
               "output"
+            ]
+          },
+          {
+            "slotId": "tabindex",
+            "type": "number",
+            "direction": [
+              "input"
             ]
           }
         ],
@@ -1776,6 +1896,16 @@
             "destination": {
               "memberIdRef": "input1",
               "slot": "disabled"
+            }
+          },
+          {
+            "connectionId": "con9",
+            "source": {
+              "slot": "tabindex"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "tabindex"
             }
           }
         ],
@@ -1885,6 +2015,13 @@
             "direction": [
               "input",
               "output"
+            ]
+          },
+          {
+            "slotId": "tabindex",
+            "type": "number",
+            "direction": [
+              "input"
             ]
           }
         ],
@@ -2013,6 +2150,16 @@
             "destination": {
               "memberIdRef": "input1",
               "slot": "disabled"
+            }
+          },
+          {
+            "connectionId": "con12",
+            "source": {
+              "slot": "tabindex"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "tabindex"
             }
           }
         ],

@@ -81,6 +81,14 @@
     },
 
     /**
+     *  Called when slot 'tabindex' has changed
+     */
+    modelTabindexChanged: function (newTabindex) {
+      // update the view
+      document.getElementById(this.getId()).setAttribute('tabindex', newTabindex);
+    },
+
+    /**
      *  Called when slot 'disabled' has changed
      */
     modelDisabledChanged: function (disabled) {
