@@ -12,7 +12,19 @@
   "keywords": [],
   "man": [],
   "artifacts": {
-    "apps": [],
+    "apps": [
+      {
+        "artifactId": "docs",
+        "description": "Structure and dataflow viewer for this webpackage",
+        "runnables": [
+          {
+            "name": "cubx basic-html-components docs",
+            "path": "/index.html",
+            "description": "Call this app as a simple demo."
+          }
+        ]
+      }
+    ],
     "elementaryComponents": [
       {
         "artifactId": "cubx-input",
@@ -763,7 +775,7 @@
               "memberIdRef": "input1",
               "slot": "value"
             },
-            "repeatedValues" : true
+            "repeatedValues": true
           },
           {
             "connectionId": "con4-1",
