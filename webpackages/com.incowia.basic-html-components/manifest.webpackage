@@ -211,7 +211,7 @@
               "cubx-select.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.9.0/cubxpolymer/main"
             ]
           }
         ],
@@ -301,7 +301,7 @@
               "cubx-textarea.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.9.0/cubxpolymer/main"
             ]
           }
         ],
@@ -412,7 +412,7 @@
               "cubx-button.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.9.0/cubxpolymer/main"
             ]
           }
         ],
@@ -494,7 +494,7 @@
               "cubx-p.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.9.0/cubxpolymer/main"
             ]
           }
         ],
@@ -526,7 +526,7 @@
               "cubx-ol.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.9.0/cubxpolymer/main"
             ]
           }
         ],
@@ -572,7 +572,7 @@
               "cubx-ul.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.9.0/cubxpolymer/main"
             ]
           }
         ],
@@ -604,7 +604,7 @@
               "cubx-img.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.9.0/cubxpolymer/main"
             ]
           }
         ],
