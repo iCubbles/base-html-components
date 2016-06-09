@@ -1214,6 +1214,16 @@
             }
           },
           {
+            "connectionId": "con1-1",
+            "source": {
+              "memberIdRef": "input1",
+              "slot": "checked"
+            },
+            "destination": {
+              "slot": "checked"
+            }
+          },
+          {
             "connectionId": "con3",
             "source": {
               "slot": "rightText"
@@ -1383,7 +1393,8 @@
             "slotId": "checked",
             "type": "boolean",
             "direction": [
-              "input"
+              "input",
+              "output"
             ]
           },
           {
@@ -1430,6 +1441,16 @@
             },
             "destination": {
               "memberIdRef": "input1",
+              "slot": "checked"
+            }
+          },
+          {
+            "connectionId": "con1-1",
+            "source": {
+              "memberIdRef": "input1",
+              "slot": "checked"
+            },
+            "destination": {
               "slot": "checked"
             }
           },

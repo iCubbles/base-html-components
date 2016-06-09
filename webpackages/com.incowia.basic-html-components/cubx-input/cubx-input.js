@@ -55,9 +55,6 @@
     inputFieldSlotValueChanged: function (event) {
       // update the cubbles-model
       this.setValue(event.target.value);
-      if (this.getType() === 'checkbox' || this.getType() === 'radio') {
-        this.setChecked(event.target.checked);
-      }
     },
 
     /**
@@ -66,6 +63,9 @@
     modelValueChanged: function (value) {
       // update the view
       document.getElementById(this.getId()).value = value;
+      if (this.getType() === 'checkbox' || this.getType() === 'radio') {
+        this.setChecked(document.getElementById(this.getId()).checked);
+      }
     },
 
     /**
