@@ -52,7 +52,7 @@
     _fillOlList: function () {
       var list = this.getList() || [];
       for (var i in list) {
-        this.$.ul.appendChild(this._createLiElement(list[i]));
+        this.$$('ul').appendChild(this._createLiElement(list[i]));
       }
     },
 
@@ -61,7 +61,7 @@
      * @private
      */
     _emptyOlList: function () {
-      this.$.ul.innerHTML = "";
+      this.$$('ul').innerHTML = "";
     },
 
     /**

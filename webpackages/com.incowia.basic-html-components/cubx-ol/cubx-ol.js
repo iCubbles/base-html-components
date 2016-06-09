@@ -62,7 +62,7 @@
           + this._validTypes[0] + ' instead.');
         newType = this._validTypes[0];
       }
-      this.$.ol.setAttribute('type', newType);
+      this.$$('ol').setAttribute('type', newType);
     },
 
     /**
@@ -70,7 +70,7 @@
      */
     modelStartChanged: function (newStart) {
       // update the view
-      this.$.ol.setAttribute('start', newStart);
+      this.$$('ol').setAttribute('start', newStart);
     },
 
     /**
@@ -80,7 +80,7 @@
     _fillOlList: function () {
       var list = this.getList() || [];
       for (var i in list) {
-       this.$.ol.appendChild(this._createLiElement(list[i]));
+       this.$$('ol').appendChild(this._createLiElement(list[i]));
       }
     },
 
@@ -89,7 +89,7 @@
      * @private
      */
     _emptyOlList: function () {
-      this.$.ol.innerHTML = "";
+      this.$$('ol').innerHTML = "";
     },
 
     /**

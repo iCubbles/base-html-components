@@ -221,8 +221,7 @@
             "type": "string",
             "direction": [
               "input"
-            ],
-            "value": "selectId"
+            ]
           },
           {
             "slotId": "value",
@@ -311,8 +310,7 @@
             "type": "string",
             "direction": [
               "input"
-            ],
-            "value": "textareaId"
+            ]
           },
           {
             "slotId": "value",
@@ -1823,7 +1821,6 @@
             "slotId": "value",
             "type": "string",
             "direction": [
-              "input",
               "output"
             ]
           },
@@ -1874,16 +1871,6 @@
           },
           {
             "connectionId": "con4",
-            "source": {
-              "slot": "value"
-            },
-            "destination": {
-              "memberIdRef": "input1",
-              "slot": "value"
-            }
-          },
-          {
-            "connectionId": "con4-1",
             "source": {
               "memberIdRef": "input1",
               "slot": "value"

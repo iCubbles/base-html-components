@@ -62,7 +62,9 @@
      */
     modelValueChanged: function (value) {
       // update the view
-      this.$$('input').value = value;
+      if (this.getType() !== 'file') {
+        this.$$('input').value = value;
+      }
       if (this.getType() === 'checkbox' || this.getType() === 'radio') {
         this.setChecked(this.$$('input').checked);
       }

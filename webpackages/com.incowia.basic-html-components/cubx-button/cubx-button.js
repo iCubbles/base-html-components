@@ -15,7 +15,7 @@
     _validTypes:[
       'submit',
       'reset',
-      'button',
+      'button'
     ],
 
     /**
@@ -52,7 +52,7 @@
         newType = this._validTypes[0];
       }
       // update the view
-      document.getElementById(this.getId()).setAttribute('type', newType);
+      this.$$('button').setAttribute('type', newType);
     },
 
     /**
@@ -60,7 +60,7 @@
      */
     modelValueChanged: function (newValue) {
       // update the view
-      document.getElementById(this.getId()).setAttribute('value', newValue);
+      this.$$('button').setAttribute('value', newValue);
     },
 
     /**
@@ -68,7 +68,7 @@
      */
     modelTextChanged: function (newText) {
       // update the view
-      document.getElementById(this.getId()).innerHTML = newText;
+      this.$$('button').innerHTML = newText;
     },
 
     /**
@@ -76,7 +76,7 @@
      */
     modelOnclickChanged: function (newValue) {
       // update the view
-      document.getElementById(this.getId()).setAttribute('onclick', newValue);
+      this.$$('button').setAttribute('onclick', newValue);
     },
 
     /**
@@ -84,7 +84,7 @@
      */
     modelNameChanged: function (name) {
       // update the view
-      document.getElementById(this.getId()).setAttribute('name', name);
+      this.$$('button').setAttribute('name', name);
     },
 
     /**
@@ -92,14 +92,14 @@
      */
     modelTabindexChanged: function (newTabindex) {
       // update the view
-      document.getElementById(this.getId()).setAttribute('tabindex', newTabindex);
+      this.$$('button').setAttribute('tabindex', newTabindex);
     },
 
     /**
      *  Called when slot 'disabled' has changed
      */
     modelDisabledChanged: function (disabled) {
-      document.getElementById(this.getId()).disabled = disabled;
+      this.$$('button').disabled = disabled;
     }
   });
 }());

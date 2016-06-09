@@ -41,7 +41,7 @@
      */
     modelSrcChanged: function (src) {
       // update the view
-      this.$.img.setAttribute('src', src);
+      this.$$('img').setAttribute('src', src);
     },
 
     /**
@@ -49,7 +49,7 @@
      */
     modelAltChanged: function (alt) {
       // update the view
-      this.$.img.setAttribute('alt', alt);
+      this.$$('img').setAttribute('alt', alt);
     },
 
     /**
@@ -57,7 +57,7 @@
      */
     modelHeightChanged: function (height) {
       // update the view
-      this.$.img.setAttribute('height', height);
+      this.$$('img').setAttribute('height', height);
     },
 
     /**
@@ -65,7 +65,7 @@
      */
     modelWidthChanged: function (width) {
       // update the view
-      this.$.img.setAttribute('width', width);
+      this.$$('img').setAttribute('width', width);
     }
   });
 }());

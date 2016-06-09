@@ -41,7 +41,7 @@
      */
     modelTextChanged: function (newText) {
       // update the view
-      this.$.p.innerHTML = newText;
+      this.$$('p').innerHTML = newText;
     }
   });
 }());

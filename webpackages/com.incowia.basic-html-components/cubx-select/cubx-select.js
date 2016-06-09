@@ -52,7 +52,7 @@
      */
     modelValueChanged: function (newValue) {
       // update the view
-      document.getElementById(this.getId()).value = newValue;
+      this.$$('select').value = newValue;
     },
 
     /**
@@ -60,7 +60,7 @@
      */
     modelSizeChanged: function (newSize) {
       // update the view
-      document.getElementById(this.getId()).setAttribute('size', newSize);
+      this.$$('select').setAttribute('size', newSize);
     },
 
     /**
@@ -77,7 +77,7 @@
      */
     modelNameChanged: function (name) {
       // update the view
-      document.getElementById(this.getId()).setAttribute('name', name);
+      this.$$('select').setAttribute('name', name);
     },
 
     /**
@@ -85,21 +85,21 @@
      */
     modelTabindexChanged: function (newTabindex) {
       // update the view
-      document.getElementById(this.getId()).setAttribute('tabindex', newTabindex);
+      this.$$('select').setAttribute('tabindex', newTabindex);
     },
 
     /**
      *  Called when slot 'disabled' has changed
      */
     modelDisabledChanged: function (disabled) {
-      document.getElementById(this.getId()).disabled = disabled;
+      this.$$('select').disabled = disabled;
     },
 
     /**
      *  Called when slot 'required' has changed
      */
     modelRequiredChanged: function (required) {
-      document.getElementById(this.getId()).required = required;
+      this.$$('select').required = required;
     },
 
     /**
@@ -115,9 +115,9 @@
         value = options[i][0];
         text = options[i][1];
         if (value === this.getValue()) {
-          document.getElementById(this.getId()).options[i] = new Option(text, value, false, true);
+          this.$$('select').options[i] = new Option(text, value, false, true);
         } else {
-          document.getElementById(this.getId()).options[i] = new Option(text, value, false, false);
+          this.$$('select').options[i] = new Option(text, value, false, false);
         }
       }
     },
@@ -127,7 +127,7 @@
      * @private
      */
     _emptySelect: function () {
-      document.getElementById(this.getId()).options.length = 0;
+      this.$$('select').options.length = 0;
     }
   });
 }());

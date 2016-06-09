@@ -51,7 +51,7 @@
     modelValueChanged: function (newValue) {
       // update the view
       //this.$.textarea.setAttribute('value', newValue);
-     document.getElementById(this.getId()).value = newValue;
+     this.$$('textarea').value = newValue;
     },
 
     /**
@@ -59,7 +59,7 @@
      */
     modelMinLengthChanged: function (newMinLength) {
       // update the view
-     document.getElementById(this.getId()).setAttribute('minLength', newMinLength);
+     this.$$('textarea').setAttribute('minLength', newMinLength);
     },
 
     /**
@@ -67,7 +67,7 @@
      */
     modelMaxLengthChanged: function (newMaxLength) {
       // update the view
-     document.getElementById(this.getId()).setAttribute('maxLength', newMaxLength);
+     this.$$('textarea').setAttribute('maxLength', newMaxLength);
     },
 
     /**
@@ -75,7 +75,7 @@
      */
     modelRowsChanged: function (newRows) {
       // update the view
-     document.getElementById(this.getId()).setAttribute('rows', newRows);
+     this.$$('textarea').setAttribute('rows', newRows);
     },
 
     /**
@@ -83,7 +83,7 @@
      */
     modelColsChanged: function (newColumns) {
       // update the view
-     document.getElementById(this.getId()).setAttribute('cols', newColumns);
+     this.$$('textarea').setAttribute('cols', newColumns);
     },
 
     /**
@@ -91,7 +91,7 @@
      */
     modelNameChanged: function (name) {
       // update the view
-      document.getElementById(this.getId()).setAttribute('name', name);
+      this.$$('textarea').setAttribute('name', name);
     },
 
     /**
@@ -99,28 +99,28 @@
      */
     modelTabindexChanged: function (newTabindex) {
       // update the view
-      document.getElementById(this.getId()).setAttribute('tabindex', newTabindex);
+      this.$$('textarea').setAttribute('tabindex', newTabindex);
     },
 
     /**
      *  Called when slot 'disabled' has changed
      */
     modelDisabledChanged: function (disabled) {
-      document.getElementById(this.getId()).disabled = disabled;
+      this.$$('textarea').disabled = disabled;
     },
 
     /**
      *  Called when slot 'readonly' has changed
      */
     modelReadonlyChanged: function (readonly) {
-      document.getElementById(this.getId()).readOnly = readonly;
+      this.$$('textarea').readOnly = readonly;
     },
 
     /**
      *  Called when slot 'required' has changed
      */
     modelRequiredChanged: function (required) {
-      document.getElementById(this.getId()).required = required;
+      this.$$('textarea').required = required;
     }
 
   });
