@@ -54,8 +54,7 @@
             "type": "string",
             "direction": [
               "input"
-            ],
-            "value": "inputId"
+            ]
           },
           {
             "slotId": "type",

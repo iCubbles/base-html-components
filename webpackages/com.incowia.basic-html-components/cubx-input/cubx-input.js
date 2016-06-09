@@ -62,9 +62,9 @@
      */
     modelValueChanged: function (value) {
       // update the view
-      document.getElementById(this.getId()).value = value;
+      this.$$('input').value = value;
       if (this.getType() === 'checkbox' || this.getType() === 'radio') {
-        this.setChecked(document.getElementById(this.getId()).checked);
+        this.setChecked(this.$$('input').checked);
       }
     },
 
@@ -78,7 +78,7 @@
         type = this._validTypes[0];
       }
       // update the view
-      document.getElementById(this.getId()).setAttribute('type', type);
+      this.$$('input').setAttribute('type', type);
     },
 
     /**
@@ -86,7 +86,7 @@
      */
     modelPlaceholderChanged: function (placeholder) {
       // update the view
-      document.getElementById(this.getId()).setAttribute('placeholder', placeholder);
+      this.$$('input').setAttribute('placeholder', placeholder);
     },
 
     /**
@@ -94,7 +94,7 @@
      */
     modelMinChanged: function (min) {
       // update the view
-      document.getElementById(this.getId()).setAttribute('min', min);
+      this.$$('input').setAttribute('min', min);
     },
     /**
      *  Called when slot 'max' has changed
@@ -102,7 +102,7 @@
 
     modelMaxChanged: function (max) {
       // update the view
-      document.getElementById(this.getId()).setAttribute('max', max);
+      this.$$('input').setAttribute('max', max);
     },
 
     /**
@@ -110,7 +110,7 @@
      */
     modelStepChanged: function (step) {
       // update the view
-      document.getElementById(this.getId()).setAttribute('step', step);
+      this.$$('input').setAttribute('step', step);
     },
 
     /**
@@ -118,7 +118,7 @@
      */
     modelCheckedChanged: function (checked) {
       // update the view
-      document.getElementById(this.getId()).checked = checked;
+      this.$$('input').checked = checked;
     },
 
     /**
@@ -126,7 +126,7 @@
      */
     modelAcceptChanged: function (accept) {
       // update the view
-      document.getElementById(this.getId()).setAttribute('accept', accept);
+      this.$$('input').setAttribute('accept', accept);
     },
 
     /**
@@ -134,7 +134,7 @@
      */
     modelSrcChanged: function (src) {
       // update the view
-      document.getElementById(this.getId()).setAttribute('src', src);
+      this.$$('input').setAttribute('src', src);
     },
 
     /**
@@ -142,7 +142,7 @@
      */
     modelAltChanged: function (alt) {
       // update the view
-      document.getElementById(this.getId()).setAttribute('alt', alt);
+      this.$$('input').setAttribute('alt', alt);
     },
 
     /**
@@ -150,7 +150,7 @@
      */
     modelHeightChanged: function (height) {
       // update the view
-      document.getElementById(this.getId()).setAttribute('height', height);
+      this.$$('input').setAttribute('height', height);
     },
 
     /**
@@ -158,7 +158,7 @@
      */
     modelWidthChanged: function (width) {
       // update the view
-      document.getElementById(this.getId()).setAttribute('width', width);
+      this.$$('input').setAttribute('width', width);
     },
 
     /**
@@ -166,7 +166,7 @@
      */
     modelNameChanged: function (name) {
       // update the view
-      document.getElementById(this.getId()).setAttribute('name', name);
+      this.$$('input').setAttribute('name', name);
     },
 
     /**
@@ -174,28 +174,28 @@
      */
     modelTabindexChanged: function (newTabindex) {
       // update the view
-      document.getElementById(this.getId()).setAttribute('tabindex', newTabindex);
+      this.$$('input').setAttribute('tabindex', newTabindex);
     },
 
     /**
      *  Called when slot 'disabled' has changed
      */
     modelDisabledChanged: function (disabled) {
-      document.getElementById(this.getId()).disabled = disabled;
+      this.$$('input').disabled = disabled;
     },
 
     /**
      *  Called when slot 'readonly' has changed
      */
     modelReadonlyChanged: function (readonly) {
-      document.getElementById(this.getId()).readOnly = readonly;
+      this.$$('input').readOnly = readonly;
     },
 
     /**
      *  Called when slot 'required' has changed
      */
     modelRequiredChanged: function (required) {
-      document.getElementById(this.getId()).required = required;
+      this.$$('input').required = required;
     }
 
   });
