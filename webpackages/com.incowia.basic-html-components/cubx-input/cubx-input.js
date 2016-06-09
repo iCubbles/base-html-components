@@ -55,6 +55,9 @@
     inputFieldSlotValueChanged: function (event) {
       // update the cubbles-model
       this.setValue(event.target.value);
+      if (this.getType() === 'checkbox' || this.getType() === 'radio') {
+        this.setChecked(event.target.checked);
+      }
     },
 
     /**
@@ -193,7 +196,7 @@
      */
     modelRequiredChanged: function (required) {
       document.getElementById(this.getId()).required = required;
-    } 
+    }
 
   });
 }());

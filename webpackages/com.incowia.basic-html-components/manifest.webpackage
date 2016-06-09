@@ -139,7 +139,8 @@
             "slotId": "checked",
             "type": "boolean",
             "direction": [
-              "input"
+              "input",
+              "output"
             ]
           },
           {
@@ -1161,7 +1162,8 @@
             "slotId": "checked",
             "type": "boolean",
             "direction": [
-              "input"
+              "input",
+              "output"
             ]
           },
           {
