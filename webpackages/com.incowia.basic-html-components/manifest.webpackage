@@ -190,6 +190,21 @@
             "direction": [
               "input"
             ]
+          },
+          {
+            "slotId": "customValue",
+            "type": "object",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "changeObject",
+            "type": "object",
+            "direction": [
+              "output"
+            ]
           }
         ]
       },
@@ -1191,6 +1206,21 @@
             "direction": [
               "input"
             ]
+          },
+          {
+            "slotId": "customValue",
+            "type": "object",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "changeObject",
+            "type": "object",
+            "direction": [
+              "output"
+            ]
           }
         ],
         "members": [
@@ -1318,6 +1348,36 @@
             "destination": {
               "memberIdRef": "input1",
               "slot": "tabindex"
+            }
+          },
+          {
+            "connectionId": "con12",
+            "source": {
+              "slot": "customValue"
+            },
+            "destination": {
+              "memberIdRef": "input1",
+              "slot": "customValue"
+            }
+          },
+          {
+            "connectionId": "con13",
+            "source": {
+              "memberIdRef": "input1",
+              "slot": "customValue"
+            },
+            "destination": {
+              "slot": "customValue"
+            }
+          },
+          {
+            "connectionId": "con14",
+            "source": {
+              "memberIdRef": "input1",
+              "slot": "changeObject"
+            },
+            "destination": {
+              "slot": "changeObject"
             }
           }
         ],

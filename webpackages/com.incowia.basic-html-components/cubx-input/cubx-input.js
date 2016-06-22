@@ -64,9 +64,11 @@
       // update the view
       if (this.getType() !== 'file') {
         this.$$('input').value = value;
-      }
-      if (this.getType() === 'checkbox' || this.getType() === 'radio') {
-        this.setChecked(this.$$('input').checked);
+        if (this.getType() === 'checkbox' || this.getType() === 'radio') {
+          this.setChecked(this.$$('input').checked);
+        } else {
+          this.setChangeObject({newValue: value, customValue: this.getCustomValue()});
+        }
       }
     },
 
@@ -121,6 +123,7 @@
     modelCheckedChanged: function (checked) {
       // update the view
       this.$$('input').checked = checked;
+      this.setChangeObject({newValue: checked, customValue: this.getCustomValue()});
     },
 
     /**
