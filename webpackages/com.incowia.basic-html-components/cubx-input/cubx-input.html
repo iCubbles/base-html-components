@@ -4,7 +4,9 @@
     <template>
         <style include="cubx-input-style"></style>
         <label for$="{{model.id}}">{{model.label}}</label>
-        <input id$="{{model.id}}" on-change="inputFieldSlotValueChanged">{{model.rightText}}
+        <input id$="{{model.id}}"
+               on-change="inputFieldSlotValueChanged"
+               on-keypress="keyPressed">{{model.rightText}}
     </template>
 
     <script src="cubx-input.js"></script>

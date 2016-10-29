@@ -1,7 +1,7 @@
 {
   "name": "basic-html-components",
   "groupId": "com.incowia",
-  "version": "0.1.0-SNAPSHOT",
+  "version": "0.1.1",
   "modelVersion": "8.3.0",
   "docType": "webpackage",
   "author": {

@@ -57,6 +57,13 @@
       this.setValue(event.target.value);
     },
 
+    keyPressed: function (event) {
+      if(event.keyCode === 13){
+        event.preventDefault();
+        this.setValue(event.target.value);
+      }
+    },
+
     /**
      *  Called when slot 'value' has changed
      */
