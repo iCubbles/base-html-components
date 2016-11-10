@@ -2,7 +2,7 @@
   "name": "basic-html-components",
   "groupId": "com.incowia",
   "version": "0.1.1",
-  "modelVersion": "8.3.0",
+  "modelVersion": "9.1.1",
   "docType": "webpackage",
   "author": {
     "name": "Edwin Gamboa",
@@ -12,19 +12,7 @@
   "keywords": [],
   "man": [],
   "artifacts": {
-    "apps": [
-      {
-        "artifactId": "docs",
-        "description": "Structure and dataflow viewer for this webpackage",
-        "runnables": [
-          {
-            "name": "cubx basic-html-components docs",
-            "path": "/index.html",
-            "description": "Call this app as a simple demo."
-          }
-        ]
-      }
-    ],
+    "apps": [],
     "elementaryComponents": [
       {
         "artifactId": "cubx-input",
@@ -34,18 +22,6 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "cubx-input demo"
-          }
-        ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "description": "This is recommended for you use with webcomponents.",
-            "resources": [
-              "cubx-input.html"
-            ],
-            "dependencies": [
-              "cubx.core.rte@1.9.0/cubxpolymer/main"
-            ]
           }
         ],
         "slots": [
@@ -206,6 +182,15 @@
               "output"
             ]
           }
+        ],
+        "resources": [
+          "cubx-input.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.0.1",
+            "artifactId": "cubxpolymer"
+          }
         ]
       },
       {
@@ -216,18 +201,6 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
-          }
-        ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "description": "This is recommended for you use with webcomponents.",
-            "resources": [
-              "cubx-select.html"
-            ],
-            "dependencies": [
-              "cubx.core.rte@1.9.0/cubxpolymer/main"
-            ]
           }
         ],
         "slots": [
@@ -295,6 +268,15 @@
               "input"
             ]
           }
+        ],
+        "resources": [
+          "cubx-select.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.0.1",
+            "artifactId": "cubxpolymer"
+          }
         ]
       },
       {
@@ -305,18 +287,6 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
-          }
-        ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "description": "This is recommended for you use with webcomponents.",
-            "resources": [
-              "cubx-textarea.html"
-            ],
-            "dependencies": [
-              "cubx.core.rte@1.9.0/cubxpolymer/main"
-            ]
           }
         ],
         "slots": [
@@ -405,6 +375,15 @@
               "input"
             ]
           }
+        ],
+        "resources": [
+          "cubx-textarea.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.0.1",
+            "artifactId": "cubxpolymer"
+          }
         ]
       },
       {
@@ -415,18 +394,6 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
-          }
-        ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "description": "This is recommended for you use with webcomponents.",
-            "resources": [
-              "cubx-button.html"
-            ],
-            "dependencies": [
-              "cubx.core.rte@1.9.0/cubxpolymer/main"
-            ]
           }
         ],
         "slots": [
@@ -487,6 +454,15 @@
               "input"
             ]
           }
+        ],
+        "resources": [
+          "cubx-button.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.0.1",
+            "artifactId": "cubxpolymer"
+          }
         ]
       },
       {
@@ -499,18 +475,6 @@
             "description": "Demo app..."
           }
         ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "description": "This is recommended for you use with webcomponents.",
-            "resources": [
-              "cubx-p.html"
-            ],
-            "dependencies": [
-              "cubx.core.rte@1.9.0/cubxpolymer/main"
-            ]
-          }
-        ],
         "slots": [
           {
             "slotId": "text",
@@ -518,6 +482,15 @@
             "direction": [
               "input"
             ]
+          }
+        ],
+        "resources": [
+          "cubx-p.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.0.1",
+            "artifactId": "cubxpolymer"
           }
         ]
       },
@@ -529,18 +502,6 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
-          }
-        ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "description": "This is recommended for you use with webcomponents.",
-            "resources": [
-              "cubx-ol.html"
-            ],
-            "dependencies": [
-              "cubx.core.rte@1.9.0/cubxpolymer/main"
-            ]
           }
         ],
         "slots": [
@@ -565,6 +526,15 @@
               "input"
             ]
           }
+        ],
+        "resources": [
+          "cubx-ol.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.0.1",
+            "artifactId": "cubxpolymer"
+          }
         ]
       },
       {
@@ -577,18 +547,6 @@
             "description": "Demo app..."
           }
         ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "description": "This is recommended for you use with webcomponents.",
-            "resources": [
-              "cubx-ul.html"
-            ],
-            "dependencies": [
-              "cubx.core.rte@1.9.0/cubxpolymer/main"
-            ]
-          }
-        ],
         "slots": [
           {
             "slotId": "list",
@@ -596,6 +554,15 @@
             "direction": [
               "input"
             ]
+          }
+        ],
+        "resources": [
+          "cubx-ul.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.0.1",
+            "artifactId": "cubxpolymer"
           }
         ]
       },
@@ -607,18 +574,6 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
-          }
-        ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "description": "This is recommended for you use with webcomponents.",
-            "resources": [
-              "cubx-img.html"
-            ],
-            "dependencies": [
-              "cubx.core.rte@1.9.0/cubxpolymer/main"
-            ]
           }
         ],
         "slots": [
@@ -650,6 +605,15 @@
               "input"
             ]
           }
+        ],
+        "resources": [
+          "cubx-img.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.0.1",
+            "artifactId": "cubxpolymer"
+          }
         ]
       }
     ],
@@ -662,17 +626,6 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
-          }
-        ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [
-              "css/cubx-text-input.css"
-            ],
-            "dependencies": [
-              "this/cubx-input/main"
-            ]
           }
         ],
         "slots": [
@@ -745,7 +698,7 @@
         "members": [
           {
             "memberId": "input1",
-            "componentId": "this/cubx-input"
+            "artifactId": "cubx-input"
           }
         ],
         "connections": [
@@ -857,6 +810,14 @@
             "value": "text",
             "memberIdRef": "input1"
           }
+        ],
+        "resources": [
+          "css/cubx-text-input.css"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "cubx-input"
+          }
         ]
       },
       {
@@ -867,17 +828,6 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
-          }
-        ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [
-              "css/cubx-number-input.css"
-            ],
-            "dependencies": [
-              "this/cubx-input/main"
-            ]
           }
         ],
         "slots": [
@@ -970,7 +920,7 @@
         "members": [
           {
             "memberId": "input1",
-            "componentId": "this/cubx-input"
+            "artifactId": "cubx-input"
           }
         ],
         "connections": [
@@ -1111,6 +1061,14 @@
             "value": "number",
             "memberIdRef": "input1"
           }
+        ],
+        "resources": [
+          "css/cubx-number-input.css"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "cubx-input"
+          }
         ]
       },
       {
@@ -1121,17 +1079,6 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
-          }
-        ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [
-              "css/cubx-checkbox.css"
-            ],
-            "dependencies": [
-              "this/cubx-input/main"
-            ]
           }
         ],
         "slots": [
@@ -1226,7 +1173,7 @@
         "members": [
           {
             "memberId": "input1",
-            "componentId": "this/cubx-input"
+            "artifactId": "cubx-input"
           }
         ],
         "connections": [
@@ -1387,6 +1334,14 @@
             "value": "checkbox",
             "memberIdRef": "input1"
           }
+        ],
+        "resources": [
+          "css/cubx-checkbox.css"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "cubx-input"
+          }
         ]
       },
       {
@@ -1397,17 +1352,6 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
-          }
-        ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [
-              "css/cubx-radio-button.css"
-            ],
-            "dependencies": [
-              "this/cubx-input/main"
-            ]
           }
         ],
         "slots": [
@@ -1487,7 +1431,7 @@
         "members": [
           {
             "memberId": "input1",
-            "componentId": "this/cubx-input"
+            "artifactId": "cubx-input"
           }
         ],
         "connections": [
@@ -1618,6 +1562,14 @@
             "value": "radio",
             "memberIdRef": "input1"
           }
+        ],
+        "resources": [
+          "css/cubx-radio-button.css"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "cubx-input"
+          }
         ]
       },
       {
@@ -1628,17 +1580,6 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
-          }
-        ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [
-              "css/cubx-date-input.css"
-            ],
-            "dependencies": [
-              "this/cubx-input/main"
-            ]
           }
         ],
         "slots": [
@@ -1703,7 +1644,7 @@
         "members": [
           {
             "memberId": "input1",
-            "componentId": "this/cubx-input"
+            "artifactId": "cubx-input"
           }
         ],
         "connections": [
@@ -1804,6 +1745,14 @@
             "value": "date",
             "memberIdRef": "input1"
           }
+        ],
+        "resources": [
+          "css/cubx-date-input.css"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "cubx-input"
+          }
         ]
       },
       {
@@ -1814,17 +1763,6 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
-          }
-        ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [
-              "css/cubx-file-input.css"
-            ],
-            "dependencies": [
-              "this/cubx-input/main"
-            ]
           }
         ],
         "slots": [
@@ -1895,7 +1833,7 @@
         "members": [
           {
             "memberId": "input1",
-            "componentId": "this/cubx-input"
+            "artifactId": "cubx-input"
           }
         ],
         "connections": [
@@ -1996,6 +1934,14 @@
             "value": "file",
             "memberIdRef": "input1"
           }
+        ],
+        "resources": [
+          "css/cubx-file-input.css"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "cubx-input"
+          }
         ]
       },
       {
@@ -2006,17 +1952,6 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
-          }
-        ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [
-              "css/cubx-image-input.css"
-            ],
-            "dependencies": [
-              "this/cubx-input/main"
-            ]
           }
         ],
         "slots": [
@@ -2109,7 +2044,7 @@
         "members": [
           {
             "memberId": "input1",
-            "componentId": "this/cubx-input"
+            "artifactId": "cubx-input"
           }
         ],
         "connections": [
@@ -2249,6 +2184,14 @@
             "slot": "type",
             "value": "image",
             "memberIdRef": "input1"
+          }
+        ],
+        "resources": [
+          "css/cubx-image-input.css"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "cubx-input"
           }
         ]
       }

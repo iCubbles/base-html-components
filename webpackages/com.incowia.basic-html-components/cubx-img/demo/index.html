@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>&lt;cubx-img&gt</title>
 
-    <script src="../../../cubx.core.rte@1.9.0/webcomponents/webcomponents-lite.js"></script>
+    <script src="../../../cubx.core.rte@2.0.1/webcomponents-lite/webcomponents-lite.js"></script>
 
     <!--
         Refer to the crc-loader artifact from a Cubbles-Base.
@@ -14,7 +14,7 @@
         Want to add a 'main' -script to be executed after the dependencies have been loaded?
         If yes, add the following attribute: data-crc-main="js/my-script.js"
     -->
-    <script src="../../../cubx.core.rte@1.9.0/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+    <script src="../../../cubx.core.rte@2.0.1/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
 
 </head>
 <body>
@@ -50,7 +50,7 @@
 <div style="width:100%;height:1px;background-color:#0b0b0b;display:inline-block;"></div>
 <h2>View</h2>
 <div cubx-core-crc>
-    <cubx-img cubx-dependency="this/cubx-img/main"></cubx-img>
+    <cubx-img cubx-webpackage-id="this"></cubx-img>
 </div>
 
 <script>
