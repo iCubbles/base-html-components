@@ -12,6 +12,13 @@
   CubxPolymer({
     is: 'cubx-button',
 
+    properties: {
+      hidden: {
+        type: Boolean,
+        value: false
+      }
+    },
+
     _validTypes:[
       'submit',
       'reset',
@@ -40,6 +47,10 @@
      * Manipulate an element’s local DOM when the cubbles framework is initialized and ready to work.
      */
     cubxReady: function () {
+      // add event listener to set the clicked output to true every time the button is clicked
+      this.$$('button').addEventListener("click", function(){
+        this.setClicked(true);
+      }.bind(this), false);
     },
 
     /**
@@ -77,6 +88,15 @@
     modelOnclickChanged: function (newValue) {
       // update the view
       this.$$('button').setAttribute('onclick', newValue);
+    },
+
+    /**
+     *  Called when slot 'hidden' has changed
+     *  @param {boolean} hidden - true to hide this artifact
+     */
+    modelHiddenChanged: function (hidden) {
+      // update the view
+      this.hidden = hidden;
     },
 
     /**

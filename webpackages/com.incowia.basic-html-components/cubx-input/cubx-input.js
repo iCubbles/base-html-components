@@ -12,6 +12,13 @@
   CubxPolymer({
     is: 'cubx-input',
 
+    properties: {
+      hidden: {
+        type: Boolean,
+        value: false
+      }
+    },
+
     //valid cubx-input types
     _validTypes:[
       'text',
@@ -21,7 +28,18 @@
       'range',
       'date',
       'file',
-      'image'
+      'image',
+      'email',
+      'color',
+      'datetime',
+      'datetime-local',
+      'month',
+      'range',
+      'search',
+      'tel',
+      'time',
+      'url',
+      'week'
     ],
 
     /**
@@ -46,6 +64,24 @@
      * Manipulate an element’s local DOM when the cubbles framework is initialized and ready to work.
      */
     cubxReady: function () {
+      // add change listener to output a (custom) validation message on invalid input
+      this.$$('input').addEventListener("change", function(){
+        if (!this.$$('input').validity.valid) {
+          var customMessage = this.getCustomValidationMessage();
+          if (customMessage !== undefined && typeof customMessage === 'string' && customMessage.length > 0) {
+            this.$$('input').setCustomValidity(customMessage);
+          }
+        }
+        this.setValidationMessage(this.$$('input').validationMessage);
+      }.bind(this), false);
+
+      // add input listener to clear (custom) validation message based on validity of input
+      this.$$('input').addEventListener("input", function(){
+        this.$$('input').setCustomValidity("");
+        if (this.$$('input').validity.valid) {
+          this.setValidationMessage(this.$$('input').validationMessage);
+        }
+      }.bind(this), false);
     },
 
     /**
@@ -98,6 +134,24 @@
     modelPlaceholderChanged: function (placeholder) {
       // update the view
       this.$$('input').setAttribute('placeholder', placeholder);
+    },
+
+    /**
+     *  Called when slot 'pattern' has changed
+     *  @param {string} pattern - a regex pattern (see html5pattern)
+     */
+    modelPatternChanged: function (pattern) {
+      // update the view
+      this.$$('input').setAttribute('pattern', pattern);
+    },
+
+    /**
+     *  Called when slot 'hidden' has changed
+     *  @param {boolean} hidden - true to hide this artifact
+     */
+    modelHiddenChanged: function (hidden) {
+      // update the view
+      this.hidden = hidden;
     },
 
     /**
@@ -166,7 +220,7 @@
     },
 
     /**
-     *  Called when slot 'height' has changed
+     *  Called when slot 'width' has changed
      */
     modelWidthChanged: function (width) {
       // update the view

@@ -1,7 +1,7 @@
 {
   "name": "basic-html-components",
   "groupId": "com.incowia",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "modelVersion": "9.1.1",
   "docType": "webpackage",
   "author": {
@@ -12,7 +12,19 @@
   "keywords": [],
   "man": [],
   "artifacts": {
-    "apps": [],
+    "apps": [
+      {
+        "artifactId": "docs",
+        "description": "Generated webpackage documentation.",
+        "runnables": [
+          {
+            "name": "docs",
+            "path": "/index.html",
+            "description": "Show the interface of this component."
+          }
+        ]
+      }
+    ],
     "elementaryComponents": [
       {
         "artifactId": "cubx-input",
@@ -168,6 +180,31 @@
             ]
           },
           {
+            "slotId": "customValidationMessage",
+            "description": "replace the standard browser validationMessage with a own string (only if input is invalid)",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "pattern",
+            "description": "a regex pattern to validate against (see html5pattern)",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "hidden",
+            "type": "boolean",
+            "description": "states if the artifact should be hidden or not",
+            "direction": [
+              "input"
+            ],
+            "value": false
+          },
+          {
             "slotId": "customValue",
             "type": "object",
             "direction": [
@@ -181,6 +218,15 @@
             "direction": [
               "output"
             ]
+          },
+          {
+            "slotId": "validationMessage",
+            "type": "string",
+            "description": "will hold a message if the input is not valid (see pattern); will hold a browser based message (can be overwritten by customvalidationMessage)",
+            "direction": [
+              "output"
+            ],
+            "value": ""
           }
         ],
         "resources": [
@@ -453,6 +499,24 @@
             "direction": [
               "input"
             ]
+          },
+          {
+            "slotId": "hidden",
+            "type": "boolean",
+            "description": "states if the artifact should be hidden or not",
+            "direction": [
+              "input"
+            ],
+            "value": false
+          },
+          {
+            "slotId": "clicked",
+            "type": "boolean",
+            "description": "indicates if the button has been clicked (initial false; true after click)",
+            "direction": [
+              "output"
+            ],
+            "value": false
           }
         ],
         "resources": [
