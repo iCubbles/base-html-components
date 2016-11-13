@@ -6,7 +6,7 @@
   "docType": "webpackage",
   "author": {
     "name": "Edwin Gamboa",
-    "email": "edwin.gamboa@incowia.com"
+    "email": "edwingamboa355@gmail.com"
   },
   "license": "MIT",
   "keywords": [],
@@ -46,6 +46,7 @@
           },
           {
             "slotId": "type",
+            "description": "Type of input, it can be: text, number, checkbox, radio, range, date, file, image, email, color, datetime, datetime-local, month, range, search, tel, time, url, week.",
             "type": "string",
             "direction": [
               "input"
@@ -167,6 +168,7 @@
           },
           {
             "slotId": "rightText",
+            "description": "Useful to place a text on right side of the input element, e.g. a checkbox",
             "type": "string",
             "direction": [
               "input"
@@ -198,7 +200,7 @@
           {
             "slotId": "hidden",
             "type": "boolean",
-            "description": "states if the artifact should be hidden or not",
+            "description": "states whether the artifact should be hidden or not",
             "direction": [
               "input"
             ],
@@ -206,6 +208,7 @@
           },
           {
             "slotId": "customValue",
+            "description": "An additional or custom value to be assigned to the component, it can be of any type. Useful, when the default value (e.g. true in a checkbox) is not enough for you.",
             "type": "object",
             "direction": [
               "input",
@@ -214,6 +217,7 @@
           },
           {
             "slotId": "changeObject",
+            "description": "Indicates the current values (i.e. default html value and customValue) of the component. Updated when any of both values changes.",
             "type": "object",
             "direction": [
               "output"
@@ -542,6 +546,7 @@
         "slots": [
           {
             "slotId": "text",
+            "description": "Text to be displayed by the <p> elememt.",
             "type": "string",
             "direction": [
               "input"
@@ -571,6 +576,7 @@
         "slots": [
           {
             "slotId": "list",
+            "description": "List to be displayed by the <ol> element.",
             "type": "object",
             "direction": [
               "input"
@@ -614,6 +620,7 @@
         "slots": [
           {
             "slotId": "list",
+            "description": "List to be displayed by the <ul> element.",
             "type": "object",
             "direction": [
               "input"
@@ -932,6 +939,7 @@
           },
           {
             "slotId": "subtype",
+            "description": "The type of the number element, it can be number (default) or range.",
             "type": "string",
             "direction": [
               "input"
@@ -1220,6 +1228,7 @@
           },
           {
             "slotId": "customValue",
+            "description": "An additional or custom value to be assigned to the checkbox, it can be of any type.",
             "type": "object",
             "direction": [
               "input",
@@ -1228,6 +1237,7 @@
           },
           {
             "slotId": "changeObject",
+            "description": "Indicates the current values (i.e. true or false and the customValue) of the component. Updated when any of both values changes.",
             "type": "object",
             "direction": [
               "output"
