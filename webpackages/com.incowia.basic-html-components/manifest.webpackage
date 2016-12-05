@@ -1,7 +1,7 @@
 {
   "name": "basic-html-components",
   "groupId": "com.incowia",
-  "version": "0.1.3",
+  "version": "1.0-SNAPSHOT",
   "modelVersion": "9.1.1",
   "docType": "webpackage",
   "author": {
@@ -768,110 +768,111 @@
         ],
         "members": [
           {
-            "memberId": "input1",
+            "memberId": "input",
             "artifactId": "cubx-input"
           }
         ],
         "connections": [
           {
-            "connectionId": "con1",
-            "source": {
-              "slot": "placeholder"
-            },
-            "destination": {
-              "memberIdRef": "input1",
-              "slot": "placeholder"
-            }
-          },
-          {
-            "connectionId": "con2",
+            "connectionId": "labelCon",
             "source": {
               "slot": "label"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "label"
             }
           },
           {
-            "connectionId": "con3",
+            "connectionId": "idCon",
             "source": {
               "slot": "id"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "id"
             }
           },
           {
-            "connectionId": "con4",
+            "connectionId": "valueConIn",
             "source": {
               "slot": "value"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "value"
             },
             "repeatedValues": true
           },
           {
-            "connectionId": "con4-1",
+            "connectionId": "valueConOut",
             "source": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "value"
             },
             "destination": {
               "slot": "value"
-            }
+            },
+            "repeatedValues": true
           },
           {
-            "connectionId": "con8",
+            "connectionId": "nameCon",
             "source": {
               "slot": "name"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "name"
             }
           },
           {
-            "connectionId": "con9",
+            "connectionId": "requiredCon",
             "source": {
               "slot": "required"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "required"
             }
           },
           {
-            "connectionId": "con10",
+            "connectionId": "readonlyCon",
             "source": {
               "slot": "readonly"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "readonly"
             }
           },
           {
-            "connectionId": "con11",
+            "connectionId": "disabledCon",
             "source": {
               "slot": "disabled"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "disabled"
             }
           },
           {
-            "connectionId": "con12",
+            "connectionId": "tabindexCon",
             "source": {
               "slot": "tabindex"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "tabindex"
+            }
+          },
+          {
+            "connectionId": "placeholderCon",
+            "source": {
+              "slot": "placeholder"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "placeholder"
             }
           }
         ],
@@ -879,7 +880,7 @@
           {
             "slot": "type",
             "value": "text",
-            "memberIdRef": "input1"
+            "memberIdRef": "input"
           }
         ],
         "resources": [
@@ -991,138 +992,140 @@
         ],
         "members": [
           {
-            "memberId": "input1",
+            "memberId": "input",
             "artifactId": "cubx-input"
           }
         ],
         "connections": [
           {
-            "connectionId": "con1",
+            "connectionId": "subtypeCon",
             "source": {
               "slot": "subtype"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "type"
             }
           },
           {
-            "connectionId": "con2",
+            "connectionId": "minCon",
             "source": {
               "slot": "min"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "min"
             }
           },
           {
-            "connectionId": "con3",
+            "connectionId": "maxCon",
             "source": {
               "slot": "max"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "max"
             }
           },
           {
-            "connectionId": "con4",
+            "connectionId": "stepCon",
             "source": {
               "slot": "step"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "step"
             }
           },
           {
-            "connectionId": "con5",
+            "connectionId": "labelCon",
             "source": {
               "slot": "label"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "label"
             }
           },
           {
-            "connectionId": "con6",
+            "connectionId": "idCon",
             "source": {
               "slot": "id"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "id"
             }
           },
           {
-            "connectionId": "con7",
+            "connectionId": "valueConIn",
             "source": {
               "slot": "value"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "value"
-            }
+            },
+            "repeatedValues": true
           },
           {
-            "connectionId": "con7-1",
+            "connectionId": "valueConOut",
             "source": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "value"
             },
             "destination": {
               "slot": "value"
-            }
+            },
+            "repeatedValues": true
           },
           {
-            "connectionId": "con8",
+            "connectionId": "nameCon",
             "source": {
               "slot": "name"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "name"
             }
           },
           {
-            "connectionId": "con9",
+            "connectionId": "requiredCon",
             "source": {
               "slot": "required"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "required"
             }
           },
           {
-            "connectionId": "con10",
+            "connectionId": "readonlyCon",
             "source": {
               "slot": "readonly"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "readonly"
             }
           },
           {
-            "connectionId": "con11",
+            "connectionId": "disabledCon",
             "source": {
               "slot": "disabled"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "disabled"
             }
           },
           {
-            "connectionId": "con12",
+            "connectionId": "tabindexCon",
             "source": {
               "slot": "tabindex"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "tabindex"
             }
           }
@@ -1131,7 +1134,7 @@
           {
             "slot": "type",
             "value": "number",
-            "memberIdRef": "input1"
+            "memberIdRef": "input"
           }
         ],
         "resources": [
@@ -1246,25 +1249,25 @@
         ],
         "members": [
           {
-            "memberId": "input1",
+            "memberId": "input",
             "artifactId": "cubx-input"
           }
         ],
         "connections": [
           {
-            "connectionId": "con1",
+            "connectionId": "checkedConIn",
             "source": {
               "slot": "checked"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "checked"
             }
           },
           {
-            "connectionId": "con1-1",
+            "connectionId": "checkedConOut",
             "source": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "checked"
             },
             "destination": {
@@ -1272,119 +1275,121 @@
             }
           },
           {
-            "connectionId": "con3",
+            "connectionId": "rightTextCon",
             "source": {
               "slot": "rightText"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "rightText"
             }
           },
           {
-            "connectionId": "con4",
+            "connectionId": "labelCon",
             "source": {
               "slot": "label"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "label"
             }
           },
           {
-            "connectionId": "con5",
+            "connectionId": "idCon",
             "source": {
               "slot": "id"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "id"
             }
           },
           {
-            "connectionId": "con6",
+            "connectionId": "valueConIn",
             "source": {
               "slot": "value"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "value"
-            }
+            },
+            "repeatedValues": true
           },
           {
-            "connectionId": "con6-1",
+            "connectionId": "valueConOut",
             "source": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "value"
             },
             "destination": {
               "slot": "value"
-            }
+            },
+            "repeatedValues": true
           },
           {
-            "connectionId": "con7",
+            "connectionId": "nameCon",
             "source": {
               "slot": "name"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "name"
             }
           },
           {
-            "connectionId": "con8",
+            "connectionId": "requiredCon",
             "source": {
               "slot": "required"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "required"
             }
           },
           {
-            "connectionId": "con9",
+            "connectionId": "readonlyCon",
             "source": {
               "slot": "readonly"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "readonly"
             }
           },
           {
-            "connectionId": "con10",
+            "connectionId": "disabledCon",
             "source": {
               "slot": "disabled"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "disabled"
             }
           },
           {
-            "connectionId": "con11",
+            "connectionId": "tabindexCon",
             "source": {
               "slot": "tabindex"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "tabindex"
             }
           },
           {
-            "connectionId": "con12",
+            "connectionId": "customValueConIn",
             "source": {
               "slot": "customValue"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "customValue"
             }
           },
           {
-            "connectionId": "con13",
+            "connectionId": "customValueConOut",
             "source": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "customValue"
             },
             "destination": {
@@ -1392,9 +1397,9 @@
             }
           },
           {
-            "connectionId": "con14",
+            "connectionId": "changeObjectCon",
             "source": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "changeObject"
             },
             "destination": {
@@ -1406,7 +1411,7 @@
           {
             "slot": "type",
             "value": "checkbox",
-            "memberIdRef": "input1"
+            "memberIdRef": "input"
           }
         ],
         "resources": [
@@ -1504,25 +1509,25 @@
         ],
         "members": [
           {
-            "memberId": "input1",
+            "memberId": "input",
             "artifactId": "cubx-input"
           }
         ],
         "connections": [
           {
-            "connectionId": "con1",
+            "connectionId": "checkedConIn",
             "source": {
               "slot": "checked"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "checked"
             }
           },
           {
-            "connectionId": "con1-1",
+            "connectionId": "checkedConOut",
             "source": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "checked"
             },
             "destination": {
@@ -1530,102 +1535,104 @@
             }
           },
           {
-            "connectionId": "con2",
+            "connectionId": "nameCon",
             "source": {
               "slot": "name"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "name"
             }
           },
           {
-            "connectionId": "con3",
+            "connectionId": "rightTextCon",
             "source": {
               "slot": "rightText"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "rightText"
             }
           },
           {
-            "connectionId": "con4",
+            "connectionId": "labelCon",
             "source": {
               "slot": "label"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "label"
             }
           },
           {
-            "connectionId": "con5",
+            "connectionId": "idCon",
             "source": {
               "slot": "id"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "id"
             }
           },
           {
-            "connectionId": "con6",
+            "connectionId": "valueConIn",
             "source": {
               "slot": "value"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "value"
-            }
+            },
+            "repeatedValues": true
           },
           {
-            "connectionId": "con6-1",
+            "connectionId": "valueConOut",
             "source": {
-              "slot": "value",
-              "memberIdRef": "input1"
+              "memberIdRef": "input",
+              "slot": "value"
             },
             "destination": {
               "slot": "value"
-            }
+            },
+            "repeatedValues": true
           },
           {
-            "connectionId": "con8",
+            "connectionId": "requiredCon",
             "source": {
               "slot": "required"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "required"
             }
           },
           {
-            "connectionId": "con9",
+            "connectionId": "readonlyCon",
             "source": {
               "slot": "readonly"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "readonly"
             }
           },
           {
-            "connectionId": "con10",
+            "connectionId": "disabledCon",
             "source": {
               "slot": "disabled"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "disabled"
             }
           },
           {
-            "connectionId": "con11",
+            "connectionId": "tabindexCon",
             "source": {
               "slot": "tabindex"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "tabindex"
             }
           }
@@ -1634,7 +1641,7 @@
           {
             "slot": "type",
             "value": "radio",
-            "memberIdRef": "input1"
+            "memberIdRef": "input"
           }
         ],
         "resources": [
@@ -1717,98 +1724,100 @@
         ],
         "members": [
           {
-            "memberId": "input1",
+            "memberId": "input",
             "artifactId": "cubx-input"
           }
         ],
         "connections": [
           {
-            "connectionId": "con1",
+            "connectionId": "labelCon",
             "source": {
               "slot": "label"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "label"
             }
           },
           {
-            "connectionId": "con2",
+            "connectionId": "idCon",
             "source": {
               "slot": "id"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "id"
             }
           },
           {
-            "connectionId": "con3",
+            "connectionId": "valueConIn",
             "source": {
               "slot": "value"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "value"
-            }
+            },
+            "repeatedValues": true
           },
           {
-            "connectionId": "con3-1",
+            "connectionId": "valueConOut",
             "source": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "value"
             },
             "destination": {
               "slot": "value"
-            }
+            },
+            "repeatedValues": true
           },
           {
-            "connectionId": "con4",
+            "connectionId": "nameCon",
             "source": {
               "slot": "name"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "name"
             }
           },
           {
-            "connectionId": "con5",
+            "connectionId": "requiredCon",
             "source": {
               "slot": "required"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "required"
             }
           },
           {
-            "connectionId": "con6",
+            "connectionId": "readonlyCon",
             "source": {
               "slot": "readonly"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "readonly"
             }
           },
           {
-            "connectionId": "con7",
+            "connectionId": "disabledCon",
             "source": {
               "slot": "disabled"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "disabled"
             }
           },
           {
-            "connectionId": "con8",
+            "connectionId": "tabindexCon",
             "source": {
               "slot": "tabindex"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "tabindex"
             }
           }
@@ -1817,7 +1826,7 @@
           {
             "slot": "type",
             "value": "date",
-            "memberIdRef": "input1"
+            "memberIdRef": "input"
           }
         ],
         "resources": [
@@ -1906,98 +1915,110 @@
         ],
         "members": [
           {
-            "memberId": "input1",
+            "memberId": "input",
             "artifactId": "cubx-input"
           }
         ],
         "connections": [
           {
-            "connectionId": "con1",
+            "connectionId": "acceptCon",
             "source": {
               "slot": "accept"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "accept"
             }
           },
           {
-            "connectionId": "con2",
+            "connectionId": "labelCon",
             "source": {
               "slot": "label"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "label"
             }
           },
           {
-            "connectionId": "con3",
+            "connectionId": "idCon",
             "source": {
               "slot": "id"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "id"
             }
           },
           {
-            "connectionId": "con4",
+            "connectionId": "valueConIn",
             "source": {
-              "memberIdRef": "input1",
+              "slot": "value"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "value"
+            },
+            "repeatedValues": true
+          },
+          {
+            "connectionId": "valueConOut",
+            "source": {
+              "memberIdRef": "input",
               "slot": "value"
             },
             "destination": {
               "slot": "value"
-            }
+            },
+            "repeatedValues": true
           },
           {
-            "connectionId": "con5",
+            "connectionId": "nameCon",
             "source": {
               "slot": "name"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "name"
             }
           },
           {
-            "connectionId": "con6",
+            "connectionId": "requiredCon",
             "source": {
               "slot": "required"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "required"
             }
           },
           {
-            "connectionId": "con7",
+            "connectionId": "readonlyCon",
             "source": {
               "slot": "readonly"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "readonly"
             }
           },
           {
-            "connectionId": "con8",
+            "connectionId": "disabledCon",
             "source": {
               "slot": "disabled"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "disabled"
             }
           },
           {
-            "connectionId": "con9",
+            "connectionId": "tabindexCon",
             "source": {
               "slot": "tabindex"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "tabindex"
             }
           }
@@ -2006,7 +2027,7 @@
           {
             "slot": "type",
             "value": "file",
-            "memberIdRef": "input1"
+            "memberIdRef": "input"
           }
         ],
         "resources": [
@@ -2117,138 +2138,140 @@
         ],
         "members": [
           {
-            "memberId": "input1",
+            "memberId": "input",
             "artifactId": "cubx-input"
           }
         ],
         "connections": [
           {
-            "connectionId": "con1",
+            "connectionId": "altCon",
             "source": {
               "slot": "alt"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "alt"
             }
           },
           {
-            "connectionId": "con2",
+            "connectionId": "heightCon",
             "source": {
               "slot": "height"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "height"
             }
           },
           {
-            "connectionId": "con3",
+            "connectionId": "widthCon",
             "source": {
               "slot": "width"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "width"
             }
           },
           {
-            "connectionId": "con4",
+            "connectionId": "srcCon",
             "source": {
               "slot": "src"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "src"
             }
           },
           {
-            "connectionId": "con5",
+            "connectionId": "labelCon",
             "source": {
               "slot": "label"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "label"
             }
           },
           {
-            "connectionId": "con6",
+            "connectionId": "idCon",
             "source": {
               "slot": "id"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "id"
             }
           },
           {
-            "connectionId": "con7",
+            "connectionId": "valueConIn",
             "source": {
               "slot": "value"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "value"
-            }
+            },
+            "repeatedValues": true
           },
           {
-            "connectionId": "con7-1",
+            "connectionId": "valueConOut",
             "source": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "value"
             },
             "destination": {
               "slot": "value"
-            }
+            },
+            "repeatedValues": true
           },
           {
-            "connectionId": "con8",
+            "connectionId": "nameCon",
             "source": {
               "slot": "name"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "name"
             }
           },
           {
-            "connectionId": "con9",
+            "connectionId": "requiredCon",
             "source": {
               "slot": "required"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "required"
             }
           },
           {
-            "connectionId": "con10",
+            "connectionId": "readonlyCon",
             "source": {
               "slot": "readonly"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "readonly"
             }
           },
           {
-            "connectionId": "con11",
+            "connectionId": "disabledCon",
             "source": {
               "slot": "disabled"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "disabled"
             }
           },
           {
-            "connectionId": "con12",
+            "connectionId": "tabindexCon",
             "source": {
               "slot": "tabindex"
             },
             "destination": {
-              "memberIdRef": "input1",
+              "memberIdRef": "input",
               "slot": "tabindex"
             }
           }
@@ -2257,7 +2280,7 @@
           {
             "slot": "type",
             "value": "image",
-            "memberIdRef": "input1"
+            "memberIdRef": "input"
           }
         ],
         "resources": [
