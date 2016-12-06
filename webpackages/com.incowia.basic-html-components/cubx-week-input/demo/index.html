@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>&lt;cubx-week-input&gt; demo</title>
+
+    <script src="../../../cubx.core.rte@2.1.0/webcomponents-lite/webcomponents-lite.js"></script>
+
+    <!--
+        Refer to the crc-loader artifact from a Cubbles-Base.
+        Take care: All other dependencies are expected to be available within the same Base!
+
+        Want to add a 'main' -script to be executed after the dependencies have been loaded?
+        If yes, add the following attribute: data-crc-main="js/my-script.js"
+    -->
+    <script src="../../../cubx.core.rte@2.1.0/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+
+</head>
+<body>
+<!--  Place cubbles components there. -->
+<h1>&lt;cubx-week-input&gt; Demo</h1>
+<h2>Slots:</h2>
+<form>
+    <div style="width: 100%">
+        <label for="id"><h3>id (string):</h3></label>
+        <input type="text" id="id" value="component_id">
+        <button id="btn_setId" disabled="disabled" type="button">Set</button>
+    </div>
+    <div style="width: 100%">
+        <label for="label"><h3>label (sting):</h3></label>
+        <input type="text" id="label" value="Label text">
+        <button id="btn_setLabel" disabled="disabled" type="button">Set</button>
+    </div>
+</form>
+<h2>Other slots:</h2> name, required, readonly, disabled, value and tabindex.
+<div style="width:100%;height:1px;background-color:#0b0b0b;display:inline-block;"></div>
+<h2>View</h2>
+
+<cubx-week-input cubx-webpackage-id="this"></cubx-week-input>
+
+<script>
+    (function(){
+        'use strict';
+
+        var btn_setLabel = document.getElementById('btn_setLabel');
+        var btn_setId = document.getElementById('btn_setId');
+        var id = document.getElementById('id');
+        var label = document.getElementById('label');
+
+        var cubxHtmlComponent= document.getElementsByTagName('cubx-week-input')[0];
+
+        document.addEventListener('cifReady', function() {
+            btn_setLabel.removeAttribute('disabled');
+            btn_setId.removeAttribute('disabled');
+        });
+
+        btn_setId.addEventListener('click', function() {
+            var value = id.value;
+            cubxHtmlComponent.setId(value);
+        });
+
+        btn_setLabel.addEventListener('click', function() {
+            var value = label.value;
+            cubxHtmlComponent.setLabel(value);
+        });
+    })()
+</script>
+
+</body>
+</html>

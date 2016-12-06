@@ -2291,6 +2291,1716 @@
             "artifactId": "cubx-input"
           }
         ]
+      },
+      {
+        "artifactId": "cubx-datetime-local-input",
+        "description": "Datetime input component",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "css/cubx-datetime-local-input.css"
+        ],
+        "slots": [
+          {
+            "slotId": "id",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "name",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "required",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "readonly",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "disabled",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "label",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "value",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "tabindex",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "input",
+            "artifactId": "cubx-input"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "labelCon",
+            "source": {
+              "slot": "label"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "label"
+            }
+          },
+          {
+            "connectionId": "idCon",
+            "source": {
+              "slot": "id"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "id"
+            }
+          },
+          {
+            "connectionId": "valueConIn",
+            "source": {
+              "slot": "value"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "value"
+            },
+            "repeatedValues": true
+          },
+          {
+            "connectionId": "valueConOut",
+            "source": {
+              "memberIdRef": "input",
+              "slot": "value"
+            },
+            "destination": {
+              "slot": "value"
+            },
+            "repeatedValues": true
+          },
+          {
+            "connectionId": "nameCon",
+            "source": {
+              "slot": "name"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "name"
+            }
+          },
+          {
+            "connectionId": "requiredCon",
+            "source": {
+              "slot": "required"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "required"
+            }
+          },
+          {
+            "connectionId": "readonlyCon",
+            "source": {
+              "slot": "readonly"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "readonly"
+            }
+          },
+          {
+            "connectionId": "disabledCon",
+            "source": {
+              "slot": "disabled"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "disabled"
+            }
+          },
+          {
+            "connectionId": "tabindexCon",
+            "source": {
+              "slot": "tabindex"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "tabindex"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "slot": "type",
+            "value": "datetime-local",
+            "memberIdRef": "input"
+          }
+        ],
+        "dependencies": [
+          {
+            "artifactId": "cubx-input"
+          }
+        ]
+      },
+      {
+        "artifactId": "cubx-month-input",
+        "description": "Month input component",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface and dataflow of this component."
+          }
+        ],
+        "resources": [
+          "css/cubx-month-input.css"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "cubx-input"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "id",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "name",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "required",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "readonly",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "disabled",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "label",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "value",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "tabindex",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "input",
+            "artifactId": "cubx-input"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "labelCon",
+            "source": {
+              "slot": "label"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "label"
+            }
+          },
+          {
+            "connectionId": "idCon",
+            "source": {
+              "slot": "id"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "id"
+            }
+          },
+          {
+            "connectionId": "valueConIn",
+            "source": {
+              "slot": "value"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "value"
+            },
+            "repeatedValues": true
+          },
+          {
+            "connectionId": "valueConOut",
+            "source": {
+              "memberIdRef": "input",
+              "slot": "value"
+            },
+            "destination": {
+              "slot": "value"
+            },
+            "repeatedValues": true
+          },
+          {
+            "connectionId": "nameCon",
+            "source": {
+              "slot": "name"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "name"
+            }
+          },
+          {
+            "connectionId": "requiredCon",
+            "source": {
+              "slot": "required"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "required"
+            }
+          },
+          {
+            "connectionId": "readonlyCon",
+            "source": {
+              "slot": "readonly"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "readonly"
+            }
+          },
+          {
+            "connectionId": "disabledCon",
+            "source": {
+              "slot": "disabled"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "disabled"
+            }
+          },
+          {
+            "connectionId": "tabindexCon",
+            "source": {
+              "slot": "tabindex"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "tabindex"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "slot": "type",
+            "value": "month",
+            "memberIdRef": "input"
+          }
+        ]
+      },
+      {
+        "artifactId": "cubx-search-input",
+        "description": "Search html input",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface and dataflow of this component."
+          }
+        ],
+        "resources": [
+          "css/cubx-search-input.css"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "cubx-input"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "id",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "name",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "required",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "readonly",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "disabled",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "label",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "value",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "tabindex",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "input",
+            "artifactId": "cubx-input"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "labelCon",
+            "source": {
+              "slot": "label"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "label"
+            }
+          },
+          {
+            "connectionId": "idCon",
+            "source": {
+              "slot": "id"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "id"
+            }
+          },
+          {
+            "connectionId": "valueConIn",
+            "source": {
+              "slot": "value"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "value"
+            },
+            "repeatedValues": true
+          },
+          {
+            "connectionId": "valueConOut",
+            "source": {
+              "memberIdRef": "input",
+              "slot": "value"
+            },
+            "destination": {
+              "slot": "value"
+            },
+            "repeatedValues": true
+          },
+          {
+            "connectionId": "nameCon",
+            "source": {
+              "slot": "name"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "name"
+            }
+          },
+          {
+            "connectionId": "requiredCon",
+            "source": {
+              "slot": "required"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "required"
+            }
+          },
+          {
+            "connectionId": "readonlyCon",
+            "source": {
+              "slot": "readonly"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "readonly"
+            }
+          },
+          {
+            "connectionId": "disabledCon",
+            "source": {
+              "slot": "disabled"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "disabled"
+            }
+          },
+          {
+            "connectionId": "tabindexCon",
+            "source": {
+              "slot": "tabindex"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "tabindex"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "slot": "type",
+            "value": "search",
+            "memberIdRef": "input"
+          }
+        ]
+      },
+      {
+        "artifactId": "cubx-tel-input",
+        "description": "Tel html input component",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface and dataflow of this component."
+          }
+        ],
+        "resources": [
+          "css/cubx-tel-input.css"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "cubx-input"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "id",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "name",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "required",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "readonly",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "disabled",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "label",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "value",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "tabindex",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "input",
+            "artifactId": "cubx-input"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "labelCon",
+            "source": {
+              "slot": "label"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "label"
+            }
+          },
+          {
+            "connectionId": "idCon",
+            "source": {
+              "slot": "id"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "id"
+            }
+          },
+          {
+            "connectionId": "valueConIn",
+            "source": {
+              "slot": "value"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "value"
+            },
+            "repeatedValues": true
+          },
+          {
+            "connectionId": "valueConOut",
+            "source": {
+              "memberIdRef": "input",
+              "slot": "value"
+            },
+            "destination": {
+              "slot": "value"
+            },
+            "repeatedValues": true
+          },
+          {
+            "connectionId": "nameCon",
+            "source": {
+              "slot": "name"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "name"
+            }
+          },
+          {
+            "connectionId": "requiredCon",
+            "source": {
+              "slot": "required"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "required"
+            }
+          },
+          {
+            "connectionId": "readonlyCon",
+            "source": {
+              "slot": "readonly"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "readonly"
+            }
+          },
+          {
+            "connectionId": "disabledCon",
+            "source": {
+              "slot": "disabled"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "disabled"
+            }
+          },
+          {
+            "connectionId": "tabindexCon",
+            "source": {
+              "slot": "tabindex"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "tabindex"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "slot": "type",
+            "value": "tel",
+            "memberIdRef": "input"
+          }
+        ]
+      },
+      {
+        "artifactId": "cubx-time-input",
+        "description": "Time html component",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface and dataflow of this component."
+          }
+        ],
+        "resources": [
+          "css/cubx-time-input.css"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "cubx-input"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "id",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "name",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "required",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "readonly",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "disabled",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "label",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "value",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "tabindex",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "input",
+            "artifactId": "cubx-input"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "labelCon",
+            "source": {
+              "slot": "label"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "label"
+            }
+          },
+          {
+            "connectionId": "idCon",
+            "source": {
+              "slot": "id"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "id"
+            }
+          },
+          {
+            "connectionId": "valueConIn",
+            "source": {
+              "slot": "value"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "value"
+            },
+            "repeatedValues": true
+          },
+          {
+            "connectionId": "valueConOut",
+            "source": {
+              "memberIdRef": "input",
+              "slot": "value"
+            },
+            "destination": {
+              "slot": "value"
+            },
+            "repeatedValues": true
+          },
+          {
+            "connectionId": "nameCon",
+            "source": {
+              "slot": "name"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "name"
+            }
+          },
+          {
+            "connectionId": "requiredCon",
+            "source": {
+              "slot": "required"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "required"
+            }
+          },
+          {
+            "connectionId": "readonlyCon",
+            "source": {
+              "slot": "readonly"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "readonly"
+            }
+          },
+          {
+            "connectionId": "disabledCon",
+            "source": {
+              "slot": "disabled"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "disabled"
+            }
+          },
+          {
+            "connectionId": "tabindexCon",
+            "source": {
+              "slot": "tabindex"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "tabindex"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "slot": "type",
+            "value": "time",
+            "memberIdRef": "input"
+          }
+        ]
+      },
+      {
+        "artifactId": "cubx-url-input",
+        "description": "Url html input component",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface and dataflow of this component."
+          }
+        ],
+        "resources": [
+          "css/cubx-url-input.css"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "cubx-input"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "id",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "name",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "required",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "readonly",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "disabled",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "label",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "value",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "tabindex",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "input",
+            "artifactId": "cubx-input"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "labelCon",
+            "source": {
+              "slot": "label"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "label"
+            }
+          },
+          {
+            "connectionId": "idCon",
+            "source": {
+              "slot": "id"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "id"
+            }
+          },
+          {
+            "connectionId": "valueConIn",
+            "source": {
+              "slot": "value"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "value"
+            },
+            "repeatedValues": true
+          },
+          {
+            "connectionId": "valueConOut",
+            "source": {
+              "memberIdRef": "input",
+              "slot": "value"
+            },
+            "destination": {
+              "slot": "value"
+            },
+            "repeatedValues": true
+          },
+          {
+            "connectionId": "nameCon",
+            "source": {
+              "slot": "name"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "name"
+            }
+          },
+          {
+            "connectionId": "requiredCon",
+            "source": {
+              "slot": "required"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "required"
+            }
+          },
+          {
+            "connectionId": "readonlyCon",
+            "source": {
+              "slot": "readonly"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "readonly"
+            }
+          },
+          {
+            "connectionId": "disabledCon",
+            "source": {
+              "slot": "disabled"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "disabled"
+            }
+          },
+          {
+            "connectionId": "tabindexCon",
+            "source": {
+              "slot": "tabindex"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "tabindex"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "slot": "type",
+            "value": "url",
+            "memberIdRef": "input"
+          }
+        ]
+      },
+      {
+        "artifactId": "cubx-week-input",
+        "description": "Week html input component",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface and dataflow of this component."
+          }
+        ],
+        "resources": [
+          "css/cubx-week-input.css"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "cubx-input"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "id",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "name",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "required",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "readonly",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "disabled",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "label",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "value",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "tabindex",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "input",
+            "artifactId": "cubx-input"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "labelCon",
+            "source": {
+              "slot": "label"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "label"
+            }
+          },
+          {
+            "connectionId": "idCon",
+            "source": {
+              "slot": "id"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "id"
+            }
+          },
+          {
+            "connectionId": "valueConIn",
+            "source": {
+              "slot": "value"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "value"
+            },
+            "repeatedValues": true
+          },
+          {
+            "connectionId": "valueConOut",
+            "source": {
+              "memberIdRef": "input",
+              "slot": "value"
+            },
+            "destination": {
+              "slot": "value"
+            },
+            "repeatedValues": true
+          },
+          {
+            "connectionId": "nameCon",
+            "source": {
+              "slot": "name"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "name"
+            }
+          },
+          {
+            "connectionId": "requiredCon",
+            "source": {
+              "slot": "required"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "required"
+            }
+          },
+          {
+            "connectionId": "readonlyCon",
+            "source": {
+              "slot": "readonly"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "readonly"
+            }
+          },
+          {
+            "connectionId": "disabledCon",
+            "source": {
+              "slot": "disabled"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "disabled"
+            }
+          },
+          {
+            "connectionId": "tabindexCon",
+            "source": {
+              "slot": "tabindex"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "tabindex"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "slot": "type",
+            "value": "week",
+            "memberIdRef": "input"
+          }
+        ]
+      },
+      {
+        "artifactId": "cubx-email-input",
+        "description": "Email html input component",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface and dataflow of this component."
+          }
+        ],
+        "resources": [
+          "css/cubx-email-input.css"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "cubx-input"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "id",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "name",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "required",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "readonly",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "disabled",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "label",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "value",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "tabindex",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "input",
+            "artifactId": "cubx-input"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "labelCon",
+            "source": {
+              "slot": "label"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "label"
+            }
+          },
+          {
+            "connectionId": "idCon",
+            "source": {
+              "slot": "id"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "id"
+            }
+          },
+          {
+            "connectionId": "valueConIn",
+            "source": {
+              "slot": "value"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "value"
+            },
+            "repeatedValues": true
+          },
+          {
+            "connectionId": "valueConOut",
+            "source": {
+              "memberIdRef": "input",
+              "slot": "value"
+            },
+            "destination": {
+              "slot": "value"
+            },
+            "repeatedValues": true
+          },
+          {
+            "connectionId": "nameCon",
+            "source": {
+              "slot": "name"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "name"
+            }
+          },
+          {
+            "connectionId": "requiredCon",
+            "source": {
+              "slot": "required"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "required"
+            }
+          },
+          {
+            "connectionId": "readonlyCon",
+            "source": {
+              "slot": "readonly"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "readonly"
+            }
+          },
+          {
+            "connectionId": "disabledCon",
+            "source": {
+              "slot": "disabled"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "disabled"
+            }
+          },
+          {
+            "connectionId": "tabindexCon",
+            "source": {
+              "slot": "tabindex"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "tabindex"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "slot": "type",
+            "value": "email",
+            "memberIdRef": "input"
+          }
+        ]
+      },
+      {
+        "artifactId": "cubx-color-input",
+        "description": "Color html input component",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface and dataflow of this component."
+          }
+        ],
+        "resources": [
+          "css/cubx-color-input.css"
+        ],
+        "dependencies": [
+          {
+            "artifactId": "cubx-input"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "id",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "name",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "required",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "readonly",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "disabled",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "label",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "value",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ]
+          },
+          {
+            "slotId": "tabindex",
+            "type": "number",
+            "direction": [
+              "input"
+            ]
+          }
+        ],
+        "members": [
+          {
+            "memberId": "input",
+            "artifactId": "cubx-input"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "labelCon",
+            "source": {
+              "slot": "label"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "label"
+            }
+          },
+          {
+            "connectionId": "idCon",
+            "source": {
+              "slot": "id"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "id"
+            }
+          },
+          {
+            "connectionId": "valueConIn",
+            "source": {
+              "slot": "value"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "value"
+            },
+            "repeatedValues": true
+          },
+          {
+            "connectionId": "valueConOut",
+            "source": {
+              "memberIdRef": "input",
+              "slot": "value"
+            },
+            "destination": {
+              "slot": "value"
+            },
+            "repeatedValues": true
+          },
+          {
+            "connectionId": "nameCon",
+            "source": {
+              "slot": "name"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "name"
+            }
+          },
+          {
+            "connectionId": "requiredCon",
+            "source": {
+              "slot": "required"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "required"
+            }
+          },
+          {
+            "connectionId": "readonlyCon",
+            "source": {
+              "slot": "readonly"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "readonly"
+            }
+          },
+          {
+            "connectionId": "disabledCon",
+            "source": {
+              "slot": "disabled"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "disabled"
+            }
+          },
+          {
+            "connectionId": "tabindexCon",
+            "source": {
+              "slot": "tabindex"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "tabindex"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "slot": "type",
+            "value": "color",
+            "memberIdRef": "input"
+          }
+        ]
       }
     ],
     "utilities": []
