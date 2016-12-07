@@ -34,6 +34,11 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "cubx-input demo"
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
           }
         ],
         "slots": [
@@ -251,6 +256,11 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
           }
         ],
         "slots": [
@@ -337,6 +347,11 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
           }
         ],
         "slots": [
@@ -444,6 +459,11 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
           }
         ],
         "slots": [
@@ -541,6 +561,11 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
           }
         ],
         "slots": [
@@ -571,6 +596,11 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
           }
         ],
         "slots": [
@@ -615,6 +645,11 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
           }
         ],
         "slots": [
@@ -645,6 +680,11 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
           }
         ],
         "slots": [
@@ -697,6 +737,11 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
           }
         ],
         "slots": [
@@ -900,6 +945,11 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
           }
         ],
         "slots": [
@@ -1154,6 +1204,11 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
           }
         ],
         "slots": [
@@ -1431,6 +1486,11 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
           }
         ],
         "slots": [
@@ -1661,6 +1721,11 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
           }
         ],
         "slots": [
@@ -1846,6 +1911,11 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
           }
         ],
         "slots": [
@@ -2047,6 +2117,11 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
           }
         ],
         "slots": [
