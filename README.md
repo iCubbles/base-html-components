@@ -9,28 +9,28 @@ The generated documentation for this webpackage and its artifacts is available [
 |--------------------------------|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------|---------------------------|
 | **cubx-input** | Elementary component | Wrap the input html component | [Demo][demoInput], [Docs][docsInput] |
 | **cubx-email-input** | Compound component | Wrap the email type of the input html component | [Demo][demoEmailI], [Docs][docsEmailI] |
-| **cubx-file-input** | Compound component | Wrap the email type of the input html component | [Demo][demoFileI], [Docs][docsFileI] |
-| **cubx-image-input** | Compound component | Wrap the email type of the input html component | [Demo][demoImageI], [Docs][docsImageI] |
-| **cubx-month-input** | Compound component | Wrap the email type of the input html component | [Demo][demoMonthI], [Docs][docsMonthI] |
-| **cubx-number-input** | Compound component | Wrap the email type of the input html component | [Demo][demoNumberI], [Docs][docsNumberI] |
-| **cubx-color-input** | Compound component | Wrap the email type of the input html component | [Demo][demoColorI], [Docs][docsColorI] |
-| **cubx-date-input** | Compound component | Wrap the email type of the input html component | [Demo][demoDateI], [Docs][docsDateI] |
-| **cubx-datetime-local-input** | Compound component | Wrap the email type of the input html component | [Demo][demoDateTLI], [Docs][docsDateTLI] |
-| **cubx-week-input** | Compound component | Wrap the email type of the input html component | [Demo][demoWeekI], [Docs][docsWeekI] |
-| **cubx-url-input** | Compound component | Wrap the email type of the input html component | [Demo][demoUrlI], [Docs][docsUrlI] |
-| **cubx-tel-input** | Compound component | Wrap the email type of the input html component | [Demo][demoTelI], [Docs][docsTelI] |
-| **cubx-time-input** | Compound component | Wrap the email type of the input html component | [Demo][demoTimeI], [Docs][docsTimeI] |
-| **cubx-text-input** | Compound component | Wrap the email type of the input html component | [Demo][demoTextI], [Docs][docsTextI] |
-| **cubx-search-input** | Compound component | Wrap the email type of the input html component | [Demo][demoSearchI], [Docs][docsSearchI] |
-| **cubx-radio-button** | Compound component | Wrap the email type of the input html component | [Demo][demoRadioB], [Docs][docsRadioB] |
-| **cubx-checkbox** | Compound component | Wrap the email type of the input html component | [Demo][demoCheckbox], [Docs][docsCheckbox] |
-| **cubx-img** | Elementary component | Wrap the email type of the input html component | [Demo][demoImg], [Docs][docsImg] |
-| **cubx-ol** | Elementary component | Wrap the email type of the input html component | [Demo][demoOl], [Docs][docsOl] |
-| **cubx-p** | Elementary component | Wrap the email type of the input html component | [Demo][demoP], [Docs][docsP] |
-| **cubx-button** | Elementary component | Wrap the email type of the input html component | [Demo][demoButton], [Docs][docsButton] |
-| **cubx-textarea** | Elementary component | Wrap the email type of the input html component | [Demo][demoTextarea], [Docs][docsTextarea] |
-| **cubx-ul** | Elementary component | Wrap the email type of the input html component | [Demo][demoUl], [Docs][docsUl] |
-| **cubx-select** | Elementary component | Wrap the email type of the input html component | [Demo][demoSelect], [Docs][docsSelect] |
+| **cubx-file-input** | Compound component | Wrap the file type of the input html component | [Demo][demoFileI], [Docs][docsFileI] |
+| **cubx-image-input** | Compound component | Wrap the image type of the input html component | [Demo][demoImageI], [Docs][docsImageI] |
+| **cubx-month-input** | Compound component | Wrap the month type of the input html component | [Demo][demoMonthI], [Docs][docsMonthI] |
+| **cubx-number-input** | Compound component | Wrap the number type of the input html component | [Demo][demoNumberI], [Docs][docsNumberI] |
+| **cubx-color-input** | Compound component | Wrap the color type of the input html component | [Demo][demoColorI], [Docs][docsColorI] |
+| **cubx-date-input** | Compound component | Wrap the date type of the input html component | [Demo][demoDateI], [Docs][docsDateI] |
+| **cubx-datetime-local-input** | Compound component | Wrap the datetime-local type of the input html component | [Demo][demoDateTLI], [Docs][docsDateTLI] |
+| **cubx-week-input** | Compound component | Wrap the week type of the input html component | [Demo][demoWeekI], [Docs][docsWeekI] |
+| **cubx-url-input** | Compound component | Wrap the url type of the input html component | [Demo][demoUrlI], [Docs][docsUrlI] |
+| **cubx-tel-input** | Compound component | Wrap the tel type of the input html component | [Demo][demoTelI], [Docs][docsTelI] |
+| **cubx-time-input** | Compound component | Wrap the time type of the input html component | [Demo][demoTimeI], [Docs][docsTimeI] |
+| **cubx-text-input** | Compound component | Wrap the text type of the input html component | [Demo][demoTextI], [Docs][docsTextI] |
+| **cubx-search-input** | Compound component | Wrap the search type of the input html component | [Demo][demoSearchI], [Docs][docsSearchI] |
+| **cubx-radio-button** | Compound component | Wrap the radio type of the input html component | [Demo][demoRadioB], [Docs][docsRadioB] |
+| **cubx-checkbox** | Compound component | Wrap the checkbox type of the input html component | [Demo][demoCheckbox], [Docs][docsCheckbox] |
+| **cubx-img** | Elementary component | Wrap the img html component | [Demo][demoImg], [Docs][docsImg] |
+| **cubx-ol** | Elementary component | Wrap the ol html component | [Demo][demoOl], [Docs][docsOl] |
+| **cubx-p** | Elementary component | Wrap the p html component | [Demo][demoP], [Docs][docsP] |
+| **cubx-button** | Elementary component | Wrap the button html component | [Demo][demoButton], [Docs][docsButton] |
+| **cubx-textarea** | Elementary component | Wrap the textarea html component | [Demo][demoTextarea], [Docs][docsTextarea] |
+| **cubx-ul** | Elementary component | Wrap the ul html component | [Demo][demoUl], [Docs][docsUl] |
+| **cubx-select** | Elementary component | Wrap the select html component | [Demo][demoSelect], [Docs][docsSelect] |
 
 ## Use of components
 
