@@ -1,16 +1,21 @@
 {
   "name": "basic-html-components",
   "groupId": "com.incowia",
-  "version": "1.0",
+  "version": "1.2-SNAPSHOT",
   "modelVersion": "9.1.1",
   "docType": "webpackage",
   "author": {
     "name": "Edwin Gamboa",
     "email": "edwin.gamboa@incowia.com"
   },
+  "contributors": [
+    {
+      "name": "Pierre Wolf",
+      "email": "pierre.wolf@incowia.com"
+    }
+  ],
   "license": "MIT",
   "keywords": [],
-
   "man": [],
   "artifacts": {
     "apps": [
@@ -725,6 +730,49 @@
           {
             "webpackageId": "cubx.core.rte@2.1.0",
             "artifactId": "cubxpolymer"
+          }
+        ]
+      },
+      {
+        "artifactId": "cubx-label-output",
+        "description": " This elementary-component simple renders a html-span as 'label' for the following output text",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "cubx-label-output.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.2.0",
+            "artifactId": "cubxpolymer"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "outputLabel",
+            "type": "string",
+            "direction": [
+              "input"
+            ],
+            "value": "defaultLabel"
+          },
+          {
+            "slotId": "outputText",
+            "type": "string",
+            "direction": [
+              "input"
+            ],
+            "value": "defaultText"
           }
         ]
       }
