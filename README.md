@@ -38,13 +38,13 @@ The generated documentation for this webpackage and its artifacts is available [
 The html file should contain the desire component using its tag, e.g. the `<cubx-email-input>`, as follows:
 
 ```html
-<cubx-email-input cubx-webpackage-id="com.incowia.basic-html-components@1.0"></cubx-email-input>
+<cubx-email-input cubx-webpackage-id="com.incowia.basic-html-components@1.2"></cubx-email-input>
 ```
 
 This component can be optionally initialized using the `<cubx-core-slot-init>` tag (available from _cubx.core.rte_ version 1.9.0). For example, lets initilize the 'value' slot as follows:
 
 ```html
-<cubx-email-input cubx-webpackage-id="com.incowia.basic-html-components@1.0">
+<cubx-email-input cubx-webpackage-id="com.incowia.basic-html-components@1.2">
         <!--Initilization-->
         <cubx-core-init>
                 <cubx-core-slot-init slot="value">"myemail@email.com"</cubx-core-slot-init>
@@ -65,78 +65,78 @@ document.addEventListener('crcDepMgrReady', function() {
 
 The same process is valid for the other components.
 
-[wpDocs]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/docs/index.html
+[wpDocs]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/docs/index.html
 
-[demoInput]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-input/demo/index.html
-[docsInput]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-input/docs/index.html
+[demoInput]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-input/demo/index.html
+[docsInput]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-input/docs/index.html
 
-[demoEmailI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-email-input/demo/index.html
-[docsEmailI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-email-input/docs/index.html
+[demoEmailI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-email-input/demo/index.html
+[docsEmailI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-email-input/docs/index.html
 
-[demoFileI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-file-input/demo/index.html
-[docsFileI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-file-input/docs/index.html
+[demoFileI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-file-input/demo/index.html
+[docsFileI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-file-input/docs/index.html
 
-[demoImageI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-image-input/demo/index.html
-[docsImageI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-image-input/docs/index.html
+[demoImageI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-image-input/demo/index.html
+[docsImageI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-image-input/docs/index.html
 
-[demoMonthI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-month-input/demo/index.html
-[docsMonthI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-month-input/docs/index.html
+[demoMonthI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-month-input/demo/index.html
+[docsMonthI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-month-input/docs/index.html
 
-[demoNumberI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-number-input/demo/index.html
-[docsNumberI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-number-input/docs/index.html
+[demoNumberI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-number-input/demo/index.html
+[docsNumberI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-number-input/docs/index.html
 
-[demoColorI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-color-input/demo/index.html
-[docsColorI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-color-input/docs/index.html
+[demoColorI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-color-input/demo/index.html
+[docsColorI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-color-input/docs/index.html
 
-[demoDateI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-date-input/demo/index.html
-[docsDateI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-date-input/docs/index.html
+[demoDateI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-date-input/demo/index.html
+[docsDateI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-date-input/docs/index.html
 
-[demoDateTLI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-datetime-local-input/demo/index.html
-[docsDateTLI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-datetime-local-input/docs/index.html
+[demoDateTLI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-datetime-local-input/demo/index.html
+[docsDateTLI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-datetime-local-input/docs/index.html
 
-[demoWeekI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-week-input/demo/index.html
-[docsWeekI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-week-input/docs/index.html
+[demoWeekI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-week-input/demo/index.html
+[docsWeekI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-week-input/docs/index.html
 
-[demoUrlI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-url-input/demo/index.html
-[docsUrlI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-url-input/docs/index.html
+[demoUrlI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-url-input/demo/index.html
+[docsUrlI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-url-input/docs/index.html
 
-[demoTelI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-tel-input/demo/index.html
-[docsTelI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-tel-input/docs/index.html
+[demoTelI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-tel-input/demo/index.html
+[docsTelI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-tel-input/docs/index.html
 
-[demoTimeI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-time-input/demo/index.html
-[docsTimeI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-time-input/docs/index.html
+[demoTimeI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-time-input/demo/index.html
+[docsTimeI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-time-input/docs/index.html
 
-[demoTextI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-text-input/demo/index.html
-[docsTextI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-text-input/docs/index.html
+[demoTextI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-text-input/demo/index.html
+[docsTextI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-text-input/docs/index.html
 
-[demoSearchI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-search-input/demo/index.html
-[docsSearchI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-search-input/docs/index.html
+[demoSearchI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-search-input/demo/index.html
+[docsSearchI]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-search-input/docs/index.html
 
-[demoRadioB]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-radio-button/demo/index.html
-[docsRadioB]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-radio-button/docs/index.html
+[demoRadioB]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-radio-button/demo/index.html
+[docsRadioB]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-radio-button/docs/index.html
 
-[demoCheckbox]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-checkbox/demo/index.html
-[docsCheckbox]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-checkbox/docs/index.html
+[demoCheckbox]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-checkbox/demo/index.html
+[docsCheckbox]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-checkbox/docs/index.html
 
-[demoImg]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-img/demo/index.html
-[docsImg]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-img/docs/index.html
+[demoImg]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-img/demo/index.html
+[docsImg]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-img/docs/index.html
 
-[demoOl]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-ol/demo/index.html
-[docsOl]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-ol/docs/index.html
+[demoOl]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-ol/demo/index.html
+[docsOl]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-ol/docs/index.html
 
-[demoP]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-p/demo/index.html
-[docsP]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-p/docs/index.html
+[demoP]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-p/demo/index.html
+[docsP]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-p/docs/index.html
 
-[demoButton]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-button/demo/index.html
-[docsButton]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-button/docs/index.html
+[demoButton]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-button/demo/index.html
+[docsButton]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-button/docs/index.html
 
-[demoTextarea]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-textarea/demo/index.html
-[docsTextarea]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-textarea/docs/index.html
+[demoTextarea]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-textarea/demo/index.html
+[docsTextarea]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-textarea/docs/index.html
 
-[demoUl]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-ul/demo/index.html
-[docsUl]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-ul/docs/index.html
+[demoUl]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-ul/demo/index.html
+[docsUl]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-ul/docs/index.html
 
-[demoSelect]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-select/demo/index.html
-[docsSelect]: https://cubbles.world/shared/com.incowia.basic-html-components@1.0/cubx-select/docs/index.html
+[demoSelect]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-select/demo/index.html
+[docsSelect]: https://cubbles.world/shared/com.incowia.basic-html-components@1.2/cubx-select/docs/index.html
 
 [Want to get to know the Cubbles Platform?](https://cubbles.github.io)
