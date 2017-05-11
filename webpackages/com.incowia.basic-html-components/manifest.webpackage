@@ -775,6 +775,42 @@
             "value": "defaultText"
           }
         ]
+      },
+      {
+        "artifactId": "cubx-text-output",
+        "description": "A simple component to output given text",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "cubx-text-output.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.2.0",
+            "artifactId": "cubxpolymer"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "value",
+            "type": "string",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": 10
+          }
+        ]
       }
     ],
     "compoundComponents": [
