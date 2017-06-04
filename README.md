@@ -32,6 +32,7 @@ The generated documentation for this webpackage and its artifacts is available [
 | **cubx-ul** | Elementary component | Wrap the ul html component | [Demo][demoUl], [Docs][docsUl] |
 | **cubx-select** | Elementary component | Wrap the select html component | [Demo][demoSelect], [Docs][docsSelect] |
 | **cubx-label-output** | Elementary component | Simple static output of "label text" | |
+| **cubx-text-output** | Elementary component | Simple static output of "text" | |
 
 ## Use of components
 
