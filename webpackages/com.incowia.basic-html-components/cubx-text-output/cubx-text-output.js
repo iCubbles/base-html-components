@@ -19,6 +19,10 @@
 
     modelValueChanged: function (newValue) {
       this.value = newValue;
+    },
+
+    __isHidden: function() {
+      return !this.model.visible;
     }
   });
 }());

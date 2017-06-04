@@ -1,7 +1,7 @@
 <dom-module id="cubx-text-output">
 
     <template>
-        <span  class="cubx-text-output cubx-text-output--color cubx-text-output--size">{{model.value}}</span>
+        <span  class="cubx-text-output cubx-text-output--color cubx-text-output--size" hidden$="[[__isHidden(model.visible)]]">{{model.value}}</span>
     </template>
 
     <script src="cubx-text-output.js"></script>

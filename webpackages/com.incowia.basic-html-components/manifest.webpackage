@@ -809,6 +809,15 @@
               "output"
             ],
             "value": 10
+          },
+          {
+            "slotId": "visible",
+            "type": "boolean",
+            "direction": [
+              "input",
+              "output"
+            ],
+            "value": true
           }
         ]
       }
