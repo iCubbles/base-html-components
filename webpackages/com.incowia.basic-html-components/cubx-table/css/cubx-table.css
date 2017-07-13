@@ -1,0 +1,16 @@
+cubx-table table {
+    border-collapse: collapse;
+}
+
+cubx-table table, cubx-table th, cubx-table td {
+    border: 1px solid black;
+    padding: 0 5px;
+}
+
+cubx-table th {
+    font-weight: bold;
+}
+
+cubx-table .advanced {
+    cursor: pointer;
+}

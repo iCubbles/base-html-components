@@ -1,7 +1,7 @@
 {
   "name": "basic-html-components",
   "groupId": "com.incowia",
-  "version": "1.3",
+  "version": "1.4-SNAPSHOT",
   "modelVersion": "9.1.1",
   "docType": "webpackage",
   "author": {
@@ -818,6 +818,48 @@
               "output"
             ],
             "value": true
+          }
+        ]
+      },
+      {
+        "artifactId": "cubx-table",
+        "description": "create a table based on the provided data",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "cubx-table.html",
+          "css/cubx-table.css"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.2.3",
+            "artifactId": "cubxpolymer"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "data",
+            "type": "array",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "settings",
+            "type": "object",
+            "direction": [
+              "input"
+            ]
           }
         ]
       }
