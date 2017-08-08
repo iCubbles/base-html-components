@@ -1,5 +1,6 @@
 cubx-table table {
     border-collapse: collapse;
+    width: 100%;
 }
 
 cubx-table table, cubx-table th, cubx-table td {
@@ -13,4 +14,8 @@ cubx-table th {
 
 cubx-table .advanced {
     cursor: pointer;
+}
+
+cubx-table {
+    display: block;
 }
