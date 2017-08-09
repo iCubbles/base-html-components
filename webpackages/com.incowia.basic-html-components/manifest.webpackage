@@ -1,7 +1,7 @@
 {
   "name": "basic-html-components",
   "groupId": "com.incowia",
-  "version": "1.4",
+  "version": "1.5-SNAPSHOT",
   "modelVersion": "9.1.1",
   "docType": "webpackage",
   "author": {
@@ -12,6 +12,10 @@
     {
       "name": "Pierre Wolf",
       "email": "pierre.wolf@incowia.com"
+    },
+    {
+      "name": "Philipp Wagner",
+      "email": "philipp.wagner@incowia.com"
     }
   ],
   "license": "MIT",
