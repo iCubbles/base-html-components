@@ -47,8 +47,7 @@
           for (i=1; i<data.length; i++) {
             // TODO implement
           }
-        }
-        else {
+        } else {
           // no key specified; remove all rows and add new rows from data
           var keyPos = data[0].indexOf(this.dataKey);
           while (tBody.children.length) {
@@ -56,6 +55,7 @@
           }
           for (i=1; i<data.length; i++) {
             var dataRow = document.createElement("tr");
+            var settings = this.getSettings();
             for (j=0; j<data[i].length; j++) {
               if (keyPos != j) {
                 var dataCell = document.createElement("td");
@@ -63,22 +63,30 @@
                 dataRow.appendChild(dataCell);
               }
             }
+            if (settings.hasOwnProperty('rowSelect') && settings.rowSelect) {
+              var self = this;
+              dataRow.onclick = (function(data){
+                return function() {
+                  self.setSelectedRow(data);
+                }
+              })(data[i]);
+              dataRow.classList.add('clickable');
+            }
             if (this.hasAdvancedCol) {
               dataCell = document.createElement("td");
-              var settings = this.getSettings();
-              settings = settings.advancedCol;
-              dataCell.innerHTML = settings.content;
+              var advancedColSettings = settings.advancedCol;
+              dataCell.innerHTML = advancedColSettings.content;
               dataCell.classList.add("advanced");
-              if (settings.class) {
-                dataCell.classList.add(settings.class);
+              if (advancedColSettings.class) {
+                dataCell.classList.add(advancedColSettings.class);
               }
-              else if (settings.color) {
-                dataCell.style.backgroundColor = settings.color;
+              else if (advancedColSettings.color) {
+                dataCell.style.backgroundColor = advancedColSettings.color;
               }
-              if (settings.link) {
-                var link = settings.link;
-                if (data[0].indexOf(settings.ref) > -1) {
-                  link += data[i][data[0].indexOf(settings.ref)];
+              if (advancedColSettings.link) {
+                var link = advancedColSettings.link;
+                if (data[0].indexOf(advancedColSettings.ref) > -1) {
+                  link += data[i][data[0].indexOf(advancedColSettings.ref)];
                 }
                 dataCell.onclick = (function(link){ return function(){ window.open(link, '_blank');}})(link);
               }

@@ -12,8 +12,12 @@ cubx-table th {
     font-weight: bold;
 }
 
-cubx-table .advanced {
+cubx-table .advanced, cubx-table .clickable {
     cursor: pointer;
+}
+
+cubx-table .clickable:hover {
+    background: rgba(0,0,0,0.1);
 }
 
 cubx-table {
