@@ -1,7 +1,7 @@
 {
   "name": "basic-html-components",
   "groupId": "com.incowia",
-  "version": "1.5",
+  "version": "1.6-SNAPSHOT",
   "modelVersion": "9.1.1",
   "docType": "webpackage",
   "author": {
@@ -871,6 +871,51 @@
             "direction": [
               "output"
             ]
+          }
+        ]
+      },
+      {
+        "artifactId": "cubx-accordion-ctrl",
+        "description": "Provides functionality to render an accordion.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface of this component."
+          }
+        ],
+        "resources": [
+          "cubx-accordion-ctrl.css",
+          "cubx-accordion-ctrl.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.4.0",
+            "artifactId": "cubxpolymer"
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "itemSelectors",
+            "type": "array",
+            "direction": [
+              "input"
+            ],
+            "description": "Provide a list of selectors (as objects) for accordion items head and body using properties \"head\" and \"body\" for each item."
+          },
+          {
+            "slotId": "multiple",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ],
+            "description": "If set to true multiple accordion items can be shown. Otherwise only one item is shown. Defaults to false",
+            "value": false
           }
         ]
       }

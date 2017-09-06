@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>&lt;cubx-accordion-ctrl&gt; demo</title>
+
+    <script src="../../../cubx.core.rte@2.4.0/webcomponents-lite/webcomponents-lite.js"></script>
+    <script src="../../../cubx.core.rte@2.4.0/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+
+</head>
+<body>
+
+<h1>Accordion with multiple items opened</h1>
+
+<div class="accordion-head1">Section 1</div>
+<div class="accordion-body1">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</div>
+
+<div class="accordion-head2">Section 2</div>
+<div class="accordion-body2">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</div>
+
+<div class="accordion-head3">Section 3</div>
+<div class="accordion-body3">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</div>
+
+<cubx-accordion-ctrl cubx-webpackage-id="this">
+    <cubx-core-init style="display:none;">
+        <cubx-core-slot-init slot="itemSelectors">
+            [
+            {"head": ".accordion-head1", "body":".accordion-body1"},
+            {"head": ".accordion-head2", "body":".accordion-body2"},
+            {"head": ".accordion-head3", "body":".accordion-body3"}
+            ]
+        </cubx-core-slot-init>
+        <cubx-core-slot-init slot="multiple">true</cubx-core-slot-init>
+    </cubx-core-init>
+</cubx-accordion-ctrl>
+
+<br><hr>
+
+<h1>Accordion with only one item opened</h1>
+
+<div class="accordion-head4">Section 1</div>
+<div class="accordion-body4">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</div>
+
+<div class="accordion-head5">Section 2</div>
+<div class="accordion-body5">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</div>
+
+<div class="accordion-head6">Section 3</div>
+<div class="accordion-body6">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</div>
+
+<cubx-accordion-ctrl cubx-webpackage-id="this">
+    <cubx-core-init style="display:none;">
+        <cubx-core-slot-init slot="itemSelectors">
+            [
+            {"head": ".accordion-head4", "body":".accordion-body4"},
+            {"head": ".accordion-head5", "body":".accordion-body5"},
+            {"head": ".accordion-head6", "body":".accordion-body6"}
+            ]
+        </cubx-core-slot-init>
+    </cubx-core-init>
+</cubx-accordion-ctrl>
+
+
+
+
+<style>
+    [class^="accordion-head"] {
+        background-color: lightgray;
+        padding: 10px;
+        margin-top: 2px;
+    }
+    [class^="accordion-body"] {
+        padding: 5px 5px 10px 5px;
+    }
+</style>
+
+</body>
+</html>
