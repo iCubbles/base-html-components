@@ -4,6 +4,11 @@
   CubxPolymer({
     is: 'cubx-accordion-ctrl',
 
+    classes: {
+      COLLAPSED: 'collapsed',
+      EXPANDED: 'expanded'
+    },
+
     cubxReady: function () {
       this._cubxReady = true;
       this._handleConfigChanges();
@@ -48,10 +53,11 @@
       }
       var self = this;
       item.head.classList.add('cubx-accordion-ctrl-item-head');
+      item.head.classList.add(this.classes.COLLAPSED);
       item.body.classList.add('cubx-accordion-ctrl-item-body');
       item.body.classList.add('hidden');
       item.head.addEventListener('click', function (event) {
-        item.body.classList.contains('hidden') ? item.body.classList.remove('hidden') : item.body.classList.add('hidden');
+        item.body.classList.contains('hidden') ? self._expandItem(item) : self._collapseItem(item);
         self._checkForMultiple(item);
       });
     },
@@ -59,9 +65,21 @@
     _checkForMultiple: function (item) {
       if (this.model.multiple === false) {
         for(var i = 0; i < this.items.length; i++) {
-          this.items[i].body !== item.body ? this.items[i].body.classList.add('hidden') : null;
+          this.items[i].body !== item.body ? this._collapseItem(this.items[i]) : null;
         }
       }
+    },
+
+    _expandItem: function (item) {
+      item.body.classList.remove('hidden');
+      item.head.classList.add(this.classes.EXPANDED);
+      item.head.classList.remove(this.classes.COLLAPSED);
+    },
+
+    _collapseItem: function (item) {
+      item.body.classList.add('hidden');
+      item.head.classList.add(this.classes.COLLAPSED);
+      item.head.classList.remove(this.classes.EXPANDED);
     }
   });
 }());
