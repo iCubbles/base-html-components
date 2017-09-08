@@ -49,9 +49,9 @@
       var self = this;
       item.head.classList.add('cubx-accordion-ctrl-item-head');
       item.body.classList.add('cubx-accordion-ctrl-item-body');
-      item.body.style.display = 'none';
+      item.body.classList.add('hidden');
       item.head.addEventListener('click', function (event) {
-        item.body.style.display === 'block' ? item.body.style.display = 'none' : item.body.style.display = 'block';
+        item.body.classList.contains('hidden') ? item.body.classList.remove('hidden') : item.body.classList.add('hidden');
         self._checkForMultiple(item);
       });
     },
@@ -59,7 +59,7 @@
     _checkForMultiple: function (item) {
       if (this.model.multiple === false) {
         for(var i = 0; i < this.items.length; i++) {
-          this.items[i].body !== item.body ? this.items[i].body.style.display = 'none' : null;
+          this.items[i].body !== item.body ? this.items[i].body.classList.add('hidden') : null;
         }
       }
     }

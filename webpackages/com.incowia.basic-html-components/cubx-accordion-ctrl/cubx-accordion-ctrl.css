@@ -2,6 +2,6 @@
     cursor: pointer;
 }
 
-.cubx-accordion-ctrl-item-body:hover {
-
+.cubx-accordion-ctrl-item-body.hidden {
+    display: none !important;
 }
