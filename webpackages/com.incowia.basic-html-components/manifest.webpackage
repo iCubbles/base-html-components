@@ -916,6 +916,14 @@
             ],
             "description": "If set to true multiple accordion items can be shown. Otherwise only one item is shown. Defaults to false",
             "value": false
+          },
+          {
+            "slotId": "expandAll",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ],
+            "description": "If set to true all accordion items will be expanded. Note: this only applies if slot \"multiple\" is set to \"true\"."
           }
         ]
       }

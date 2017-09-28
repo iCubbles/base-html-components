@@ -14,6 +14,12 @@
       this._handleConfigChanges();
     },
 
+    modelExpandAllChanged: function (value) {
+      if (this._cubxReady && typeof value === 'boolean' && value) {
+        this._handleConfigChanges(true);
+      }
+    },
+
     modelItemSelectorsChanged: function (selectors) {
       if (selectors instanceof Array && this._cubxReady) {
         this._handleConfigChanges();
@@ -22,15 +28,23 @@
 
     modelMultipleChanged: function (multiple) {
       if (typeof multiple === 'boolean' && this._cubxReady) {
-        this._handleConfigChanges();
+        this._handleConfigChanges(true);
       }
     },
 
-    _handleConfigChanges: function () {
+    _handleConfigChanges: function (skipInit) {
       var itemSelectors = this.model.itemSelectors;
       var multiple = this.model.multiple || false;
+      var expandAll = this.model.expandAll || false;
 
-      itemSelectors instanceof Array ? this._initAccordionForGivenSelectors(itemSelectors) : null;
+      itemSelectors instanceof Array && !skipInit ? this._initAccordionForGivenSelectors(itemSelectors) : null;
+      expandAll && multiple ? this._expandItems() : null;
+    },
+
+    _expandItems: function () {
+      for (var i = 0; i < this.items.length; i++) {
+        this._expandItem(this.items[i]);
+      }
     },
 
     _initAccordionForGivenSelectors: function (itemSelectors) {
@@ -51,6 +65,7 @@
         console.error('invalid selector');
         return;
       }
+      if (item.initialised) { return };
       var self = this;
       item.head.classList.add('cubx-accordion-ctrl-item-head');
       item.head.classList.add(this.classes.COLLAPSED);
@@ -60,6 +75,7 @@
         item.body.classList.contains('hidden') ? self._expandItem(item) : self._collapseItem(item);
         self._checkForMultiple(item);
       });
+      item.initialised = true;
     },
 
     _checkForMultiple: function (item) {
