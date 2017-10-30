@@ -246,6 +246,14 @@
               "output"
             ],
             "value": ""
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
+            "direction": [
+              "input"
+            ]
           }
         ],
         "resources": [
@@ -1009,6 +1017,14 @@
             "direction": [
               "input"
             ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
+            "direction": [
+              "input"
+            ]
           }
         ],
         "members": [
@@ -1118,6 +1134,16 @@
             "destination": {
               "memberIdRef": "input",
               "slot": "placeholder"
+            }
+          },
+          {
+            "connectionId": "langCon",
+            "source": {
+              "slot": "lang"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "lang"
             }
           }
         ],
@@ -1235,6 +1261,14 @@
           {
             "slotId": "tabindex",
             "type": "number",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
             "direction": [
               "input"
             ]
@@ -1378,6 +1412,16 @@
               "memberIdRef": "input",
               "slot": "tabindex"
             }
+          },
+          {
+            "connectionId": "langCon",
+            "source": {
+              "slot": "lang"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "lang"
+            }
           }
         ],
         "inits": [
@@ -1499,6 +1543,14 @@
             "type": "object",
             "direction": [
               "output"
+            ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
+            "direction": [
+              "input"
             ]
           }
         ],
@@ -1660,6 +1712,16 @@
             "destination": {
               "slot": "changeObject"
             }
+          },
+          {
+            "connectionId": "langCon",
+            "source": {
+              "slot": "lang"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "lang"
+            }
           }
         ],
         "inits": [
@@ -1762,6 +1824,14 @@
           {
             "slotId": "tabindex",
             "type": "number",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
             "direction": [
               "input"
             ]
@@ -1895,6 +1965,16 @@
               "memberIdRef": "input",
               "slot": "tabindex"
             }
+          },
+          {
+            "connectionId": "langCon",
+            "source": {
+              "slot": "lang"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "lang"
+            }
           }
         ],
         "inits": [
@@ -1982,6 +2062,14 @@
           {
             "slotId": "tabindex",
             "type": "number",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
             "direction": [
               "input"
             ]
@@ -2085,6 +2173,16 @@
               "memberIdRef": "input",
               "slot": "tabindex"
             }
+          },
+          {
+            "connectionId": "langCon",
+            "source": {
+              "slot": "lang"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "lang"
+            }
           }
         ],
         "inits": [
@@ -2178,6 +2276,14 @@
           {
             "slotId": "tabindex",
             "type": "number",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
             "direction": [
               "input"
             ]
@@ -2290,6 +2396,16 @@
             "destination": {
               "memberIdRef": "input",
               "slot": "tabindex"
+            }
+          },
+          {
+            "connectionId": "langCon",
+            "source": {
+              "slot": "lang"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "lang"
             }
           }
         ],
@@ -2406,6 +2522,14 @@
           {
             "slotId": "tabindex",
             "type": "number",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
             "direction": [
               "input"
             ]
@@ -2549,6 +2673,16 @@
               "memberIdRef": "input",
               "slot": "tabindex"
             }
+          },
+          {
+            "connectionId": "langCon",
+            "source": {
+              "slot": "lang"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "lang"
+            }
           }
         ],
         "inits": [
@@ -2639,6 +2773,14 @@
           {
             "slotId": "tabindex",
             "type": "number",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
             "direction": [
               "input"
             ]
@@ -2741,6 +2883,16 @@
             "destination": {
               "memberIdRef": "input",
               "slot": "tabindex"
+            }
+          },
+          {
+            "connectionId": "langCon",
+            "source": {
+              "slot": "lang"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "lang"
             }
           }
         ],
@@ -2837,6 +2989,14 @@
             "direction": [
               "input"
             ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
+            "direction": [
+              "input"
+            ]
           }
         ],
         "members": [
@@ -2936,6 +3096,16 @@
             "destination": {
               "memberIdRef": "input",
               "slot": "tabindex"
+            }
+          },
+          {
+            "connectionId": "langCon",
+            "source": {
+              "slot": "lang"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "lang"
             }
           }
         ],
@@ -3027,6 +3197,14 @@
             "direction": [
               "input"
             ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
+            "direction": [
+              "input"
+            ]
           }
         ],
         "members": [
@@ -3126,6 +3304,16 @@
             "destination": {
               "memberIdRef": "input",
               "slot": "tabindex"
+            }
+          },
+          {
+            "connectionId": "langCon",
+            "source": {
+              "slot": "lang"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "lang"
             }
           }
         ],
@@ -3217,6 +3405,14 @@
             "direction": [
               "input"
             ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
+            "direction": [
+              "input"
+            ]
           }
         ],
         "members": [
@@ -3316,6 +3512,16 @@
             "destination": {
               "memberIdRef": "input",
               "slot": "tabindex"
+            }
+          },
+          {
+            "connectionId": "langCon",
+            "source": {
+              "slot": "lang"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "lang"
             }
           }
         ],
@@ -3407,6 +3613,14 @@
             "direction": [
               "input"
             ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
+            "direction": [
+              "input"
+            ]
           }
         ],
         "members": [
@@ -3506,6 +3720,16 @@
             "destination": {
               "memberIdRef": "input",
               "slot": "tabindex"
+            }
+          },
+          {
+            "connectionId": "langCon",
+            "source": {
+              "slot": "lang"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "lang"
             }
           }
         ],
@@ -3597,6 +3821,14 @@
             "direction": [
               "input"
             ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
+            "direction": [
+              "input"
+            ]
           }
         ],
         "members": [
@@ -3696,6 +3928,16 @@
             "destination": {
               "memberIdRef": "input",
               "slot": "tabindex"
+            }
+          },
+          {
+            "connectionId": "langCon",
+            "source": {
+              "slot": "lang"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "lang"
             }
           }
         ],
@@ -3787,6 +4029,14 @@
             "direction": [
               "input"
             ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
+            "direction": [
+              "input"
+            ]
           }
         ],
         "members": [
@@ -3886,6 +4136,16 @@
             "destination": {
               "memberIdRef": "input",
               "slot": "tabindex"
+            }
+          },
+          {
+            "connectionId": "langCon",
+            "source": {
+              "slot": "lang"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "lang"
             }
           }
         ],
@@ -3977,6 +4237,14 @@
             "direction": [
               "input"
             ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
+            "direction": [
+              "input"
+            ]
           }
         ],
         "members": [
@@ -4076,6 +4344,16 @@
             "destination": {
               "memberIdRef": "input",
               "slot": "tabindex"
+            }
+          },
+          {
+            "connectionId": "langCon",
+            "source": {
+              "slot": "lang"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "lang"
             }
           }
         ],
@@ -4167,6 +4445,14 @@
             "direction": [
               "input"
             ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
+            "direction": [
+              "input"
+            ]
           }
         ],
         "members": [
@@ -4266,6 +4552,16 @@
             "destination": {
               "memberIdRef": "input",
               "slot": "tabindex"
+            }
+          },
+          {
+            "connectionId": "langCon",
+            "source": {
+              "slot": "lang"
+            },
+            "destination": {
+              "memberIdRef": "input",
+              "slot": "lang"
             }
           }
         ],

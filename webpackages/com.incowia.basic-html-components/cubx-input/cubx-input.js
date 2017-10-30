@@ -260,7 +260,13 @@
      */
     modelRequiredChanged: function (required) {
       this.$$('input').required = required;
-    }
+    },
 
+    /**
+     *  Called when slot 'lang' has changed
+     */
+    modelLangChanged: function (lang) {
+      this.$$('input').setAttribute('lang', lang);
+    }
   });
 }());
