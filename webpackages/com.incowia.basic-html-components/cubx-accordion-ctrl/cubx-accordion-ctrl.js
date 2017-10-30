@@ -96,6 +96,13 @@
       item.body.classList.add('hidden');
       item.head.classList.add(this.classes.COLLAPSED);
       item.head.classList.remove(this.classes.EXPANDED);
+    },
+
+    /**
+     *  Called when slot 'lang' has changed
+     */
+    modelLangChanged: function (lang) {
+      this.setAttribute('lang', lang);
     }
   });
 }());

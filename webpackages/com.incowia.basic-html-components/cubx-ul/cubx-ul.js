@@ -75,6 +75,13 @@
       var textNode = document.createTextNode(text);
       node.appendChild(textNode);
       return node;
+    },
+
+    /**
+     *  Called when slot 'lang' has changed
+     */
+    modelLangChanged: function (lang) {
+      this.setAttribute('lang', lang);
     }
   });
 }());

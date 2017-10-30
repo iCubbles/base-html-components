@@ -23,6 +23,13 @@
 
     __isHidden: function() {
       return !this.model.visible;
+    },
+
+    /**
+     *  Called when slot 'lang' has changed
+     */
+    modelLangChanged: function (lang) {
+      this.setAttribute('lang', lang);
     }
   });
 }());

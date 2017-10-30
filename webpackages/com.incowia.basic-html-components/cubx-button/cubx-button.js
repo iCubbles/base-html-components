@@ -120,6 +120,13 @@
      */
     modelDisabledChanged: function (disabled) {
       this.$$('button').disabled = disabled;
+    },
+
+    /**
+     *  Called when slot 'lang' has changed
+     */
+    modelLangChanged: function (lang) {
+      this.setAttribute('lang', lang);
     }
   });
 }());

@@ -66,6 +66,13 @@
     modelWidthChanged: function (width) {
       // update the view
       this.$$('img').setAttribute('width', width);
+    },
+
+    /**
+     *  Called when slot 'lang' has changed
+     */
+    modelLangChanged: function (lang) {
+      this.setAttribute('lang', lang);
     }
   });
 }());

@@ -129,6 +129,13 @@
       else {
         this.dataKey = false;
       }
+    },
+
+    /**
+     *  Called when slot 'lang' has changed
+     */
+    modelLangChanged: function (lang) {
+      this.setAttribute('lang', lang);
     }
   });
 }());

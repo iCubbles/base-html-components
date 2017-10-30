@@ -121,6 +121,13 @@
      */
     modelRequiredChanged: function (required) {
       this.$$('textarea').required = required;
+    },
+
+    /**
+     *  Called when slot 'lang' has changed
+     */
+    modelLangChanged: function (lang) {
+      this.setAttribute('lang', lang);
     }
 
   });

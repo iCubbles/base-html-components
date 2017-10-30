@@ -46,6 +46,13 @@
      */
     modelOutputTextChanged: function (newValue) {
       this.model.outputText = newValue;
+    },
+
+    /**
+     *  Called when slot 'lang' has changed
+     */
+    modelLangChanged: function (lang) {
+      this.setAttribute('lang', lang);
     }
   });
 }());

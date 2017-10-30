@@ -345,6 +345,14 @@
             "direction": [
               "input"
             ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
+            "direction": [
+              "input"
+            ]
           }
         ],
         "resources": [
@@ -457,6 +465,14 @@
             "direction": [
               "input"
             ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
+            "direction": [
+              "input"
+            ]
           }
         ],
         "resources": [
@@ -559,6 +575,14 @@
               "output"
             ],
             "value": false
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
+            "direction": [
+              "input"
+            ]
           }
         ],
         "resources": [
@@ -591,6 +615,14 @@
             "slotId": "text",
             "description": "Text to be displayed by the <p> elememt.",
             "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
             "direction": [
               "input"
             ]
@@ -643,6 +675,14 @@
             "direction": [
               "input"
             ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
+            "direction": [
+              "input"
+            ]
           }
         ],
         "resources": [
@@ -675,6 +715,14 @@
             "slotId": "list",
             "description": "List to be displayed by the <ul> element.",
             "type": "object",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
             "direction": [
               "input"
             ]
@@ -733,6 +781,14 @@
             "direction": [
               "input"
             ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
+            "direction": [
+              "input"
+            ]
           }
         ],
         "resources": [
@@ -785,6 +841,14 @@
               "input"
             ],
             "value": "defaultText"
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
+            "direction": [
+              "input"
+            ]
           }
         ]
       },
@@ -830,6 +894,14 @@
               "output"
             ],
             "value": true
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
+            "direction": [
+              "input"
+            ]
           }
         ]
       },
@@ -878,6 +950,14 @@
             "type": "object",
             "direction": [
               "output"
+            ]
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
+            "direction": [
+              "input"
             ]
           }
         ]
@@ -932,6 +1012,14 @@
               "input"
             ],
             "description": "If set to true all accordion items will be expanded. Note: this only applies if slot \"multiple\" is set to \"true\"."
+          },
+          {
+            "slotId": "lang",
+            "type": "string",
+            "description": "Specify the 'lang' attribute of the embedded html element",
+            "direction": [
+              "input"
+            ]
           }
         ]
       }

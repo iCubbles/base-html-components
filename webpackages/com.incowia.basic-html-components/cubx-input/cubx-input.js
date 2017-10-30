@@ -266,7 +266,7 @@
      *  Called when slot 'lang' has changed
      */
     modelLangChanged: function (lang) {
-      this.$$('input').setAttribute('lang', lang);
+      this.setAttribute('lang', lang);
     }
   });
 }());

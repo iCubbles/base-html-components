@@ -42,6 +42,13 @@
     modelTextChanged: function (newText) {
       // update the view
       this.$$('p').innerHTML = newText;
+    },
+
+    /**
+     *  Called when slot 'lang' has changed
+     */
+    modelLangChanged: function (lang) {
+      this.setAttribute('lang', lang);
     }
   });
 }());

@@ -128,6 +128,13 @@
      */
     _emptySelect: function () {
       this.$$('select').options.length = 0;
+    },
+
+    /**
+     *  Called when slot 'lang' has changed
+     */
+    modelLangChanged: function (lang) {
+      this.setAttribute('lang', lang);
     }
   });
 }());
