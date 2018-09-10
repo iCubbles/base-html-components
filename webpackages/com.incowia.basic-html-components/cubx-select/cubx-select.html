@@ -1,11 +1,7 @@
-<link rel="import" href="cubx-select-style.html">
-<dom-module id="cubx-select">
+<template id="cubx-select">
+    <style include="cubx-select-style"></style>
+    <label></label>
+    <select on-change="inputFieldSlotValueChanged"></select>
+</template>
 
-    <template>
-        <style include="cubx-select-style"></style>
-        <label for$="{{model.id}}">{{model.label}}</label>
-        <select id$="{{model.id}}" on-change="inputFieldSlotValueChanged"></select>
-    </template>
-
-    <script src="cubx-select.js"></script>
-</dom-module>
+<script src="cubx-select.js"></script>

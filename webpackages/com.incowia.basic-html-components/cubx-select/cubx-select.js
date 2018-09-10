@@ -1,41 +1,28 @@
 (function () {
   'use strict';
-  /**
-   * Get help:
-   * > Lifecycle callbacks:
-   * https://www.polymer-project.org/1.0/docs/devguide/registering-elements.html#lifecycle-callbacks
-   *
-   * Access the Cubbles-Component-Model:
-   * > Access slot values:
-   * slot 'a': this.getA(); | this.setA(value)
-   */
-  CubxPolymer({
+  
+  CubxComponent({
     is: 'cubx-select',
-
-    /**
-     * Manipulate an element’s local DOM when the element is created.
-     */
-    created: function () {
-    },
-
-    /**
-     * Manipulate an element’s local DOM when the element is created and initialized.
-     */
-    ready: function () {
-
-    },
-
-    /**
-     * Manipulate an element’s local DOM when the element is attached to the document.
-     */
-    attached: function () {
-    },
 
     /**
      * Manipulate an element’s local DOM when the cubbles framework is initialized and ready to work.
      */
-    cubxReady: function () {
+    contextReady: function () {
       this._fillSelect();
+      this._updateAllAttributes();
+    },
+
+    _updateAllAttributes: function() {
+      this.updateId(this.getId());
+      this.updateLabel(this.getLabel());
+      this.updateValue(this.getValue());
+      this.updateSize(this.getSize());
+      this.updateOptions();
+      this.updateName(this.getName());
+      this.updateTabindex(this.getTabindex());
+      this.updateDisabled(this.getDisabled());
+      this.updateRequired(this.getRequired());
+      this.updateLang(this.getLang());
     },
 
     /**
@@ -48,58 +35,75 @@
     },
 
     /**
+     *  Called when slot 'id' has changed
+     *  @param {boolean} id value for the input
+     */
+    modelIdChanged: function (id) {
+      this.updateId(id);
+    },
+
+    /**
+     *  Called when slot 'label' has changed
+     *  @param {boolean} label value for the input
+     */
+    modelLabelChanged: function (label) {
+      this.updateLabel(label);
+    },
+
+    /**
      * Called when slot 'value' has changed
      */
     modelValueChanged: function (newValue) {
-      // update the view
-      this.$$('select').value = newValue;
+      this.updateValue(newValue);
     },
 
     /**
      * Called when slot 'size' has changed
      */
     modelSizeChanged: function (newSize) {
-      // update the view
-      this.$$('select').setAttribute('size', newSize);
+      this.updateSize(newSize);
     },
 
     /**
      * Called when slot 'optionsValues' has changed
      */
     modelOptionsChanged: function () {
-      // update the view
-      this._emptySelect();
-      this._fillSelect();
+      this.updateOptions();
     },
 
     /**
      *  Called when slot 'name' has changed
      */
     modelNameChanged: function (name) {
-      // update the view
-      this.$$('select').setAttribute('name', name);
+      this.updateName(name);
     },
 
     /**
      *  Called when slot 'tabindex' has changed
      */
     modelTabindexChanged: function (newTabindex) {
-      // update the view
-      this.$$('select').setAttribute('tabindex', newTabindex);
+      this.updateTabindex(newTabindex);
     },
 
     /**
      *  Called when slot 'disabled' has changed
      */
     modelDisabledChanged: function (disabled) {
-      this.$$('select').disabled = disabled;
+      this.updateDisabled(disabled);
+    },
+
+    /**
+     *  Called when slot 'lang' has changed
+     */
+    modelLangChanged: function (lang) {
+      this.updateLang(lang);
     },
 
     /**
      *  Called when slot 'required' has changed
      */
     modelRequiredChanged: function (required) {
-      this.$$('select').required = required;
+      this.updateRequired(required);
     },
 
     /**
@@ -115,9 +119,9 @@
         value = options[i][0];
         text = options[i][1];
         if (value === this.getValue()) {
-          this.$$('select').options[i] = new Option(text, value, false, true);
+          this.getMainHTMLElement().options[i] = new Option(text, value, false, true);
         } else {
-          this.$$('select').options[i] = new Option(text, value, false, false);
+          this.getMainHTMLElement().options[i] = new Option(text, value, false, false);
         }
       }
     },
@@ -127,14 +131,74 @@
      * @private
      */
     _emptySelect: function () {
-      this.$$('select').options.length = 0;
+      this.getMainHTMLElement().options.length = 0;
     },
 
-    /**
-     *  Called when slot 'lang' has changed
-     */
-    modelLangChanged: function (lang) {
-      this.setAttribute('lang', lang);
-    }
+    getMainHTMLElement: function() {
+      return this.$$('select');
+    },
+
+    setAttToMainHTMLElement: function(att, val) {
+      if (val !== undefined) {
+        this.getMainHTMLElement().setAttribute(att, val);
+      }
+    },
+
+    removeAttToMainHTMLElement: function(att) {
+      this.getMainHTMLElement().removeAttribute(att);
+    },
+
+    getLabelElement: function () {
+      return this.$$('label');
+    },
+
+    updateLang: function (lang) {
+      this.setAttToMainHTMLElement('lang', lang);
+    },
+
+    updateId: function (id) {
+      if (id !== undefined) {
+        this.setAttToMainHTMLElement('id', id);
+        this.getLabelElement().setAttribute('for', id);
+      }
+    },
+
+    updateLabel: function (label) {
+      this.getLabelElement().innerHTML = label;
+    },
+
+    updateValue: function (newValue) {
+      // update the view
+      this.setAttToMainHTMLElement('select', newValue);
+    },
+
+    updateSize: function (newSize) {
+      // update the view
+      this.setAttToMainHTMLElement('size', newSize);
+    },
+
+    updateOptions: function () {
+      // update the view
+      this._emptySelect();
+      this._fillSelect();
+    },
+
+    updateName: function (name) {
+      // update the view
+      this.setAttToMainHTMLElement('name', name);
+    },
+
+    updateTabindex: function (newTabindex) {
+      // update the view
+      this.setAttToMainHTMLElement('tabindex', newTabindex);
+    },
+
+    updateDisabled: function (disabled) {
+      this.getMainHTMLElement().disabled = disabled;
+    },
+
+    updateRequired: function (required) {
+      this.getMainHTMLElement().required = required;
+    },
   });
 }());
