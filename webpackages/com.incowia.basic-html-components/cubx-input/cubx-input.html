@@ -1,14 +1,9 @@
-<link rel="import" href="cubx-input-style.html">
-<dom-module id="cubx-input">
+<template id="cubx-input">
+  <style include="cubx-input-style"></style>
+  <label id="mainLabel"></label>
+  <input on-change="inputFieldSlotValueChanged"
+         on-keypress="keyPressed">
+  <label id="rightLabel"></label>
+</template>
 
-    <template hidden$="{{hidden}}">
-      <style include="cubx-input-style"></style>
-      <label for$="{{model.id}}">{{model.label}}</label>
-      <input id$="{{model.id}}"
-             on-change="inputFieldSlotValueChanged"
-             on-keypress="keyPressed">
-      <label for$="{{model.id}}">{{model.rightText}}</label>
-    </template>
-
-  <script src="cubx-input.js"></script>
-</dom-module>
+<script src="cubx-input.js"></script>
