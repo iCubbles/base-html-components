@@ -1,11 +1,7 @@
-<link rel="import" href="cubx-textarea-style.html">
-<dom-module id="cubx-textarea">
+<template id="cubx-textarea">
+    <style include="cubx-textarea-style"></style>
+    <label></label>
+    <textarea on-change="inputFieldSlotValueChanged"></textarea>
+</template>
 
-    <template>
-        <style include="cubx-textarea-style"></style>
-        <label for$="{{model.id}}">{{model.label}}</label>
-        <textarea id$="{{model.id}}" on-change="inputFieldSlotValueChanged"></textarea>
-    </template>
-
-    <script src="cubx-textarea.js"></script>
-</dom-module>
+<script src="cubx-textarea.js"></script>

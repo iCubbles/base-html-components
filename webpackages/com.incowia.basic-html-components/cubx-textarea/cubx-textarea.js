@@ -1,39 +1,128 @@
 (function () {
   'use strict';
-  /**
-   * Get help:
-   * > Lifecycle callbacks:
-   * https://www.polymer-project.org/1.0/docs/devguide/registering-elements.html#lifecycle-callbacks
-   *
-   * Access the Cubbles-Component-Model:
-   * > Access slot values:
-   * slot 'a': this.getA(); | this.setA(value)
-   */
-  CubxPolymer({
+
+  CubxComponent({
     is: 'cubx-textarea',
 
-    /**
-     * Manipulate an element’s local DOM when the element is created.
-     */
-    created: function () {
+    contextReady: function() {
+      this._updateAllAttributes();
+    },
+
+    _updateAllAttributes: function () {
+      this.updateId(this.getId());
     },
 
     /**
-     * Manipulate an element’s local DOM when the element is created and initialized.
+     *  Called when slot 'id' has changed
+     *  @param {boolean} id value for the input
      */
-    ready: function () {
+    modelIdChanged: function (id) {
+      this.updateId(id);
+      this.updateLabel(this.getLabel());
+      this.updateValue(this.getValue());
+      this.updateMinLength(this.getMinLength());
+      this.updateMaxLength(this.getMaxLength());
+      this.updateRows(this.getRows());
+      this.updateCols(this.getColumns());
+      this.updateName(this.getName());
+      this.updateTabindex(this.getTabindex());
+      this.updateDisabled(this.getDisabled());
+      this.updateReadonly(this.getReadonly());
+      this.updateRequired(this.getRequired());
+      this.updateLang(this.getLang());
     },
 
     /**
-     * Manipulate an element’s local DOM when the element is attached to the document.
+     *  Called when slot 'id' has changed
+     *  @param {boolean} id value for the input
      */
-    attached: function () {
+    modelIdChanged: function (id) {
+      this.updateId(id);
     },
 
     /**
-     * Manipulate an element’s local DOM when the cubbles framework is initialized and ready to work.
+     *  Called when slot 'label' has changed
+     *  @param {boolean} label value for the input
      */
-    cubxReady: function () {
+    modelLabelChanged: function (label) {
+      this.updateLabel(label);
+    },
+
+    /**
+     *  Called when slot 'value' has changed
+     */
+    modelValueChanged: function (newValue) {
+     this.updateValue(newValue);
+    },
+
+    /**
+     *  Called when slot 'minLength' has changed
+     */
+    modelMinLengthChanged: function (newMinLength) {
+     this.updateMinLength(newMinLength);
+    },
+
+    /**
+     *  Called when slot 'maxLength' has changed
+     */
+    modelMaxLengthChanged: function (newMaxLength) {
+     this.updateMaxLength(newMaxLength);
+    },
+
+    /**
+     *  Called when slot 'rows' has changed
+     */
+    modelRowsChanged: function (newRows) {
+     this.updateRows(newRows);
+    },
+
+    /**
+     *  Called when slot 'cols' has changed
+     */
+    modelColsChanged: function (newColumns) {
+     this.updateCols(newColumns);
+    },
+
+    /**
+     *  Called when slot 'name' has changed
+     */
+    modelNameChanged: function (name) {
+      this.updateName(name);
+    },
+
+    /**
+     *  Called when slot 'tabindex' has changed
+     */
+    modelTabindexChanged: function (newTabindex) {
+      this.updateTabindex(newTabindex);
+    },
+
+    /**
+     *  Called when slot 'disabled' has changed
+     */
+    modelDisabledChanged: function (disabled) {
+      this.updateDisabled(disabled);
+    },
+
+    /**
+     *  Called when slot 'readonly' has changed
+     */
+    modelReadonlyChanged: function (readonly) {
+      this.updateReadonly(readonly);
+    },
+
+    /**
+     *  Called when slot 'required' has changed
+     */
+    modelRequiredChanged: function (required) {
+      this.updateRequired(required);
+    },
+
+    /**
+     *  Called when slot 'lang' has changed
+     */
+    modelLangChanged: function (lang) {
+      this.updateLang(lang);
     },
 
     /**
@@ -45,90 +134,90 @@
       this.setValue(event.target.value);
     },
 
-    /**
-     *  Called when slot 'value' has changed
-     */
-    modelValueChanged: function (newValue) {
+    getMainHTMLElement: function() {
+      return this.$$('select');
+    },
+
+    setAttToMainHTMLElement: function(att, val) {
+      if (val !== undefined) {
+        this.getMainHTMLElement().setAttribute(att, val);
+      }
+    },
+
+    removeAttToMainHTMLElement: function(att) {
+      this.getMainHTMLElement().removeAttribute(att);
+    },
+
+    getLabelElement: function () {
+      return this.$$('label');
+    },
+
+    updateId: function (id) {
+      if (id !== undefined) {
+        this.setAttToMainHTMLElement('id', id);
+        this.getLabelElement().setAttribute('for', id);
+      }
+    },
+
+    updateLabel: function (label) {
+      this.getLabelElement().innerHTML = label;
+    },
+
+    updateValue: function (newValue) {
+      if (value !== undefined) {
+        // update the view
+        this.getMainHTMLElement().value = newValue;
+      }
+    },
+
+    updateMinLength: function (newMinLength) {
+      if (newMinLength >= 0) {
+        this.setAttToMainHTMLElement('minLength', newMinLength);
+      }
+    },
+
+    updateMaxLength: function (newMaxLength) {
+      if (newMaxLength > 0) {
+        this.setAttToMainHTMLElement('maxLength', newMaxLength);
+      }
+    },
+
+    updateRows: function (newRows) {
+      if (newRows > 0) {
+        this.setAttToMainHTMLElement('rows', newRows);
+      }
+    },
+
+    updateCols: function (newColumns) {
+      if (newColumns > 0) {
+        this.setAttToMainHTMLElement('cols', newColumns);
+      }
+    },
+
+    updateName: function (name) {
       // update the view
-      //this.$.textarea.setAttribute('value', newValue);
-     this.$$('textarea').value = newValue;
+      this.setAttToMainHTMLElement('name', name);
     },
 
-    /**
-     *  Called when slot 'minLength' has changed
-     */
-    modelMinLengthChanged: function (newMinLength) {
+    updateTabindex: function (newTabindex) {
       // update the view
-     this.$$('textarea').setAttribute('minLength', newMinLength);
+      this.setAttToMainHTMLElement('tabindex', newTabindex);
     },
 
-    /**
-     *  Called when slot 'maxLength' has changed
-     */
-    modelMaxLengthChanged: function (newMaxLength) {
-      // update the view
-     this.$$('textarea').setAttribute('maxLength', newMaxLength);
+    updateDisabled: function (disabled) {
+      this.getMainHTMLElement().disabled = disabled;
     },
 
-    /**
-     *  Called when slot 'rows' has changed
-     */
-    modelRowsChanged: function (newRows) {
-      // update the view
-     this.$$('textarea').setAttribute('rows', newRows);
+    updateReadonly: function (readonly) {
+      this.getMainHTMLElement().readOnly = readonly;
     },
 
-    /**
-     *  Called when slot 'cols' has changed
-     */
-    modelColsChanged: function (newColumns) {
-      // update the view
-     this.$$('textarea').setAttribute('cols', newColumns);
+    updateRequired: function (required) {
+      this.getMainHTMLElement().required = required;
     },
 
-    /**
-     *  Called when slot 'name' has changed
-     */
-    modelNameChanged: function (name) {
-      // update the view
-      this.$$('textarea').setAttribute('name', name);
+    updateLang: function (lang) {
+      this.setAttToMainHTMLElement('lang', lang);
     },
-
-    /**
-     *  Called when slot 'tabindex' has changed
-     */
-    modelTabindexChanged: function (newTabindex) {
-      // update the view
-      this.$$('textarea').setAttribute('tabindex', newTabindex);
-    },
-
-    /**
-     *  Called when slot 'disabled' has changed
-     */
-    modelDisabledChanged: function (disabled) {
-      this.$$('textarea').disabled = disabled;
-    },
-
-    /**
-     *  Called when slot 'readonly' has changed
-     */
-    modelReadonlyChanged: function (readonly) {
-      this.$$('textarea').readOnly = readonly;
-    },
-
-    /**
-     *  Called when slot 'required' has changed
-     */
-    modelRequiredChanged: function (required) {
-      this.$$('textarea').required = required;
-    },
-
-    /**
-     *  Called when slot 'lang' has changed
-     */
-    modelLangChanged: function (lang) {
-      this.setAttribute('lang', lang);
-    }
-
   });
 }());
