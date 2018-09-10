@@ -1,6 +1,7 @@
 (function () {
   'use strict';
-  CubxPolymer({
+
+  CubxComponent({
     is: 'cubx-table',
 
     dataKey: false,
@@ -10,11 +11,13 @@
     /**
      * Manipulate an element’s local DOM when the cubbles framework is initialized and ready to work.
      */
-    cubxReady: function () {
+    contextReady: function () {
       var data = this.getData();
       if (data && (data.length || data.length === 0)) {
         this.updateTable(data);
       }
+      this.updateLang(this.getLang());
+      this.updateId(this.getId());
     },
 
     updateTable: function (data) {
@@ -135,7 +138,33 @@
      *  Called when slot 'lang' has changed
      */
     modelLangChanged: function (lang) {
-      this.setAttribute('lang', lang);
+      this.updateLang(lang);
+    },
+
+    modelIdChanged: function(id) {
+      this.updateId(id);
+    },
+
+    updateLang: function(lang) {
+      this.setAttToMainHTMLElement('lang', lang);
+    },
+
+    updateId: function(id) {
+      this.setAttToMainHTMLElement('id', id);
+    },
+
+    setAttToMainHTMLElement: function(att, val) {
+      if (val !== undefined) {
+        this.getMainHTMLElement().setAttribute(att, val);
+      }
+    },
+
+    removeAttToMainHTMLElement: function(att) {
+      this.getMainHTMLElement().removeAttribute(att);
+    },
+
+    getMainHTMLElement: function() {
+      return this.$$('table');
     }
   });
 }());
