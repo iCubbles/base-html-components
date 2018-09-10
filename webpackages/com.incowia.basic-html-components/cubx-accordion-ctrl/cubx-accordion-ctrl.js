@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  CubxPolymer({
+  CubxComponent({
     is: 'cubx-accordion-ctrl',
 
     classes: {
@@ -9,7 +9,7 @@
       EXPANDED: 'expanded'
     },
 
-    cubxReady: function () {
+    contextReady: function () {
       this._cubxReady = true;
       this._handleConfigChanges();
     },
