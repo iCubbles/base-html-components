@@ -1,15 +1,7 @@
 (function () {
   'use strict';
-  /**
-   * Get help:
-   * > Lifecycle callbacks:
-   * https://www.polymer-project.org/1.0/docs/devguide/registering-elements.html#lifecycle-callbacks
-   *
-   * Access the Cubbles-Component-Model:
-   * > Access slot values:
-   * slot 'a': this.getA(); | this.setA(value)
-   */
-  CubxPolymer({
+
+  CubxComponent({
     is: 'cubx-ol',
 
     _validTypes:[
@@ -21,28 +13,30 @@
     ],
 
     /**
-     * Manipulate an element’s local DOM when the element is created.
-     */
-    created: function () {
-    },
-
-    /**
-     * Manipulate an element’s local DOM when the element is created and initialized.
-     */
-    ready: function () {
-    },
-
-    /**
-     * Manipulate an element’s local DOM when the element is attached to the document.
-     */
-    attached: function () {
-    },
-
-    /**
      * Manipulate an element’s local DOM when the cubbles framework is initialized and ready to work.
      */
-    cubxReady: function () {
+    contextReady: function () {
+      this._handleComponentInit();
+    },
+
+    _handleComponentInit: function() {
       this._fillOlList();
+      this._updateAttributes();
+    },
+
+    _updateAttributes: function () {
+      this.updateId(this.getId());
+      this.updateType(this.getType());
+      this.updateStart(this.getStart());
+      this.updateLang(this.getLang());
+    },
+
+    /**
+     *  Called when slot 'id' has changed
+     *  @param {boolean} id value for the input
+     */
+    modelIdChanged: function (id) {
+      this.updateId(id);
     },
 
     /**
@@ -56,21 +50,23 @@
     /**
      *  Observe the Cubbles-Component-Model: If value for slot 'type' has changed ...
      */
-    modelTypeChanged: function (newType) {
-      if (typeof newType === 'string' && this._validTypes.indexOf(newType) === -1) {
-        console.log('type : "' + newType + '" is not a valid input type. Using type '
-          + this._validTypes[0] + ' instead.');
-        newType = this._validTypes[0];
-      }
-      this.$$('ol').setAttribute('type', newType);
+    modelTypeChanged: function (type) {
+      this.updateType(type);
     },
 
     /**
      *  Observe the Cubbles-Component-Model: If value for slot 'start' has changed ...
      */
-    modelStartChanged: function (newStart) {
+    modelStartChanged: function (start) {
       // update the view
-      this.$$('ol').setAttribute('start', newStart);
+      this.updateStart(start);
+    },
+
+    /**
+     *  Called when slot 'lang' has changed
+     */
+    modelLangChanged: function (lang) {
+      this.updateLang(lang);
     },
 
     /**
@@ -80,7 +76,7 @@
     _fillOlList: function () {
       var list = this.getList() || [];
       for (var i in list) {
-       this.$$('ol').appendChild(this._createLiElement(list[i]));
+       this.getMainHTMLElement().appendChild(this._createLiElement(list[i]));
       }
     },
 
@@ -89,7 +85,7 @@
      * @private
      */
     _emptyOlList: function () {
-      this.$$('ol').innerHTML = "";
+      this.getMainHTMLElement().innerHTML = "";
     },
 
     /**
@@ -99,17 +95,48 @@
      * @private
      */
     _createLiElement: function (text) {
-      var node = document.createElement("LI");
+      var node = document.createElement("li");
       var textNode = document.createTextNode(text);
       node.appendChild(textNode);
       return node;
     },
 
-    /**
-     *  Called when slot 'lang' has changed
-     */
-    modelLangChanged: function (lang) {
-      this.setAttribute('lang', lang);
+    getMainHTMLElement: function () {
+      return this.$$('ol');
+    },
+
+    setAttToMainHTMLElement: function (att, val) {
+      if (val !== undefined) {
+        this.getMainHTMLElement().setAttribute(att, val);
+      }
+    },
+
+    removeAttToMainHTMLElement: function (att) {
+      this.getMainHTMLElement().removeAttribute(att);
+    },
+
+
+    updateId: function (id) {
+      this.setAttToMainHTMLElement('id', id);
+    },
+
+    updateType: function (type) {
+      if (typeof type === 'string' && this._validTypes.indexOf(type) === -1) {
+        console.log('type : "' + type + '" is not a valid input type. Using type ' +
+          this._validTypes[0] + ' instead.');
+        type = this._validTypes[0];
+      }
+      // update the view
+      this.setAttToMainHTMLElement('type', type);
+    },
+
+    updateStart: function (start) {
+      // update the view
+      this.setAttToMainHTMLElement('start', start);
+    },
+
+    updateLang: function (lang) {
+      this.setAttToMainHTMLElement('lang', lang);
     }
   });
 }());
