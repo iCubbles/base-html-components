@@ -1,78 +1,107 @@
 (function () {
   'use strict';
-  /**
-   * Get help:
-   * > Lifecycle callbacks:
-   * https://www.polymer-project.org/1.0/docs/devguide/registering-elements.html#lifecycle-callbacks
-   *
-   * Access the Cubbles-Component-Model:
-   * > Access slot values:
-   * slot 'a': this.getA(); | this.setA(value)
-   */
-  CubxPolymer({
+
+  CubxComponent({
     is: 'cubx-img',
-
-    /**
-     * Manipulate an element’s local DOM when the element is created.
-     */
-    created: function () {
-    },
-
-    /**
-     * Manipulate an element’s local DOM when the element is created and initialized.
-     */
-    ready: function () {
-    },
-
-    /**
-     * Manipulate an element’s local DOM when the element is attached to the document.
-     */
-    attached: function () {
-    },
-
     /**
      * Manipulate an element’s local DOM when the cubbles framework is initialized and ready to work.
      */
-    cubxReady: function () {
+    contextReady: function () {
+      this._updateAttributes();
+    },
+
+    _updateAttributes: function () {
+      this.updateId(this.getId());
+      this.updateSrc(this.getSrc());
+      this.updateAlt(this.getAlt());
+      this.updateHeight(this.getHeight());
+      this.updateWidth(this.getWidth());
+      this.updateLang(this.getLang());
+    },
+
+    /**
+     *  Called when slot 'id' has changed
+     *  @param {boolean} id value for the input
+     */
+    modelIdChanged: function (id) {
+      this.updateId(id);
     },
 
     /**
      *  Called when slot 'src' has changed
      */
     modelSrcChanged: function (src) {
-      // update the view
-      this.$$('img').setAttribute('src', src);
+      this.updateSrc(src);
     },
 
     /**
      *  Called when slot 'alt' has changed
      */
     modelAltChanged: function (alt) {
-      // update the view
-      this.$$('img').setAttribute('alt', alt);
+      this.updateAlt(alt);
     },
 
     /**
      *  Called when slot 'height' has changed
      */
     modelHeightChanged: function (height) {
-      // update the view
-      this.$$('img').setAttribute('height', height);
+      this.updateHeight(height);
     },
 
     /**
      *  Called when slot 'height' has changed
      */
     modelWidthChanged: function (width) {
-      // update the view
-      this.$$('img').setAttribute('width', width);
+      this.updateWidth(width);
     },
 
     /**
      *  Called when slot 'lang' has changed
      */
     modelLangChanged: function (lang) {
-      this.setAttribute('lang', lang);
+      this.updateLang(lang);
+    },
+
+    getMainHTMLElement: function() {
+      return this.$$('img');
+    },
+
+    setAttToMainHTMLElement: function(att, val) {
+      if (val !== undefined) {
+        this.getMainHTMLElement().setAttribute(att, val);
+      }
+    },
+
+    removeAttToMainHTMLElement: function(att) {
+      this.getMainHTMLElement().removeAttribute(att);
+    },
+
+    updateId: function (id) {
+      this.setAttToMainHTMLElement('id', id);
+    },
+
+    updateSrc: function (src) {
+      // update the view
+      this.setAttToMainHTMLElement('src', src);
+    },
+
+    updateAlt: function (alt) {
+      // update the view
+      this.setAttToMainHTMLElement('alt', alt);
+    },
+
+    updateHeight: function (height) {
+      // update the view
+      this.setAttToMainHTMLElement('height', height);
+    },
+
+    updateWidth: function (width) {
+      // update the view
+      this.setAttToMainHTMLElement('width', width);
+    },
+
+    updateLang: function (lang) {
+      this.setAttToMainHTMLElement('lang', lang);
     }
   });
 }());
