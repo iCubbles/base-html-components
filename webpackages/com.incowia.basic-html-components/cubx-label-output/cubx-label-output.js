@@ -1,57 +1,74 @@
 (function () {
   'use strict';
-  /**
-   * Get help:
-   * > Lifecycle callbacks:
-   * https://www.polymer-project.org/1.0/docs/devguide/registering-elements.html#lifecycle-callbacks
-   */
-  CubxPolymer({
-    is: 'cubx-label-output',
 
-    /**
-     * Manipulate an element’s local DOM when the element is created.
-     */
-    created: function () {
-    },
+  CubxComponent({
+    is: 'cubx-label-output',
 
     /**
      * Manipulate an element’s local DOM when the element is created and initialized.
      */
-    ready: function () {
-      this.model.outputLabel = this.getOutputLabel();
-      this.model.outputText = this.getOutputText();
+    contextReady: function () {
+      this._handelComponentInit();
+    },
+
+    _handelComponentInit: function () {
+      this.updateOutputLabel(this.getOutputLabel());
+      this.updateOutputText(this.getOutputText());
+      this.updateId(this.getId());
     },
 
     /**
-     * Manipulate an element’s local DOM when the element is attached to the document.
+     *  Called when slot 'id' has changed
+     *  @param {boolean} id value for the input
      */
-    attached: function () {
+    modelIdChanged: function (id) {
+      this.updateId(id);
     },
-
-    /**
-     * Manipulate an element’s local DOM when the cubbles framework is initialized and ready to work.
-     */
-    cubxReady: function () {
-    },
-
     /**
      *  Observe the Cubbles-Component-Model: If value for slot 'outputLabel' has changed ...
      */
     modelOutputLabelChanged: function (newValue) {
-      this.model.outputLabel = newValue;
+      this.updateOutputLabel(newValue);
     },
 
     /**
      *  Observe the Cubbles-Component-Model: If value for slot 'outputText' has changed ...
      */
     modelOutputTextChanged: function (newValue) {
-      this.model.outputText = newValue;
+      this.updateOutputText(newValue);
     },
 
     /**
      *  Called when slot 'lang' has changed
      */
     modelLangChanged: function (lang) {
+      this.updateLang(lang);
+    },
+
+    updateOutputLabel: function (label) {
+      this.getOutputLabelElement().innerHTML = label;
+    },
+
+    updateId: function (id) {
+      if (id !== undefined) {
+        this.getOutputTextElement().setAttribute('id', id);
+        this.getOutputLabelElement().setAttribute('for', id);
+      }
+    },
+
+    updateOutputText: function (text) {
+      this.getOutputTextElement().innerHTML = text;
+    },
+
+    getOutputLabelElement: function (label) {
+      return this.$$('label');
+    },
+
+    getOutputTextElement: function (text) {
+      return this.$$('span');
+    },
+
+    updateLang: function (lang) {
       this.setAttribute('lang', lang);
     }
   });
