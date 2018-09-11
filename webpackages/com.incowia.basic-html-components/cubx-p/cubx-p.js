@@ -1,54 +1,67 @@
 (function () {
   'use strict';
-  /**
-   * Get help:
-   * > Lifecycle callbacks:
-   * https://www.polymer-project.org/1.0/docs/devguide/registering-elements.html#lifecycle-callbacks
-   *
-   * Access the Cubbles-Component-Model:
-   * > Access slot values:
-   * slot 'a': this.getA(); | this.setA(value)
-   */
-  CubxPolymer({
+  CubxComponent({
     is: 'cubx-p',
 
-    /**
-     * Manipulate an element’s local DOM when the element is created.
-     */
-    created: function () {
+    contextReady: function () {
+      this._updateAttributes();
+    },
+
+    _updateAttributes: function() {
+      this.updateText(this.getText());
+      this.updateId(this.getId());
+      this.updateLang(this.getLang());
     },
 
     /**
-     * Manipulate an element’s local DOM when the element is created and initialized.
+     *  Called when slot 'id' has changed
+     *  @param {boolean} id value for the input
      */
-    ready: function () {
-    },
-
-    /**
-     * Manipulate an element’s local DOM when the element is attached to the document.
-     */
-    attached: function () {
-    },
-
-    /**
-     * Manipulate an element’s local DOM when the cubbles framework is initialized and ready to work.
-     */
-    cubxReady: function () {
+    modelIdChanged: function (id) {
+      this.updateId(id);
     },
 
     /**
      *  Observe the Cubbles-Component-Model: If value for slot 'text' has changed
      */
-    modelTextChanged: function (newText) {
-      // update the view
-      this.$$('p').innerHTML = newText;
+    modelTextChanged: function (text) {
+      this.updateText(text);
     },
 
     /**
      *  Called when slot 'lang' has changed
      */
     modelLangChanged: function (lang) {
-      this.setAttribute('lang', lang);
+      this.updateLang(lang);
+    },
+
+    getMainHTMLElement: function() {
+      return this.$$('p');
+    },
+
+    setAttToMainHTMLElement: function(att, val) {
+      if (val !== undefined) {
+        this.getMainHTMLElement().setAttribute(att, val);
+      }
+    },
+
+    removeAttToMainHTMLElement: function(att) {
+      this.getMainHTMLElement().removeAttribute(att);
+    },
+
+    updateText: function (text) {
+      // update the view
+      if (text !== undefined) {
+        this.getMainHTMLElement().innerHTML = text;
+      }
+    },
+
+    updateId: function (id) {
+      this.setAttToMainHTMLElement('id', id);
+    },
+
+    updateLang: function (lang) {
+      this.setAttToMainHTMLElement('lang', lang);
     }
   });
 }());
