@@ -164,7 +164,7 @@
     },
 
     updateValue: function (newValue) {
-      if (value !== undefined) {
+      if (newValue !== undefined) {
         // update the view
         this.getMainHTMLElement().value = newValue;
       }
