@@ -122,21 +122,24 @@
             "type": "number",
             "direction": [
               "input"
-            ]
+            ],
+            "value": 0
           },
           {
             "slotId": "max",
             "type": "number",
             "direction": [
               "input"
-            ]
+            ],
+            "value": 100
           },
           {
             "slotId": "step",
             "type": "number",
             "direction": [
               "input"
-            ]
+            ],
+            "value": 1
           },
           {
             "slotId": "checked",
@@ -194,7 +197,8 @@
             "type": "number",
             "direction": [
               "input"
-            ]
+            ],
+            "value": -1
           },
           {
             "slotId": "customValidationMessage",
@@ -261,8 +265,8 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       },
@@ -344,7 +348,8 @@
             "type": "number",
             "direction": [
               "input"
-            ]
+            ],
+            "value": -1
           },
           {
             "slotId": "lang",
@@ -360,8 +365,8 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       },
@@ -464,7 +469,8 @@
             "type": "number",
             "direction": [
               "input"
-            ]
+            ],
+            "value": -1
           },
           {
             "slotId": "lang",
@@ -480,8 +486,8 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       },
@@ -506,8 +512,7 @@
             "type": "string",
             "direction": [
               "input"
-            ],
-            "value": "buttonId"
+            ]
           },
           {
             "slotId": "name",
@@ -556,7 +561,8 @@
             "type": "number",
             "direction": [
               "input"
-            ]
+            ],
+            "value": -1
           },
           {
             "slotId": "hidden",
@@ -590,8 +596,8 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       },
@@ -611,6 +617,13 @@
           }
         ],
         "slots": [
+          {
+            "slotId": "id",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
           {
             "slotId": "text",
             "description": "Text to be displayed by the <p> elememt.",
@@ -633,8 +646,8 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       },
@@ -654,6 +667,13 @@
           }
         ],
         "slots": [
+          {
+            "slotId": "id",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
           {
             "slotId": "list",
             "description": "List to be displayed by the <ol> element.",
@@ -690,8 +710,8 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       },
@@ -711,6 +731,13 @@
           }
         ],
         "slots": [
+          {
+            "slotId": "id",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
           {
             "slotId": "list",
             "description": "List to be displayed by the <ul> element.",
@@ -733,8 +760,8 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       },
@@ -754,6 +781,13 @@
           }
         ],
         "slots": [
+          {
+            "slotId": "id",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
           {
             "slotId": "alt",
             "type": "string",
@@ -796,8 +830,8 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ]
       },
@@ -821,11 +855,18 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ],
         "slots": [
+          {
+            "slotId": "id",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
           {
             "slotId": "outputLabel",
             "type": "string",
@@ -872,19 +913,25 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ],
         "slots": [
+          {
+            "slotId": "id",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
           {
             "slotId": "value",
             "type": "string",
             "direction": [
               "input",
               "output"
-            ],
-            "value": 10
+            ]
           },
           {
             "slotId": "visible",
@@ -922,15 +969,22 @@
         ],
         "resources": [
           "cubx-table.html",
-          "css/cubx-table.css"
+          "cubx-table.css"
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ],
         "slots": [
+          {
+            "slotId": "id",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          },
           {
             "slotId": "data",
             "type": "array",
@@ -983,8 +1037,8 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.4.0",
-            "artifactId": "cubxpolymer"
+            "webpackageId": "cubx.core.rte@3.0.0-SNAPSHOT",
+            "artifactId": "cubxcomponent"
           }
         ],
         "slots": [
