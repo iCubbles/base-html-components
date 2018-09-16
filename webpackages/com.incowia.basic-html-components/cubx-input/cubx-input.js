@@ -4,7 +4,7 @@
     is: 'cubx-input',
 
     //valid cubx-input types
-    _validTypes:[
+    _validTypes: [
       'text',
       'number',
       'checkbox',
@@ -31,9 +31,9 @@
       this.initComponent();
     },
 
-    initComponent: function() {
+    initComponent: function () {
       // add change listener to output a (custom) validation message on invalid input
-      this.getMainHTMLElement().addEventListener("change", function(){
+      this.getMainHTMLElement().addEventListener("change", function (event) {
         if (!this.getMainHTMLElement().validity.valid) {
           var customMessage = this.getCustomValidationMessage();
           if (customMessage !== undefined && typeof customMessage === 'string' && customMessage.length > 0) {
@@ -41,19 +41,27 @@
           }
         }
         this.setValidationMessage(this.getMainHTMLElement().validationMessage);
+        this.setValue(event.target.value);
       }.bind(this), false);
 
       // add input listener to clear (custom) validation message based on validity of input
-      this.getMainHTMLElement().addEventListener("input", function(){
+      this.getMainHTMLElement().addEventListener("input", function () {
         this.getMainHTMLElement().setCustomValidity("");
         if (this.getMainHTMLElement().validity.valid) {
           this.setValidationMessage(this.getMainHTMLElement().validationMessage);
         }
       }.bind(this), false);
+      //Update event listener for keypress
+      this.getMainHTMLElement().addEventListener("keypress", function (event) {
+        if (event.keyCode === 13) {
+          event.preventDefault();
+          this.setValue(event.target.value);
+        }
+      });
       this.updateAttributes();
     },
 
-    updateAttributes: function() {
+    updateAttributes: function () {
       this.updateValue(this.getValue());
       this.updateType(this.getType());
       this.updatePlaceholder(this.getPlaceholder());
@@ -77,22 +85,6 @@
       this.updateReadonly(this.getReadonly());
       this.updateRequired(this.getRequired());
       this.updateLang(this.getLang());
-    },
-
-    /**
-     * A handler to be called by a dom-element
-     * @param {event} event
-     */
-    inputFieldSlotValueChanged: function (event) {
-      // update the cubbles-model
-      this.setValue(event.target.value);
-    },
-
-    keyPressed: function (event) {
-      if(event.keyCode === 13){
-        event.preventDefault();
-        this.setValue(event.target.value);
-      }
     },
 
     /**
@@ -261,17 +253,17 @@
       this.updateLang(lang);
     },
 
-    getMainHTMLElement: function() {
+    getMainHTMLElement: function () {
       return this.$$('input');
     },
 
-    setAttToMainHTMLElement: function(att, val) {
+    setAttToMainHTMLElement: function (att, val) {
       if (val !== undefined) {
         this.getMainHTMLElement().setAttribute(att, val);
       }
     },
 
-    removeAttToMainHTMLElement: function(att) {
+    removeAttToMainHTMLElement: function (att) {
       this.getMainHTMLElement().removeAttribute(att);
     },
 
@@ -292,13 +284,16 @@
     },
 
     updateValue: function (value) {
-      if (value !== undefined){
+      if (value !== undefined) {
         if (this.getType() !== 'file') {
           this.getMainHTMLElement().value = value;
           if (this.getType() === 'checkbox' || this.getType() === 'radio') {
             this.setChecked(this.getMainHTMLElement().checked);
           } else {
-            this.setChangeObject({newValue: value, customValue: this.getCustomValue()});
+            this.setChangeObject({
+              newValue: value,
+              customValue: this.getCustomValue()
+            });
           }
         }
       }
@@ -306,8 +301,8 @@
 
     updateType: function (type) {
       if (typeof type === 'string' && this._validTypes.indexOf(type) === -1) {
-        console.log('type : "' + type + '" is not a valid input type. Using type '
-          + this._validTypes[0] + ' instead.');
+        console.log('type : "' + type + '" is not a valid input type. Using type ' +
+          this._validTypes[0] + ' instead.');
         type = this._validTypes[0];
       }
       // update the view
@@ -346,34 +341,43 @@
     },
 
     updateMin: function (min) {
-      // update the view
-      this.setAttToMainHTMLElement('min', min);
+      if (this.getType() === 'number' || this.getType() === 'range') {
+        this.setAttToMainHTMLElement('min', min);
+      }
     },
 
     updateMax: function (max) {
-      // update the view
-      this.setAttToMainHTMLElement('max', max);
+      if (this.getType() === 'number' || this.getType() === 'range') {
+        this.setAttToMainHTMLElement('max', max);
+      }
     },
 
     updateStep: function (step) {
-      // update the view
-      this.setAttToMainHTMLElement('step', step);
+      if (this.getType() === 'number' || this.getType() === 'range') {
+        this.setAttToMainHTMLElement('step', step);
+      }
     },
 
     updateChecked: function (checked) {
-      // update the view
-      this.getMainHTMLElement().checked = checked;
-      this.setChangeObject({newValue: checked, customValue: this.getCustomValue()});
+      if (this.getType() === 'checkbox' || this.getType() === 'radio') {
+        this.getMainHTMLElement().checked = checked;
+        this.setChangeObject({
+          newValue: checked,
+          customValue: this.getCustomValue()
+        });
+      }
     },
 
     updateAccept: function (accept) {
-      // update the view
-      this.setAttToMainHTMLElement('accept', accept);
+      if (this.getType() === 'file') {
+        this.setAttToMainHTMLElement('accept', accept);
+      }
     },
 
     updateSrc: function (src) {
-      // update the view
-      this.setAttToMainHTMLElement('src', src);
+      if (this.getType() === 'image') {
+        this.setAttToMainHTMLElement('src', src);
+      }
     },
 
     updateAlt: function (alt) {
@@ -382,13 +386,15 @@
     },
 
     updateHeight: function (height) {
-      // update the view
-      this.setAttToMainHTMLElement('height', height);
+      if (this.getType() === 'image') {
+        this.setAttToMainHTMLElement('height', height);
+      }
     },
 
     updateWidth: function (width) {
-      // update the view
-      this.setAttToMainHTMLElement('width', width);
+      if (this.getType() === 'image') {
+        this.setAttToMainHTMLElement('width', width);
+      }
     },
 
     updateName: function (name) {
