@@ -57,7 +57,7 @@
           event.preventDefault();
           this.setValue(event.target.value);
         }
-      });
+      }.bind(this), false);
       this.updateAttributes();
     },
 
