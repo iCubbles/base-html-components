@@ -5,6 +5,14 @@
     is: 'cubx-textarea',
 
     contextReady: function() {
+      this._initComponent();
+    },
+
+    _initComponent: function() {
+      // add input listener to clear (custom) validation message based on validity of input
+      this.getMainHTMLElement().addEventListener("change", function () {
+        this.setValue(event.target.value);
+      }.bind(this), false);
       this._updateAllAttributes();
     },
 
@@ -125,17 +133,8 @@
       this.updateLang(lang);
     },
 
-    /**
-     * A handler to be called by a dom-element
-     * @param {event} event
-     */
-    inputFieldSlotValueChanged: function (event) {
-      // update the cubbles-model
-      this.setValue(event.target.value);
-    },
-
     getMainHTMLElement: function() {
-      return this.$$('select');
+      return this.$$('textarea');
     },
 
     setAttToMainHTMLElement: function(att, val) {
