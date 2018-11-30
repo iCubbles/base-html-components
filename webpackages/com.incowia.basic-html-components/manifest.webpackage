@@ -1,7 +1,7 @@
 {
   "name": "basic-html-components",
   "groupId": "com.incowia",
-  "version": "1.8",
+  "version": "1.9.0-SNAPSHOT",
   "modelVersion": "9.1.1",
   "docType": "webpackage",
   "author": {
@@ -345,6 +345,11 @@
             "direction": [
               "input"
             ]
+          },
+          {
+           "slotId": "multiple",
+           "type": "boolean",
+           "direction": ["input"]
           },
           {
             "slotId": "lang",

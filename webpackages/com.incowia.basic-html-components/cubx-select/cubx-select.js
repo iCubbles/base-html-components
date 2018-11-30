@@ -43,8 +43,12 @@
      * @param {event} event
      */
     inputFieldSlotValueChanged: function (event) {
-      // update the cubbles-model
-      this.setValue(event.target.value);
+      if (this.$$('select').getAttribute('multiple')) {
+        this.setValue(this._getSelectValues(this.$$('select')));
+      } else {
+        // update the cubbles-model
+        this.setValue(event.target.value);
+      }
     },
 
     /**
@@ -103,6 +107,17 @@
     },
 
     /**
+     *  Called when slot 'required' has changed
+     */
+    modelMultipleChanged: function (multiple) {
+      if (multiple) {
+        this.$$('select').setAttribute('multiple', true);
+      } else {
+        this.$$('select').removeAttribute('multiple');
+      }
+    },
+
+    /**
      * Fill the options of the select component
      * @private
      */
@@ -115,9 +130,9 @@
         value = options[i][0];
         text = options[i][1];
         if (value === this.getValue()) {
-          this.$$('select').options[i] = new Option(text, value, false, true);
+          this.$$('select').options[ i ] = new Option(text, value, false, true);
         } else {
-          this.$$('select').options[i] = new Option(text, value, false, false);
+          this.$$('select').options[ i ] = new Option(text, value, false, false);
         }
       }
     },
@@ -135,6 +150,21 @@
      */
     modelLangChanged: function (lang) {
       this.setAttribute('lang', lang);
+    },
+
+    _getSelectValues: function (select) {
+      var result = [];
+      var options = select && select.options;
+      var opt;
+
+      for (var i = 0, iLen = options.length; i < iLen; i++) {
+        opt = options[ i ];
+
+        if (opt.selected) {
+          result.push(opt.value || opt.text);
+        }
+      }
+      return result;
     }
   });
 }());
