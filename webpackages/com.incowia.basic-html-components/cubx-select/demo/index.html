@@ -15,7 +15,11 @@
         If yes, add the following attribute: data-crc-main="js/my-script.js"
     -->
     <script src="../../../cubx.core.rte@2.2.3/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
-
+    <style>
+        cubx-select label {
+            vertical-align: top;
+        }
+    </style>
 </head>
 <body>
 <!--
@@ -44,6 +48,11 @@
                     ["option3Value", "Option 3 text"]]</textarea>
             <button id="btn_set" disabled="disabled" style="float:right;" type="button">Set</button>
         </div>
+        <div style="width: 100%; margin-top:10px;">
+            <label for="multiple" style="font-size:1.17em;"><b>multiple</b></label>
+            <input type="checkbox" id="multiple">
+            <button id="btn_setMultiple" disabled="disabled" type="button">Set</button>
+        </div>
     </form>
 </div>
 <h2>Other slots:</h2> size, name, required, readonly, disabled, value and tabindex.
@@ -65,6 +74,7 @@
         var btn_set = document.getElementById('btn_set');
         var btn_setLabel = document.getElementById('btn_setLabel');
         var btn_setID = document.getElementById('btn_setID');
+        var btn_setMultiple = document.getElementById('btn_setMultiple');
         var cubxHtmlComponent = document.getElementsByTagName('cubx-select')[0];
 
 
@@ -72,6 +82,7 @@
             btn_set.removeAttribute('disabled');
             btn_setLabel.removeAttribute('disabled');
             btn_setID.removeAttribute('disabled');
+            btn_setMultiple.removeAttribute('disabled');
         });
 
         btn_set.addEventListener('click', function() {
@@ -88,6 +99,14 @@
             var value = id.value;
             cubxHtmlComponent.setId(value);
         });
+
+      btn_setMultiple.addEventListener('click', function() {
+        if (multiple.checked) {
+          cubxHtmlComponent.setMultiple(true);
+        } else {
+          cubxHtmlComponent.setMultiple(false);
+        }
+      });
     })()
 </script>
 
