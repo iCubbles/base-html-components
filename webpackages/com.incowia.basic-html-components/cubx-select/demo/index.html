@@ -53,6 +53,11 @@
             <input type="checkbox" id="multiple">
             <button id="btn_setMultiple" disabled="disabled" type="button">Set</button>
         </div>
+        <div style="width: 100%; margin-top:10px;">
+            <label for="size"><h3>Size</h3></label>
+            <input type="number" id="size">
+            <button id="btn_setSize" disabled="disabled" type="button">Set</button>
+        </div>
     </form>
 </div>
 <h2>Other slots:</h2> size, name, required, readonly, disabled, value and tabindex.
@@ -75,6 +80,7 @@
         var btn_setLabel = document.getElementById('btn_setLabel');
         var btn_setID = document.getElementById('btn_setID');
         var btn_setMultiple = document.getElementById('btn_setMultiple');
+        var btn_setSize = document.getElementById('btn_setSize');
         var cubxHtmlComponent = document.getElementsByTagName('cubx-select')[0];
 
 
@@ -83,6 +89,7 @@
             btn_setLabel.removeAttribute('disabled');
             btn_setID.removeAttribute('disabled');
             btn_setMultiple.removeAttribute('disabled');
+            btn_setSize.removeAttribute('disabled');
         });
 
         btn_set.addEventListener('click', function() {
@@ -106,6 +113,11 @@
         } else {
           cubxHtmlComponent.setMultiple(false);
         }
+      });
+
+      btn_setSize.addEventListener('click', function() {
+        var value = size.value;
+        cubxHtmlComponent.setSize(value);
       });
     })()
 </script>
