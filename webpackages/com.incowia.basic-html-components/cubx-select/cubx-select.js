@@ -56,7 +56,11 @@
      */
     modelValueChanged: function (newValue) {
       // update the view
-      this.$$('select').value = newValue;
+      if (this.$$('select').getAttribute('multiple') && Array.isArray(newValue)) {
+        this._setSelectValues(newValue);
+      } else {
+        this.$$('select').value = newValue;
+      }
     },
 
     /**
@@ -127,8 +131,8 @@
       var value;
       var text;
       for (var i in options) {
-        value = options[i][0];
-        text = options[i][1];
+        value = options[ i ][ 0 ];
+        text = options[ i ][ 1 ];
         if (value === this.getValue()) {
           this.$$('select').options[ i ] = new Option(text, value, false, true);
         } else {
@@ -165,6 +169,23 @@
         }
       }
       return result;
+    },
+
+    _setSelectValues: function (selectedValues) {
+      var select = this.$$('select');
+      if (!select || !select.options || !selectedValues || !Array.isArray(selectedValues)) {
+        return;
+      }
+      var options = select.options;
+      var option;
+      for (var i = 0; i < options.length; i++) {
+        option = options[i];
+        if (selectedValues.includes(option.value)) {
+          option.setAttribute('selected', 'true');
+        } else {
+          option.removeAttribute('selected');
+        }
+      };
     }
   });
 }());
