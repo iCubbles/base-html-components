@@ -44,7 +44,7 @@
      * @param {event} event
      */
     inputFieldSlotValueChanged: function (event) {
-      if (this.$$('select').getAttribute('multiple')) {
+      if (this.$$('select').multiple) {
         this.setValue(this._getSelectValues(this.$$('select')));
       } else {
         // update the cubbles-model
@@ -58,7 +58,7 @@
     modelValueChanged: function (newValue) {
       // update the view
       var select = this.$$('select');
-      if (select.getAttribute('multiple') && Array.isArray(newValue)) {
+      if (select.multiple && Array.isArray(newValue)) {
         this._setSelectValues(newValue);
         this._setValue(newValue);
       } else {
@@ -138,14 +138,14 @@
       for (var i in options) {
         value = options[ i ][ 0 ];
         text = options[ i ][ 1 ];
-        if (value === this.getValue() || this.getValue().includes(value)) {
-          select.options.add( new Option(text, value, false, true));
+        if (value === this.getValue() || (this.getValue() && this.getValue().includes(value))) {
+          select.options.add(new Option(text, value, false, true));
         } else {
           select.options.add(new Option(text, value, false, false));
         }
       }
 
-      if (select.multiple && Array.isArray(values) && values.length === 0) {
+      if (select.multiple && values && Array.isArray(values) && values.length === 0) {
         select.selectedIndex = -1;
       }
     },
@@ -201,7 +201,7 @@
     },
     _setValue: function (values) {
       var select = this.$$('select');
-      if (select.getAttribute('multiple') && Array.isArray(values)) {
+      if (select.multiple && values && Array.isArray(values)) {
         if (!values.includes(select.value)) {
           select.value = values[0];
         }
