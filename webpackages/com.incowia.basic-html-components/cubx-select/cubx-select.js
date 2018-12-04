@@ -1,3 +1,4 @@
+/* globals Option */
 (function () {
   'use strict';
   /**
@@ -56,8 +57,10 @@
      */
     modelValueChanged: function (newValue) {
       // update the view
-      if (this.$$('select').getAttribute('multiple') && Array.isArray(newValue)) {
+      var select = this.$$('select');
+      if (select.getAttribute('multiple') && Array.isArray(newValue)) {
         this._setSelectValues(newValue);
+        this._setValue(newValue);
       } else {
         this.$$('select').value = newValue;
       }
@@ -76,8 +79,10 @@
      */
     modelOptionsChanged: function () {
       // update the view
+      var values = this._getSelectValues(this.$$('select'));
+
       this._emptySelect();
-      this._fillSelect();
+      this._fillSelect(values);
     },
 
     /**
@@ -115,9 +120,9 @@
      */
     modelMultipleChanged: function (multiple) {
       if (multiple) {
-        this.$$('select').setAttribute('multiple', true);
+        this.$$('select').multiple = true;
       } else {
-        this.$$('select').removeAttribute('multiple');
+        this.$$('select').multiple = false;
       }
     },
 
@@ -125,19 +130,23 @@
      * Fill the options of the select component
      * @private
      */
-    _fillSelect: function () {
+    _fillSelect: function (values) {
       var options = this.getOptions() || [];
-
+      var select = this.$$('select');
       var value;
       var text;
       for (var i in options) {
         value = options[ i ][ 0 ];
         text = options[ i ][ 1 ];
-        if (value === this.getValue()) {
-          this.$$('select').options[ i ] = new Option(text, value, false, true);
+        if (value === this.getValue() || this.getValue().includes(value)) {
+          select.options.add( new Option(text, value, false, true));
         } else {
-          this.$$('select').options[ i ] = new Option(text, value, false, false);
+          select.options.add(new Option(text, value, false, false));
         }
+      }
+
+      if (select.multiple && Array.isArray(values) && values.length === 0) {
+        select.selectedIndex = -1;
       }
     },
 
@@ -157,8 +166,11 @@
     },
 
     _getSelectValues: function (select) {
+      if (!select || !select.options) {
+        return;
+      }
       var result = [];
-      var options = select && select.options;
+      var options = select.options;
       var opt;
 
       for (var i = 0, iLen = options.length; i < iLen; i++) {
@@ -186,6 +198,16 @@
           option.removeAttribute('selected');
         }
       };
+    },
+    _setValue: function (values) {
+      var select = this.$$('select');
+      if (select.getAttribute('multiple') && Array.isArray(values)) {
+        if (!values.includes(select.value)) {
+          select.value = values[0];
+        }
+      } else {
+        select.value = values;
+      }
     }
   });
 }());

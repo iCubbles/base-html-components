@@ -347,9 +347,11 @@
             ]
           },
           {
-           "slotId": "multiple",
-           "type": "boolean",
-           "direction": ["input"]
+            "slotId": "multiple",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
           },
           {
             "slotId": "lang",
@@ -367,6 +369,9 @@
           {
             "webpackageId": "cubx.core.rte@2.2.3",
             "artifactId": "cubxpolymer"
+          },
+          {
+            "artifactId": "polyfills"
           }
         ]
       },
@@ -4667,6 +4672,15 @@
         ]
       }
     ],
-    "utilities": []
+    "utilities": [
+      {
+        "artifactId": "polyfills",
+        "description": "",
+        "resources": [
+          "html-import.html"
+        ],
+        "dependencies": []
+      }
+    ]
   }
 }
