@@ -261,7 +261,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
+            "webpackageId": "cubx.core.rte@2.5.2",
             "artifactId": "cubxpolymer"
           }
         ]
@@ -367,7 +367,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
+            "webpackageId": "cubx.core.rte@2.5.2",
             "artifactId": "cubxpolymer"
           },
           {
@@ -490,7 +490,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
+            "webpackageId": "cubx.core.rte@2.5.2",
             "artifactId": "cubxpolymer"
           }
         ]
@@ -600,7 +600,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
+            "webpackageId": "cubx.core.rte@2.5.2",
             "artifactId": "cubxpolymer"
           }
         ]
@@ -643,7 +643,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
+            "webpackageId": "cubx.core.rte@2.5.2",
             "artifactId": "cubxpolymer"
           }
         ]
@@ -700,7 +700,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
+            "webpackageId": "cubx.core.rte@2.5.2",
             "artifactId": "cubxpolymer"
           }
         ]
@@ -743,7 +743,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
+            "webpackageId": "cubx.core.rte@2.5.2",
             "artifactId": "cubxpolymer"
           }
         ]
@@ -806,7 +806,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
+            "webpackageId": "cubx.core.rte@2.5.2",
             "artifactId": "cubxpolymer"
           }
         ]
@@ -831,7 +831,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
+            "webpackageId": "cubx.core.rte@2.5.2",
             "artifactId": "cubxpolymer"
           }
         ],
@@ -882,7 +882,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
+            "webpackageId": "cubx.core.rte@2.5.2",
             "artifactId": "cubxpolymer"
           }
         ],
@@ -936,7 +936,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.3",
+            "webpackageId": "cubx.core.rte@2.5.2",
             "artifactId": "cubxpolymer"
           }
         ],
