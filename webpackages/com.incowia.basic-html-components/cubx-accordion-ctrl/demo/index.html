@@ -31,13 +31,20 @@
     magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 </div>
 
+<div class="accordion-head4">Section 4</div>
+<div class="accordion-body4">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</div>
+
 <cubx-accordion-ctrl cubx-webpackage-id="this">
     <cubx-core-init style="display:none;">
         <cubx-core-slot-init slot="itemSelectors">
             [
-            {"head": ".accordion-head1", "body":".accordion-body1"},
+            {"head": ".accordion-head1", "body":".accordion-body1", "expanded": true},
             {"head": ".accordion-head2", "body":".accordion-body2"},
-            {"head": ".accordion-head3", "body":".accordion-body3"}
+            {"head": ".accordion-head3", "body":".accordion-body3", "expanded": true},
+            {"head": ".accordion-head4", "body":".accordion-body4"}
             ]
         </cubx-core-slot-init>
         <cubx-core-slot-init slot="multiple">true</cubx-core-slot-init>
@@ -48,20 +55,26 @@
 
 <h1>Accordion with only one item opened</h1>
 
-<div class="accordion-head4">Section 1</div>
-<div class="accordion-body4">
+<div class="accordion-head11">Section 1</div>
+<div class="accordion-body11">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
     magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 </div>
 
-<div class="accordion-head5">Section 2</div>
-<div class="accordion-body5">
+<div class="accordion-head12">Section 2</div>
+<div class="accordion-body12">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
     magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 </div>
 
-<div class="accordion-head6">Section 3</div>
-<div class="accordion-body6">
+<div class="accordion-head13">Section 3</div>
+<div class="accordion-body13">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</div>
+
+<div class="accordion-head14">Section 4</div>
+<div class="accordion-body14">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
     magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 </div>
@@ -70,9 +83,10 @@
     <cubx-core-init style="display:none;">
         <cubx-core-slot-init slot="itemSelectors">
             [
-            {"head": ".accordion-head4", "body":".accordion-body4"},
-            {"head": ".accordion-head5", "body":".accordion-body5"},
-            {"head": ".accordion-head6", "body":".accordion-body6"}
+            {"head": ".accordion-head11", "body":".accordion-body11", "expanded": true},
+            {"head": ".accordion-head12", "body":".accordion-body12"},
+            {"head": ".accordion-head13", "body":".accordion-body13", "expanded": true},
+            {"head": ".accordion-head14", "body":".accordion-body14"}
             ]
         </cubx-core-slot-init>
     </cubx-core-init>

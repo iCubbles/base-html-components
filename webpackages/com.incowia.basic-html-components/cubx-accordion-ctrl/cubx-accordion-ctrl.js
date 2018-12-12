@@ -37,8 +37,12 @@
       var multiple = this.model.multiple || false;
       var expandAll = this.model.expandAll || false;
 
-      itemSelectors instanceof Array && !skipInit ? this._initAccordionForGivenSelectors(itemSelectors) : null;
-      expandAll && multiple ? this._expandItems() : null;
+      if (itemSelectors instanceof Array && !skipInit) {
+        this._initAccordionForGivenSelectors(itemSelectors);
+      }
+      if (expandAll && multiple) {
+        this._expandItems();
+      }
     },
 
     _expandItems: function () {
@@ -49,15 +53,25 @@
 
     _initAccordionForGivenSelectors: function (itemSelectors) {
       var items = [];
+      var lastSelectedItem;
       for (var i = 0; i < itemSelectors.length; i++) {
         var item = {
           head: document.querySelector(itemSelectors[i].head),
           body: document.querySelector(itemSelectors[i].body)
         };
+        if (itemSelectors[i].hasOwnProperty('expanded') && itemSelectors[i].expanded === true) {
+          item.expanded = true;
+        } else {
+          item.expanded = false;
+        }
         items.push(item);
         this._initItem(item);
+        if (item.expanded === true) {
+          lastSelectedItem = item;
+        }
       }
       this.items = items;
+      this._checkForMultiple(lastSelectedItem);
     },
 
     _initItem: function (item) {
@@ -65,7 +79,7 @@
         console.error('invalid selector');
         return;
       }
-      if (item.initialised) { return };
+      if (item.initialised) { return; };
       var self = this;
       item.head.classList.add('cubx-accordion-ctrl-item-head');
       item.head.classList.add(this.classes.COLLAPSED);
@@ -75,13 +89,18 @@
         item.body.classList.contains('hidden') ? self._expandItem(item) : self._collapseItem(item);
         self._checkForMultiple(item);
       });
+      if (item.expanded === true) {
+        this._expandItem(item);
+      }
       item.initialised = true;
     },
 
     _checkForMultiple: function (item) {
       if (this.model.multiple === false) {
-        for(var i = 0; i < this.items.length; i++) {
-          this.items[i].body !== item.body ? this._collapseItem(this.items[i]) : null;
+        for (var i = 0; i < this.items.length; i++) {
+          if (this.items[i].body !== item.body) {
+            this._collapseItem(this.items[i]);
+          };
         }
       }
     },
