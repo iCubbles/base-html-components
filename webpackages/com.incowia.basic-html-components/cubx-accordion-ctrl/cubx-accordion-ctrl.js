@@ -71,7 +71,9 @@
         }
       }
       this.items = items;
-      this._checkForMultiple(lastSelectedItem);
+      if (lastSelectedItem) {
+        this._checkForMultiple(lastSelectedItem);
+      }
     },
 
     _initItem: function (item) {
