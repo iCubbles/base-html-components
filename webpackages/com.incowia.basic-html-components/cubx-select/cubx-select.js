@@ -1,9 +1,13 @@
+/* globals CubxComponent, Option */
 (function () {
   'use strict';
-  
+
   CubxComponent({
     is: 'cubx-select',
 
+    listener: {
+      'select.change': 'inputFieldSlotValueChanged'
+    },
     /**
      * Manipulate an element’s local DOM when the cubbles framework is initialized and ready to work.
      */
@@ -12,7 +16,7 @@
       this._updateAllAttributes();
     },
 
-    _updateAllAttributes: function() {
+    _updateAllAttributes: function () {
       this.updateId(this.getId());
       this.updateLabel(this.getLabel());
       this.updateValue(this.getValue());
@@ -31,7 +35,13 @@
      */
     inputFieldSlotValueChanged: function (event) {
       // update the cubbles-model
-      this.setValue(event.target.value);
+      if (this.getMainHTMLElement().getAttribute('multiple')) {
+        this.setValue(event.target.value);
+        this.setValue(this._getSelectValues(this.$$('select')));
+      } else {
+        // update the cubbles-model
+        this.setValue(event.target.value);
+      }
     },
 
     /**
@@ -107,6 +117,17 @@
     },
 
     /**
+     *  Called when slot 'required' has changed
+     */
+    modelMultipleChanged: function (multiple) {
+      if (multiple) {
+        this.getMainHTMLElement().setAttribute('multiple', true);
+      } else {
+        this.getMainHTMLElement().removeAttribute('multiple');
+      }
+    },
+
+    /**
      * Fill the options of the select component
      * @private
      */
@@ -116,12 +137,12 @@
       var value;
       var text;
       for (var i in options) {
-        value = options[i][0];
-        text = options[i][1];
+        value = options[ i ][ 0 ];
+        text = options[ i ][ 1 ];
         if (value === this.getValue()) {
-          this.getMainHTMLElement().options[i] = new Option(text, value, false, true);
+          this.getMainHTMLElement().options[ i ] = new Option(text, value, false, true);
         } else {
-          this.getMainHTMLElement().options[i] = new Option(text, value, false, false);
+          this.getMainHTMLElement().options[ i ] = new Option(text, value, false, false);
         }
       }
     },
@@ -134,17 +155,17 @@
       this.getMainHTMLElement().options.length = 0;
     },
 
-    getMainHTMLElement: function() {
+    getMainHTMLElement: function () {
       return this.$$('select');
     },
 
-    setAttToMainHTMLElement: function(att, val) {
+    setAttToMainHTMLElement: function (att, val) {
       if (val !== undefined) {
         this.getMainHTMLElement().setAttribute(att, val);
       }
     },
 
-    removeAttToMainHTMLElement: function(att) {
+    removeAttToMainHTMLElement: function (att) {
       this.getMainHTMLElement().removeAttribute(att);
     },
 
@@ -200,5 +221,21 @@
     updateRequired: function (required) {
       this.getMainHTMLElement().required = required;
     },
+
+    _getSelectValues: function (select) {
+      var result = [];
+      var options = select && select.options;
+      var opt;
+
+      for (var i = 0, iLen = options.length; i < iLen; i++) {
+        opt = options[ i ];
+
+        if (opt.selected) {
+          result.push(opt.value || opt.text);
+        }
+      }
+      return result;
+    }
+
   });
 }());

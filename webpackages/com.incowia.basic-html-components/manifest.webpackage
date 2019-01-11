@@ -352,6 +352,11 @@
             "value": -1
           },
           {
+            "slotId": "multiple",
+            "type": "boolean",
+            "direction": ["input"]
+          },
+          {
             "slotId": "lang",
             "type": "string",
             "description": "Specify the 'lang' attribute of the embedded html element",
